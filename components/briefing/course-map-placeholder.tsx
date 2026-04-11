@@ -291,6 +291,9 @@ export function CourseMapPlaceholder({
 
     async function initMap() {
       const mapboxgl = (await import("mapbox-gl")).default;
+      const isCompactViewport =
+        typeof window !== "undefined" &&
+        window.matchMedia("(max-width: 767px)").matches;
 
       if (disposed || !mapRef.current) {
         return;
@@ -513,16 +516,18 @@ export function CourseMapPlaceholder({
             "flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-stone-900 text-xs font-bold text-white shadow-lg";
           el.textContent = String(index + 1);
 
-          const text = document.createElement("div");
-          text.className =
-            "rounded-xl border border-stone-200 bg-white/95 px-3 py-1.5 text-xs font-semibold text-stone-900 shadow-lg backdrop-blur";
-          text.textContent = markerLabel;
-
           wrapper.appendChild(el);
-          wrapper.appendChild(text);
+
+          if (!isCompactViewport) {
+            const text = document.createElement("div");
+            text.className =
+              "rounded-xl border border-stone-200 bg-white/95 px-3 py-1.5 text-xs font-semibold text-stone-900 shadow-lg backdrop-blur";
+            text.textContent = markerLabel;
+            wrapper.appendChild(text);
+          }
 
           const marker = new mapboxgl.Marker(wrapper, {
-            anchor: "left",
+            anchor: isCompactViewport ? "center" : "left",
           })
             .setLngLat([point.lng, point.lat])
             .setPopup(
