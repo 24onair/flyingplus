@@ -71,6 +71,11 @@ select {
   padding: 24px 0 48px;
 }
 
+body[data-embed-mode="true"] .page-wrap {
+  width: min(100%, calc(100vw - 16px));
+  padding: 8px 0 20px;
+}
+
 .glass {
   background: var(--surface);
   border: 1px solid var(--line);
@@ -105,6 +110,11 @@ select {
   .page-wrap {
     width: min(100%, calc(100vw - 20px));
     padding: 16px 0 36px;
+  }
+
+  body[data-embed-mode="true"] .page-wrap {
+    width: min(100%, calc(100vw - 12px));
+    padding: 6px 0 16px;
   }
 }
 

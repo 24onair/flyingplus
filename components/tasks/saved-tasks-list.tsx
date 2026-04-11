@@ -4,14 +4,17 @@ import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/components/auth/auth-provider";
+import { withEmbedParam } from "@/lib/embed";
 import type { SavedTaskRecord } from "@/types/saved-task";
 
 export function SavedTasksList({
   initialTasks,
   emptyMessage,
+  embed = false,
 }: {
   initialTasks: SavedTaskRecord[];
   emptyMessage?: string;
+  embed?: boolean;
 }) {
   const router = useRouter();
   const { getAccessToken, profile } = useAuth();
@@ -32,7 +35,7 @@ export function SavedTasksList({
       const accessToken = await getAccessToken();
 
       if (!accessToken) {
-        router.push("/auth/login");
+        router.push(withEmbedParam("/auth/login", embed));
         return;
       }
 
@@ -82,7 +85,7 @@ export function SavedTasksList({
           <div className="flex items-start justify-between gap-4">
             <div className="min-w-0 flex-1">
               <p className="text-sm font-semibold text-stone-500">{task.siteName}</p>
-              {isAdmin ? (
+              {isAdmin && !embed ? (
                 <p className="mt-1 text-xs font-medium text-stone-500">
                   저장자 {task.ownerName || task.ownerEmail || "알 수 없음"}
                 </p>
@@ -132,19 +135,21 @@ export function SavedTasksList({
           </div>
 
           <div className="mt-4 flex flex-wrap gap-2">
-            <Link href={`/tasks/${task.id}`} className="btn btn-secondary">
+            <Link href={withEmbedParam(`/tasks/${task.id}`, embed)} className="btn btn-secondary">
               상세 보기
             </Link>
-            <button
-              type="button"
-              onClick={() => {
-                setEditingId(task.id);
-                setDraftName(task.name);
-              }}
-              className="btn btn-secondary"
-            >
-              이름 변경
-            </button>
+            {!embed ? (
+              <button
+                type="button"
+                onClick={() => {
+                  setEditingId(task.id);
+                  setDraftName(task.name);
+                }}
+                className="btn btn-secondary"
+              >
+                이름 변경
+              </button>
+            ) : null}
           </div>
         </div>
       ))}

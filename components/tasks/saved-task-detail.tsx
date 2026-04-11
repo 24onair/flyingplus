@@ -8,6 +8,7 @@ import { CourseMapPlaceholder } from "@/components/briefing/course-map-placehold
 import { TaskElevationProfile } from "@/components/briefing/task-elevation-profile";
 import { XctskQrModal } from "@/components/briefing/xctsk-qr-modal";
 import { canUsePersonalStorage } from "@/lib/auth/profile";
+import { withEmbedParam } from "@/lib/embed";
 import { buildCupTaskFile } from "@/lib/export/cup";
 import { buildXctskTaskFile } from "@/lib/export/xctsk";
 import { computeTaskPath } from "@/lib/task/task-geometry";
@@ -118,7 +119,13 @@ async function readTaskApiResponse(response: Response) {
   }
 }
 
-export function SavedTaskDetail({ task }: { task: SavedTaskRecord }) {
+export function SavedTaskDetail({
+  task,
+  embed = false,
+}: {
+  task: SavedTaskRecord;
+  embed?: boolean;
+}) {
   const router = useRouter();
   const { user, profile, isLoading: authLoading, getAccessToken } = useAuth();
   const canRenameOriginal = Boolean(profile?.isAdmin) || user?.id === task.userId;
@@ -439,7 +446,7 @@ export function SavedTaskDetail({ task }: { task: SavedTaskRecord }) {
     }
 
     if (!user) {
-      router.push("/auth/login");
+      router.push(withEmbedParam("/auth/login", embed));
       return;
     }
 
@@ -461,7 +468,7 @@ export function SavedTaskDetail({ task }: { task: SavedTaskRecord }) {
       const accessToken = await getAccessToken();
 
       if (!accessToken) {
-        router.push("/auth/login");
+        router.push(withEmbedParam("/auth/login", embed));
         return;
       }
 
@@ -528,7 +535,7 @@ export function SavedTaskDetail({ task }: { task: SavedTaskRecord }) {
       const accessToken = await getAccessToken();
 
       if (!accessToken) {
-        router.push("/auth/login");
+        router.push(withEmbedParam("/auth/login", embed));
         return;
       }
 
@@ -558,7 +565,7 @@ export function SavedTaskDetail({ task }: { task: SavedTaskRecord }) {
   }
 
   return (
-    <div className="space-y-6">
+    <div className={embed ? "space-y-4" : "space-y-6"}>
       <XctskQrModal
         open={isQrOpen}
         onClose={() => setIsQrOpen(false)}
@@ -566,17 +573,21 @@ export function SavedTaskDetail({ task }: { task: SavedTaskRecord }) {
         taskName={taskName}
       />
 
-      <div className="glass rounded-[28px] border p-5">
+      <div className={`glass border ${embed ? "rounded-[24px] p-4" : "rounded-[28px] p-5"}`}>
         <div className="flex items-start justify-between gap-4">
           <div>
-            <p className="text-sm font-semibold text-stone-500">저장된 타스크 편집</p>
-            <h1 className="mt-1 text-3xl font-bold text-stone-900">{task.name}</h1>
+            <p className="text-sm font-semibold text-stone-500">
+              {embed ? "워드프레스 임베드" : "저장된 타스크 편집"}
+            </p>
+            <h1 className={`mt-1 font-bold text-stone-900 ${embed ? "text-2xl" : "text-3xl"}`}>
+              {task.name}
+            </h1>
             <p className="mt-2 text-sm text-stone-600">
               {task.siteName} / {task.date} / {task.taskType}
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-2">
-            {canRenameOriginal ? (
+            {canRenameOriginal && !embed ? (
               <button
                 type="button"
                 onClick={() => void renameCurrentTask()}
@@ -590,13 +601,13 @@ export function SavedTaskDetail({ task }: { task: SavedTaskRecord }) {
                     : "현재 이름 저장"}
               </button>
             ) : null}
-            <Link href="/tasks" className="btn btn-secondary">
+            <Link href={withEmbedParam("/tasks", embed)} className="btn btn-secondary">
               목록으로
             </Link>
           </div>
         </div>
 
-        <div className="mt-6 flex flex-wrap gap-4">
+        <div className={`flex flex-wrap gap-4 ${embed ? "mt-4" : "mt-6"}`}>
           <button
             type="button"
             onClick={exportCup}
@@ -753,7 +764,10 @@ export function SavedTaskDetail({ task }: { task: SavedTaskRecord }) {
           {saveStatus === "done" && savedTaskId ? (
             <div className="mt-3 rounded-2xl bg-emerald-50 px-4 py-3 text-sm text-emerald-900">
               새 타스크로 저장했습니다.{" "}
-              <Link href={`/tasks/${savedTaskId}`} className="font-semibold underline">
+              <Link
+                href={withEmbedParam(`/tasks/${savedTaskId}`, embed)}
+                className="font-semibold underline"
+              >
                 저장된 타스크 보기
               </Link>
             </div>

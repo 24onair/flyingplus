@@ -49,6 +49,7 @@ function isItemActive(
 export function AppHeader() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const isEmbed = searchParams.get("embed") === "1";
   const serializedParams = searchParams.toString();
   const { profile } = useAuth();
   const utilityItems = utilityNavItems
@@ -61,6 +62,10 @@ export function AppHeader() {
           }
         : item
     );
+
+  if (isEmbed) {
+    return null;
+  }
 
   return (
     <header className="sticky top-0 z-20 border-b border-stone-200/70 bg-[rgba(248,244,236,0.8)] backdrop-blur-xl">

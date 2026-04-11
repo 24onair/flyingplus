@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useAuth } from "@/components/auth/auth-provider";
 import { canUsePersonalStorage } from "@/lib/auth/profile";
+import { withEmbedParam } from "@/lib/embed";
 import { SavedTaskDetail } from "@/components/tasks/saved-task-detail";
 import type { SavedTaskRecord } from "@/types/saved-task";
 
@@ -24,7 +25,13 @@ async function readTaskResponse(response: Response) {
   return JSON.parse(raw) as TaskApiResponse;
 }
 
-export function PersonalTaskDetailPage({ taskId }: { taskId: string }) {
+export function PersonalTaskDetailPage({
+  taskId,
+  embed = false,
+}: {
+  taskId: string;
+  embed?: boolean;
+}) {
   const { user, profile, isLoading, getAccessToken } = useAuth();
   const isAdmin = Boolean(profile?.isAdmin);
   const canAccessTasks = isAdmin || canUsePersonalStorage(profile);
@@ -112,7 +119,7 @@ export function PersonalTaskDetailPage({ taskId }: { taskId: string }) {
           <span>
             {" "}
             공개 타스크가 아니라면{" "}
-            <Link href="/auth/login" className="font-semibold underline">
+            <Link href={withEmbedParam("/auth/login", embed)} className="font-semibold underline">
               로그인
             </Link>
             해 주세요.
@@ -131,8 +138,8 @@ export function PersonalTaskDetailPage({ taskId }: { taskId: string }) {
   }
 
   return (
-    <div className="space-y-4">
-      {isAdmin ? (
+    <div className={embed ? "space-y-3" : "space-y-4"}>
+      {!embed && isAdmin ? (
         <div className="glass rounded-[24px] border p-4 text-sm text-stone-600">
           저장자{" "}
           <span className="font-semibold text-stone-900">
@@ -143,7 +150,7 @@ export function PersonalTaskDetailPage({ taskId }: { taskId: string }) {
           ) : null}
         </div>
       ) : null}
-      <SavedTaskDetail task={task} />
+      <SavedTaskDetail task={task} embed={embed} />
     </div>
   );
 }

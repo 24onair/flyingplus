@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useAuth } from "@/components/auth/auth-provider";
 import { canUsePersonalStorage } from "@/lib/auth/profile";
+import { withEmbedParam } from "@/lib/embed";
 import { SavedTasksList } from "@/components/tasks/saved-tasks-list";
 import type { SavedTaskRecord } from "@/types/saved-task";
 
@@ -24,7 +25,7 @@ async function readTasksResponse(response: Response) {
   return JSON.parse(raw) as TasksApiResponse;
 }
 
-export function PersonalTasksPage() {
+export function PersonalTasksPage({ embed = false }: { embed?: boolean }) {
   const { user, profile, isLoading, getAccessToken } = useAuth();
   const isAdmin = Boolean(profile?.isAdmin);
   const canAccessOwnTasks = isAdmin || canUsePersonalStorage(profile);
@@ -126,8 +127,8 @@ export function PersonalTasksPage() {
   }
 
   return (
-    <div className="space-y-6">
-      <section className="glass rounded-[28px] border p-6">
+    <div className={embed ? "space-y-4" : "space-y-6"}>
+      <section className={`glass border ${embed ? "rounded-[24px] p-4" : "rounded-[28px] p-6"}`}>
         <p className="text-sm font-semibold text-stone-500">공개 타스크</p>
         <h2 className="mt-1 text-2xl font-bold text-stone-900">모두가 보는 오픈 타스크</h2>
         <p className="mt-2 text-sm text-stone-600">
@@ -137,24 +138,28 @@ export function PersonalTasksPage() {
       <SavedTasksList
         initialTasks={publicTasks}
         emptyMessage="아직 공개된 타스크가 없습니다."
+        embed={embed}
       />
 
-      {!user ? (
+      {!embed && !user ? (
         <div className="glass rounded-[28px] border p-6 text-sm text-stone-700">
           내 타스크를 보려면 로그인이 필요합니다.{" "}
-          <Link href="/auth/login" className="font-semibold text-stone-900 underline">
+          <Link
+            href={withEmbedParam("/auth/login", embed)}
+            className="font-semibold text-stone-900 underline"
+          >
             로그인하러 가기
           </Link>
         </div>
       ) : null}
 
-      {user && !isAdmin && !canUsePersonalStorage(profile) ? (
+      {!embed && user && !isAdmin && !canUsePersonalStorage(profile) ? (
         <div className="glass rounded-[28px] border p-6 text-sm text-stone-700">
           관리자 승인 후 내 타스크 저장 목록을 사용할 수 있습니다.
         </div>
       ) : null}
 
-      {user && canAccessOwnTasks && !isAdmin ? (
+      {!embed && user && canAccessOwnTasks && !isAdmin ? (
         <>
           <section className="glass rounded-[28px] border p-6">
             <p className="text-sm font-semibold text-stone-500">내 타스크</p>
@@ -166,11 +171,12 @@ export function PersonalTasksPage() {
           <SavedTasksList
             initialTasks={myTasks}
             emptyMessage="아직 내가 저장한 타스크가 없습니다."
+            embed={embed}
           />
         </>
       ) : null}
 
-      {isAdmin ? (
+      {!embed && isAdmin ? (
         <>
           <section className="glass rounded-[28px] border p-6">
             <p className="text-sm font-semibold text-stone-500">관리자 전체 타스크</p>
@@ -182,6 +188,7 @@ export function PersonalTasksPage() {
           <SavedTasksList
             initialTasks={allTasks}
             emptyMessage="저장된 타스크가 없습니다."
+            embed={embed}
           />
         </>
       ) : null}
