@@ -4,6 +4,20 @@ import type { PointerEvent as ReactPointerEvent } from "react";
 import { useEffect, useRef, useState } from "react";
 import type { TaskPointType } from "@/types/course";
 
+type FullscreenDocument = Document & {
+  webkitFullscreenElement?: Element | null;
+  webkitExitFullscreen?: () => Promise<void> | void;
+};
+
+type FullscreenElement = HTMLElement & {
+  webkitRequestFullscreen?: () => Promise<void> | void;
+};
+
+function getFullscreenElement() {
+  const fullscreenDocument = document as FullscreenDocument;
+  return document.fullscreenElement ?? fullscreenDocument.webkitFullscreenElement ?? null;
+}
+
 type TerrainProfileSample = {
   distanceKm: number;
   elevationM: number | null;
@@ -50,29 +64,43 @@ export function TaskElevationProfile({
 
   useEffect(() => {
     function handleFullscreenChange() {
-      setIsFullscreen(document.fullscreenElement === sectionRef.current);
+      setIsFullscreen(getFullscreenElement() === sectionRef.current);
     }
 
     document.addEventListener("fullscreenchange", handleFullscreenChange);
+    document.addEventListener("webkitfullscreenchange", handleFullscreenChange as EventListener);
 
     return () => {
       document.removeEventListener("fullscreenchange", handleFullscreenChange);
+      document.removeEventListener(
+        "webkitfullscreenchange",
+        handleFullscreenChange as EventListener
+      );
     };
   }, []);
 
   async function toggleFullscreen() {
-    const section = sectionRef.current;
+    const section = sectionRef.current as FullscreenElement | null;
+    const fullscreenDocument = document as FullscreenDocument;
 
     if (!section) {
       return;
     }
 
-    if (document.fullscreenElement === section) {
-      await document.exitFullscreen();
+    if (getFullscreenElement() === section) {
+      if (document.exitFullscreen) {
+        await document.exitFullscreen();
+      } else {
+        await fullscreenDocument.webkitExitFullscreen?.();
+      }
       return;
     }
 
-    await section.requestFullscreen();
+    if (section.requestFullscreen) {
+      await section.requestFullscreen();
+    } else {
+      await section.webkitRequestFullscreen?.();
+    }
   }
 
   if (validSamples.length < 2) {

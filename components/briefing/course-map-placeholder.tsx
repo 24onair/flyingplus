@@ -9,6 +9,20 @@ import type {
   WaypointRecord,
 } from "@/types/course";
 
+type FullscreenDocument = Document & {
+  webkitFullscreenElement?: Element | null;
+  webkitExitFullscreen?: () => Promise<void> | void;
+};
+
+type FullscreenElement = HTMLElement & {
+  webkitRequestFullscreen?: () => Promise<void> | void;
+};
+
+function getFullscreenElement() {
+  const fullscreenDocument = document as FullscreenDocument;
+  return document.fullscreenElement ?? fullscreenDocument.webkitFullscreenElement ?? null;
+}
+
 type CourseMapProps = {
   courseName: string;
   siteName: string;
@@ -236,7 +250,7 @@ export function CourseMapPlaceholder({
 
   useEffect(() => {
     function handleFullscreenChange() {
-      const active = document.fullscreenElement === sectionRef.current;
+      const active = getFullscreenElement() === sectionRef.current;
       setIsFullscreen(active);
 
       if (resizeTimeoutRef.current) {
@@ -261,6 +275,7 @@ export function CourseMapPlaceholder({
     }
 
     document.addEventListener("fullscreenchange", handleFullscreenChange);
+    document.addEventListener("webkitfullscreenchange", handleFullscreenChange as EventListener);
 
     return () => {
       if (resizeTimeoutRef.current) {
@@ -268,6 +283,10 @@ export function CourseMapPlaceholder({
         resizeTimeoutRef.current = null;
       }
       document.removeEventListener("fullscreenchange", handleFullscreenChange);
+      document.removeEventListener(
+        "webkitfullscreenchange",
+        handleFullscreenChange as EventListener
+      );
     };
   }, []);
 
@@ -645,18 +664,27 @@ export function CourseMapPlaceholder({
   ]);
 
   async function toggleFullscreen() {
-    const section = sectionRef.current;
+    const section = sectionRef.current as FullscreenElement | null;
+    const fullscreenDocument = document as FullscreenDocument;
 
     if (!section) {
       return;
     }
 
-    if (document.fullscreenElement === section) {
-      await document.exitFullscreen();
+    if (getFullscreenElement() === section) {
+      if (document.exitFullscreen) {
+        await document.exitFullscreen();
+      } else {
+        await fullscreenDocument.webkitExitFullscreen?.();
+      }
       return;
     }
 
-    await section.requestFullscreen();
+    if (section.requestFullscreen) {
+      await section.requestFullscreen();
+    } else {
+      await section.webkitRequestFullscreen?.();
+    }
   }
 
   if (validRoute.length === 0) {
