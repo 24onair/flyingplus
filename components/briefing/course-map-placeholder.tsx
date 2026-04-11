@@ -9,20 +9,6 @@ import type {
   WaypointRecord,
 } from "@/types/course";
 
-type FullscreenDocument = Document & {
-  webkitFullscreenElement?: Element | null;
-  webkitExitFullscreen?: () => Promise<void> | void;
-};
-
-type FullscreenElement = HTMLElement & {
-  webkitRequestFullscreen?: () => Promise<void> | void;
-};
-
-function getFullscreenElement() {
-  const fullscreenDocument = document as FullscreenDocument;
-  return document.fullscreenElement ?? fullscreenDocument.webkitFullscreenElement ?? null;
-}
-
 type CourseMapProps = {
   courseName: string;
   siteName: string;
@@ -249,46 +235,50 @@ export function CourseMapPlaceholder({
   }, [onTerrainProfileChange]);
 
   useEffect(() => {
-    function handleFullscreenChange() {
-      const active = getFullscreenElement() === sectionRef.current;
-      setIsFullscreen(active);
+    if (!isFullscreen) {
+      return undefined;
+    }
 
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
       if (resizeTimeoutRef.current) {
         window.clearTimeout(resizeTimeoutRef.current);
         resizeTimeoutRef.current = null;
       }
+    };
+  }, [isFullscreen]);
 
-      resizeTimeoutRef.current = window.setTimeout(() => {
-        const map = mapInstanceRef.current;
-        const container = mapRef.current;
-
-        if (!map || !container || !container.isConnected) {
-          return;
-        }
-
-        try {
-          map.resize();
-        } catch {
-          // Ignore resize attempts during fullscreen teardown/recreation.
-        }
-      }, 150);
+  useEffect(() => {
+    if (resizeTimeoutRef.current) {
+      window.clearTimeout(resizeTimeoutRef.current);
+      resizeTimeoutRef.current = null;
     }
 
-    document.addEventListener("fullscreenchange", handleFullscreenChange);
-    document.addEventListener("webkitfullscreenchange", handleFullscreenChange as EventListener);
+    resizeTimeoutRef.current = window.setTimeout(() => {
+      const map = mapInstanceRef.current;
+      const container = mapRef.current;
+
+      if (!map || !container || !container.isConnected) {
+        return;
+      }
+
+      try {
+        map.resize();
+      } catch {
+        // Ignore resize attempts during layout transitions.
+      }
+    }, 150);
 
     return () => {
       if (resizeTimeoutRef.current) {
         window.clearTimeout(resizeTimeoutRef.current);
         resizeTimeoutRef.current = null;
       }
-      document.removeEventListener("fullscreenchange", handleFullscreenChange);
-      document.removeEventListener(
-        "webkitfullscreenchange",
-        handleFullscreenChange as EventListener
-      );
     };
-  }, []);
+  }, [isFullscreen]);
 
   useEffect(() => {
     if (!accessToken || !mapRef.current || validRoute.length === 0) {
@@ -664,27 +654,7 @@ export function CourseMapPlaceholder({
   ]);
 
   async function toggleFullscreen() {
-    const section = sectionRef.current as FullscreenElement | null;
-    const fullscreenDocument = document as FullscreenDocument;
-
-    if (!section) {
-      return;
-    }
-
-    if (getFullscreenElement() === section) {
-      if (document.exitFullscreen) {
-        await document.exitFullscreen();
-      } else {
-        await fullscreenDocument.webkitExitFullscreen?.();
-      }
-      return;
-    }
-
-    if (section.requestFullscreen) {
-      await section.requestFullscreen();
-    } else {
-      await section.webkitRequestFullscreen?.();
-    }
+    setIsFullscreen((current) => !current);
   }
 
   if (validRoute.length === 0) {
@@ -710,7 +680,7 @@ export function CourseMapPlaceholder({
       ref={sectionRef}
       className={`glass relative overflow-hidden border ${
         isFullscreen
-          ? "min-h-[100dvh] rounded-none border-0 bg-stone-950"
+          ? "fixed inset-0 z-[80] min-h-[100dvh] rounded-none border-0 bg-stone-950"
           : "min-h-[420px] rounded-[32px]"
       }`}
     >

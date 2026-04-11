@@ -4,20 +4,6 @@ import type { PointerEvent as ReactPointerEvent } from "react";
 import { useEffect, useRef, useState } from "react";
 import type { TaskPointType } from "@/types/course";
 
-type FullscreenDocument = Document & {
-  webkitFullscreenElement?: Element | null;
-  webkitExitFullscreen?: () => Promise<void> | void;
-};
-
-type FullscreenElement = HTMLElement & {
-  webkitRequestFullscreen?: () => Promise<void> | void;
-};
-
-function getFullscreenElement() {
-  const fullscreenDocument = document as FullscreenDocument;
-  return document.fullscreenElement ?? fullscreenDocument.webkitFullscreenElement ?? null;
-}
-
 type TerrainProfileSample = {
   distanceKm: number;
   elevationM: number | null;
@@ -63,44 +49,20 @@ export function TaskElevationProfile({
   );
 
   useEffect(() => {
-    function handleFullscreenChange() {
-      setIsFullscreen(getFullscreenElement() === sectionRef.current);
+    if (!isFullscreen) {
+      return undefined;
     }
 
-    document.addEventListener("fullscreenchange", handleFullscreenChange);
-    document.addEventListener("webkitfullscreenchange", handleFullscreenChange as EventListener);
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
 
     return () => {
-      document.removeEventListener("fullscreenchange", handleFullscreenChange);
-      document.removeEventListener(
-        "webkitfullscreenchange",
-        handleFullscreenChange as EventListener
-      );
+      document.body.style.overflow = previousOverflow;
     };
-  }, []);
+  }, [isFullscreen]);
 
   async function toggleFullscreen() {
-    const section = sectionRef.current as FullscreenElement | null;
-    const fullscreenDocument = document as FullscreenDocument;
-
-    if (!section) {
-      return;
-    }
-
-    if (getFullscreenElement() === section) {
-      if (document.exitFullscreen) {
-        await document.exitFullscreen();
-      } else {
-        await fullscreenDocument.webkitExitFullscreen?.();
-      }
-      return;
-    }
-
-    if (section.requestFullscreen) {
-      await section.requestFullscreen();
-    } else {
-      await section.webkitRequestFullscreen?.();
-    }
+    setIsFullscreen((current) => !current);
   }
 
   if (validSamples.length < 2) {
@@ -260,7 +222,7 @@ export function TaskElevationProfile({
       ref={sectionRef}
       className={`rounded-2xl bg-stone-100 p-4 ${
         isFullscreen
-          ? "min-h-[100dvh] overflow-y-auto rounded-none bg-stone-100 px-3 py-4 sm:px-4 md:px-6 md:py-6"
+          ? "fixed inset-0 z-[80] min-h-[100dvh] overflow-y-auto rounded-none bg-stone-100 px-3 py-4 sm:px-4 md:px-6 md:py-6"
           : ""
       }`}
     >
