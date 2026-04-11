@@ -64,29 +64,29 @@ export function AppHeader() {
 
   return (
     <header className="sticky top-0 z-20 border-b border-stone-200/70 bg-[rgba(248,244,236,0.8)] backdrop-blur-xl">
-      <div className="mx-auto flex w-[min(1200px,calc(100vw-24px))] items-center justify-between py-4">
-        <Link href="/" className="flex items-center gap-3">
-          <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-stone-900 text-xl text-white">
+      <div className="mx-auto w-[min(1200px,calc(100vw-24px))] py-3 md:py-4">
+        <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+          <Link href="/" className="flex min-w-0 items-center gap-3">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-stone-900 text-xl text-white">
             🪂
-          </div>
-          <div>
-            <p className="text-sm font-semibold text-stone-500">XC 도우미</p>
-            <p className="text-base font-bold text-stone-900">
-              Hike & Fly Planner
-            </p>
-          </div>
-        </Link>
+            </div>
+            <div className="min-w-0">
+              <p className="text-sm font-semibold text-stone-500">XC 도우미</p>
+              <p className="truncate text-base font-bold text-stone-900 md:text-lg">
+                Hike & Fly Planner
+              </p>
+            </div>
+          </Link>
 
-        <div className="hidden items-center gap-3 md:flex">
-          <div className="flex flex-col items-end gap-2">
-            <nav className="flex flex-wrap justify-end gap-2">
+          <div className="min-w-0 flex-1 space-y-2">
+            <nav className="flex gap-2 overflow-x-auto pb-1 md:flex-wrap md:justify-end md:overflow-visible md:pb-0">
               {primaryNavItems.map((item) => (
                 <Link
                   key={item.href}
                   href={
                     serializedParams ? `${item.href}?${serializedParams}` : item.href
                   }
-                  className={`rounded-full px-4 py-2 text-sm font-semibold transition hover:bg-white hover:text-stone-900 ${
+                  className={`shrink-0 rounded-full px-4 py-2 text-sm font-semibold transition hover:bg-white hover:text-stone-900 ${
                     isItemActive(pathname, item.href)
                       ? "bg-white text-stone-900 shadow-sm"
                       : "text-stone-600"
@@ -97,15 +97,15 @@ export function AppHeader() {
               ))}
             </nav>
 
-            <div className="flex items-center gap-3">
-              <nav className="flex flex-wrap justify-end gap-2">
+            <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-end md:gap-3">
+              <nav className="flex gap-2 overflow-x-auto pb-1 md:flex-wrap md:justify-end md:overflow-visible md:pb-0">
                 {utilityItems.map((item) => (
                   <Link
                     key={item.href}
                     href={
                       serializedParams ? `${item.href}?${serializedParams}` : item.href
                     }
-                    className={`rounded-full border px-3 py-1.5 text-xs font-semibold transition ${
+                    className={`shrink-0 rounded-full border px-3 py-1.5 text-xs font-semibold transition ${
                       isItemActive(pathname, item.href, item.activePrefixes)
                         ? "border-stone-300 bg-white text-stone-900 shadow-sm"
                         : "border-stone-200 bg-stone-50/80 text-stone-600 hover:border-stone-300 hover:bg-white hover:text-stone-900"
@@ -115,7 +115,9 @@ export function AppHeader() {
                   </Link>
                 ))}
               </nav>
-              <AuthStatus />
+              <div className="min-w-0 md:max-w-full">
+                <AuthStatus />
+              </div>
             </div>
           </div>
         </div>

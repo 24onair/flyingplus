@@ -682,30 +682,33 @@ export function CourseMapPlaceholder({
       ref={sectionRef}
       className={`glass relative overflow-hidden border ${
         isFullscreen
-          ? "min-h-screen rounded-none border-0 bg-stone-950"
+          ? "min-h-[100dvh] rounded-none border-0 bg-stone-950"
           : "min-h-[420px] rounded-[32px]"
       }`}
     >
-      <div ref={mapRef} className={isFullscreen ? "h-screen w-full" : "h-[420px] w-full"} />
+      <div
+        ref={mapRef}
+        className={isFullscreen ? "h-[100dvh] w-full" : "h-[420px] w-full"}
+      />
 
       <button
         type="button"
         onClick={() => {
           void toggleFullscreen();
         }}
-        className="pointer-events-auto absolute right-4 top-4 z-20 rounded-2xl bg-stone-900 px-4 py-3 text-sm font-semibold text-white shadow-sm"
+        className="pointer-events-auto absolute right-3 top-3 z-20 rounded-2xl bg-stone-900 px-3 py-2 text-xs font-semibold text-white shadow-sm sm:right-4 sm:top-4 sm:px-4 sm:py-3 sm:text-sm"
       >
         {isFullscreen ? "전체 보기 닫기" : "지도 전체 보기"}
       </button>
 
-      <div className="pointer-events-none absolute left-4 top-4 right-20 z-10 flex flex-wrap gap-3">
-        <div className="rounded-2xl bg-white/92 px-4 py-3 shadow-sm backdrop-blur">
+      <div className="pointer-events-none absolute left-3 right-20 top-3 z-10 flex max-w-[min(100%-5rem,56rem)] flex-wrap gap-2 sm:left-4 sm:top-4 sm:gap-3">
+        <div className="rounded-2xl bg-white/92 px-3 py-2 shadow-sm backdrop-blur sm:px-4 sm:py-3">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">
             추천 코스
           </p>
-          <p className="mt-2 text-lg font-bold text-stone-900">{courseName}</p>
+          <p className="mt-1 text-sm font-bold text-stone-900 sm:mt-2 sm:text-lg">{courseName}</p>
         </div>
-        <div className="rounded-2xl bg-white/92 px-4 py-3 shadow-sm backdrop-blur">
+        <div className="hidden rounded-2xl bg-white/92 px-4 py-3 shadow-sm backdrop-blur md:block">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">
             지도 상태
           </p>
@@ -721,8 +724,8 @@ export function CourseMapPlaceholder({
       </div>
 
       {waypoints.length > 0 ? (
-        <div className="absolute bottom-4 left-4 right-4 z-10 flex flex-col gap-3 lg:right-auto lg:max-w-[540px]">
-          <div className="pointer-events-auto flex flex-wrap gap-2 rounded-2xl bg-white/92 p-3 shadow-sm backdrop-blur">
+        <div className="absolute bottom-3 left-3 right-3 z-10 flex flex-col gap-2 sm:bottom-4 sm:left-4 sm:right-4 sm:gap-3 lg:right-auto lg:max-w-[540px]">
+          <div className="pointer-events-auto flex flex-wrap gap-2 rounded-2xl bg-white/92 p-2.5 shadow-sm backdrop-blur sm:p-3">
             {categoryOptions.map((category) => {
               const count =
                 category === "all"
@@ -747,7 +750,7 @@ export function CourseMapPlaceholder({
             })}
           </div>
 
-          <div className="rounded-2xl bg-white/92 p-3 shadow-sm backdrop-blur">
+          <div className="hidden rounded-2xl bg-white/92 p-3 shadow-sm backdrop-blur sm:block">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">
               문경 웨이포인트 DB
             </p>
@@ -807,12 +810,12 @@ export function CourseMapPlaceholder({
             onClick={() => {
               void toggleFullscreen();
             }}
-            className="pointer-events-auto absolute right-4 top-20 z-20 rounded-full border border-stone-300 bg-white/92 px-3 py-2 text-xs font-semibold text-stone-700 shadow-sm backdrop-blur"
+            className="pointer-events-auto absolute right-3 top-14 z-20 rounded-full border border-stone-300 bg-white/92 px-3 py-2 text-[11px] font-semibold text-stone-700 shadow-sm backdrop-blur sm:right-4 sm:top-20 sm:text-xs"
           >
             ESC 또는 닫기
           </button>
 
-          <aside className="pointer-events-auto absolute right-4 top-36 bottom-4 z-20 w-[360px] overflow-y-auto rounded-[28px] border border-stone-200 bg-white/94 p-5 shadow-xl backdrop-blur">
+          <aside className="pointer-events-auto absolute inset-x-3 bottom-3 z-20 max-h-[48dvh] overflow-y-auto rounded-[28px] border border-stone-200 bg-white/94 p-4 shadow-xl backdrop-blur sm:inset-x-auto sm:right-4 sm:top-36 sm:bottom-4 sm:max-h-none sm:w-[360px] sm:p-5">
             <div className="space-y-2">
               <p className="text-sm font-semibold text-stone-500">편집 중인 코스</p>
               <h2 className="text-xl font-bold text-stone-900">{courseName}</h2>
@@ -834,11 +837,11 @@ export function CourseMapPlaceholder({
             </div>
 
             <div className="mt-4 rounded-2xl bg-stone-100 p-4">
-              <div className="flex items-center justify-between gap-3">
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">
                   웨이포인트 목록
                 </p>
-                <div className="flex items-center gap-2">
+                <div className="flex flex-wrap items-center gap-2">
                   <button
                     type="button"
                     onClick={onExportCup}
@@ -906,7 +909,10 @@ export function CourseMapPlaceholder({
               </div>
               <ul className="mt-3 space-y-2 text-sm text-stone-700">
                 {editableTurnpoints.map((turnpoint, index) => (
-                  <li key={turnpoint.order} className="flex items-center gap-2">
+                  <li
+                    key={turnpoint.order}
+                    className="flex flex-col gap-3 rounded-2xl bg-stone-50/80 p-3 sm:flex-row sm:items-center"
+                  >
                     <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-white text-xs font-bold text-stone-900">
                       {turnpoint.order}
                     </span>
@@ -940,7 +946,7 @@ export function CourseMapPlaceholder({
                           ))}
                         </select>
                       </div>
-                      <div className="mt-2 flex items-center gap-3">
+                      <div className="mt-2 flex flex-wrap items-center gap-3">
                         <input
                           type="range"
                           min={100}
@@ -973,7 +979,7 @@ export function CourseMapPlaceholder({
                         </span>
                       </div>
                     </div>
-                    <div className="flex items-center gap-1">
+                    <div className="flex flex-wrap items-center gap-1 sm:self-start">
                       <button
                         type="button"
                         onClick={() => onMoveTurnpoint?.(turnpoint.order, "up")}

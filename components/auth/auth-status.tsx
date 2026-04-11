@@ -46,7 +46,7 @@ export function AuthStatus() {
 
   if (!mounted) {
     return (
-      <div className="rounded-full border border-stone-200 bg-white px-4 py-2 text-xs font-medium text-stone-500">
+      <div className="w-full rounded-full border border-stone-200 bg-white px-4 py-2 text-center text-xs font-medium text-stone-500 md:w-auto">
         계정 확인 중...
       </div>
     );
@@ -54,7 +54,7 @@ export function AuthStatus() {
 
   if (!supabaseEnabled) {
     return (
-      <div className="rounded-full border border-stone-200 bg-white px-4 py-2 text-xs font-medium text-stone-500">
+      <div className="w-full rounded-full border border-stone-200 bg-white px-4 py-2 text-center text-xs font-medium text-stone-500 md:w-auto">
         Auth 준비 중
       </div>
     );
@@ -64,7 +64,7 @@ export function AuthStatus() {
     if (loadingFallbackReady) {
       if (!user) {
         return (
-          <div className="flex items-center gap-2">
+          <div className="flex w-full flex-wrap items-center gap-2 md:w-auto md:justify-end">
             <Link href="/auth/login" className="btn btn-secondary">
               로그인
             </Link>
@@ -76,7 +76,7 @@ export function AuthStatus() {
       }
 
       return (
-        <div className="flex items-center gap-2">
+        <div className="flex w-full flex-wrap items-center gap-2 md:w-auto md:justify-end">
           <div className="rounded-full border border-amber-200 bg-amber-50 px-4 py-2 text-xs font-medium text-amber-800">
             계정 상태 지연 중
           </div>
@@ -93,7 +93,7 @@ export function AuthStatus() {
     }
 
     return (
-      <div className="rounded-full border border-stone-200 bg-white px-4 py-2 text-xs font-medium text-stone-500">
+      <div className="w-full rounded-full border border-stone-200 bg-white px-4 py-2 text-center text-xs font-medium text-stone-500 md:w-auto">
         계정 확인 중...
       </div>
     );
@@ -101,7 +101,7 @@ export function AuthStatus() {
 
   if (!user) {
     return (
-      <div className="flex items-center gap-2">
+      <div className="flex w-full flex-wrap items-center gap-2 md:w-auto md:justify-end">
         <Link href="/auth/login" className="btn btn-secondary">
           로그인
         </Link>
@@ -113,13 +113,13 @@ export function AuthStatus() {
   }
 
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex w-full flex-wrap items-center gap-2 md:w-auto md:justify-end">
       {profile?.isAdmin ? (
         <Link href="/admin/members" className="btn btn-secondary">
           회원관리
         </Link>
       ) : null}
-      <div className="rounded-full border border-stone-200 bg-white px-4 py-2 text-xs font-medium text-stone-700">
+      <div className="max-w-full rounded-full border border-stone-200 bg-white px-4 py-2 text-xs font-medium text-stone-700">
         <span className="font-semibold text-stone-900">
           {profile?.name || user.email || "회원"}
         </span>

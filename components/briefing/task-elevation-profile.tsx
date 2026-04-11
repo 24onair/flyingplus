@@ -231,15 +231,17 @@ export function TaskElevationProfile({
     <div
       ref={sectionRef}
       className={`rounded-2xl bg-stone-100 p-4 ${
-        isFullscreen ? "h-screen overflow-y-auto rounded-none bg-stone-100 p-6" : ""
+        isFullscreen
+          ? "min-h-[100dvh] overflow-y-auto rounded-none bg-stone-100 px-3 py-4 sm:px-4 md:px-6 md:py-6"
+          : ""
       }`}
     >
-      <div className="flex items-center justify-between gap-3">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">
           전체 타스크 고도 프로파일
         </p>
-        <div className="flex items-center gap-3">
-          <p className="text-xs font-medium text-stone-600">
+        <div className="flex flex-col gap-2 sm:items-end">
+          <p className="text-xs font-medium leading-5 text-stone-600 sm:text-right">
             최저 {Math.round(minElevation)}m / 최고 {Math.round(maxElevation)}m / 베이스{" "}
             {Math.round(baseAltitudeM)}m
           </p>
@@ -248,7 +250,7 @@ export function TaskElevationProfile({
             onClick={() => {
               void toggleFullscreen();
             }}
-            className="rounded-full border border-stone-300 bg-white px-3 py-1.5 text-xs font-semibold text-stone-700"
+            className="w-full rounded-full border border-stone-300 bg-white px-3 py-2 text-xs font-semibold text-stone-700 sm:w-auto"
           >
             {isFullscreen ? "전체 보기 닫기" : "프로파일 전체 보기"}
           </button>
@@ -257,13 +259,13 @@ export function TaskElevationProfile({
 
       <div
         className={`mt-3 overflow-hidden rounded-2xl border border-stone-200 bg-white p-3 ${
-          isFullscreen ? "min-h-[340px]" : ""
+          isFullscreen ? "min-h-[340px] px-2 py-3 sm:p-3 md:p-4" : ""
         }`}
       >
         <svg
           ref={svgRef}
           viewBox={`0 0 ${chartWidth} ${chartHeight}`}
-          className={`w-full ${isFullscreen ? "h-[360px]" : "h-[220px]"}`}
+          className={`w-full ${isFullscreen ? "h-[52dvh] min-h-[320px] max-h-[560px]" : "h-[220px]"}`}
           role="img"
           aria-label="타스크 고도 프로파일"
           onPointerMove={handlePointerMove}
@@ -374,16 +376,16 @@ export function TaskElevationProfile({
             strokeLinecap="round"
           />
         </svg>
-        <div className="mt-2 flex items-center justify-between text-xs font-medium text-stone-500">
-          <span>0km</span>
-          <span>
+        <div className="mt-2 flex flex-wrap items-center justify-between gap-2 text-xs font-medium text-stone-500">
+          <span className="whitespace-nowrap">0km</span>
+          <span className="min-w-0 flex-1 text-center">
             {hoveredPoint
               ? `${hoveredPoint.distanceKm.toFixed(1)}km / ${Math.round(
                   hoveredPoint.elevationM
                 )}m`
               : "라인에 마우스를 올리면 거리/고도 표시"}
           </span>
-          <span>{totalDistance.toFixed(1)}km</span>
+          <span className="whitespace-nowrap">{totalDistance.toFixed(1)}km</span>
         </div>
       </div>
 
