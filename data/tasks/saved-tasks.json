@@ -1,0 +1,766 @@
+{
+  "tasks": [
+    {
+      "id": "고헌산-로컬-세이프-코스-1775706215874",
+      "createdAt": "2026-04-09T03:43:35.874Z",
+      "updatedAt": "2026-04-09T03:43:35.874Z",
+      "name": "고헌산 로컬 세이프 코스",
+      "siteId": "goheonsan",
+      "siteName": "울산 고헌산",
+      "date": "2026-04-10",
+      "taskType": "RACE",
+      "sssOpenTime": "12:00",
+      "taskDeadlineTime": "23:00",
+      "distanceKm": 23.171395248729066,
+      "turnpoints": [
+        {
+          "order": 1,
+          "name": "출발 리지",
+          "lat": 35.655,
+          "lng": 129.042,
+          "radiusM": 200,
+          "taskType": "start",
+          "elevationM": 897.7144438198774
+        },
+        {
+          "order": 2,
+          "name": "근거리 확장 포인트",
+          "lat": 35.671,
+          "lng": 129.019,
+          "radiusM": 400,
+          "taskType": "sss",
+          "elevationM": 573.3828729082436
+        },
+        {
+          "order": 3,
+          "name": "리턴 포인트",
+          "lat": 35.661,
+          "lng": 128.997,
+          "radiusM": 400,
+          "taskType": "turnpoint",
+          "elevationM": 343.73378910245106
+        },
+        {
+          "order": 4,
+          "name": "U34056",
+          "label": "-M-GOHEON2",
+          "lat": 35.6171,
+          "lng": 129.0964,
+          "radiusM": 400,
+          "taskType": "turnpoint",
+          "elevationM": 582.3192272723929
+        },
+        {
+          "order": 5,
+          "name": "U35101",
+          "label": "-M-GOHEON",
+          "lat": 35.6417,
+          "lng": 129.0888,
+          "radiusM": 400,
+          "taskType": "ess",
+          "elevationM": 996.1804680083894
+        },
+        {
+          "order": 6,
+          "name": "U39103",
+          "label": "-M-GAJI",
+          "lat": 35.6202,
+          "lng": 129.0029,
+          "radiusM": 400,
+          "taskType": "goal",
+          "elevationM": 1205.8087039534494
+        }
+      ]
+    },
+    {
+      "id": "문경-m27-m24-m31-m30-메인-코스-1775571066040",
+      "createdAt": "2026-04-07T14:11:06.040Z",
+      "updatedAt": "2026-04-07T14:19:43.516Z",
+      "name": "문경 크게 한바퀴",
+      "siteId": "mungyeong",
+      "siteName": "문경",
+      "date": "2026-04-08",
+      "taskType": "RACE",
+      "sssOpenTime": "12:00",
+      "taskDeadlineTime": "23:00",
+      "distanceKm": 39.888255612207764,
+      "turnpoints": [
+        {
+          "order": 1,
+          "name": "M27",
+          "label": "TAKEOFF- MUNGYEONG1",
+          "lat": 36.731167,
+          "lng": 128.174667,
+          "radiusM": 200,
+          "taskType": "start",
+          "elevationM": 755.5609106608557
+        },
+        {
+          "order": 2,
+          "name": "M31",
+          "label": "MT- BUGOKRI",
+          "lat": 36.710333,
+          "lng": 128.2,
+          "radiusM": 1700,
+          "taskType": "sss",
+          "elevationM": 673.161361547488
+        },
+        {
+          "order": 3,
+          "name": "M20",
+          "label": "MT- UNDAL",
+          "lat": 36.756333,
+          "lng": 128.198833,
+          "radiusM": 500,
+          "taskType": "turnpoint",
+          "elevationM": 1002.2811444629832
+        },
+        {
+          "order": 4,
+          "name": "M07",
+          "label": "MT- DaeMi",
+          "lat": 36.8125,
+          "lng": 128.216833,
+          "radiusM": 1000,
+          "taskType": "turnpoint",
+          "elevationM": 980.3393575259661
+        },
+        {
+          "order": 5,
+          "name": "M06",
+          "label": "Migolchi",
+          "lat": 36.829,
+          "lng": 128.146833,
+          "radiusM": 1000,
+          "taskType": "turnpoint",
+          "elevationM": 786.9898397101024
+        },
+        {
+          "order": 6,
+          "name": "M10",
+          "label": "MT- JUHEUL",
+          "lat": 36.778833,
+          "lng": 128.106833,
+          "radiusM": 1600,
+          "taskType": "turnpoint",
+          "elevationM": 846.8894980550297
+        },
+        {
+          "order": 7,
+          "name": "M32",
+          "label": "MT- SeongJu",
+          "lat": 36.698,
+          "lng": 128.093833,
+          "radiusM": 2000,
+          "taskType": "turnpoint",
+          "elevationM": 574.1317852564961
+        },
+        {
+          "order": 8,
+          "name": "M35",
+          "label": "FORTRESS- GOMOSAN",
+          "lat": 36.666667,
+          "lng": 128.129333,
+          "radiusM": 2200,
+          "taskType": "turnpoint",
+          "elevationM": 183.06492170975903
+        },
+        {
+          "order": 9,
+          "name": "M28",
+          "label": "MT- BONGMYEONG",
+          "lat": 36.7205,
+          "lng": 128.144167,
+          "radiusM": 1000,
+          "taskType": "turnpoint",
+          "elevationM": 588.4535441158205
+        },
+        {
+          "order": 10,
+          "name": "M24",
+          "label": "TAKEOFF- MUNGYEONG2",
+          "lat": 36.739667,
+          "lng": 128.174167,
+          "radiusM": 400,
+          "taskType": "ess",
+          "elevationM": 655.3966751189237
+        },
+        {
+          "order": 11,
+          "name": "L23",
+          "label": "LANDING- GOYORI",
+          "lat": 36.737,
+          "lng": 128.154167,
+          "radiusM": 400,
+          "taskType": "goal",
+          "elevationM": 245.2217785492441
+        }
+      ]
+    },
+    {
+      "id": "고헌산-메인-타이밍-코스-1775549537226",
+      "createdAt": "2026-04-07T08:12:17.225Z",
+      "updatedAt": "2026-04-07T08:12:17.225Z",
+      "name": "고헌산 메인 타이밍 코스",
+      "siteId": "goheonsan",
+      "siteName": "울산 고헌산",
+      "date": "2026-04-09",
+      "taskType": "RACE",
+      "sssOpenTime": "12:00",
+      "taskDeadlineTime": "23:00",
+      "distanceKm": 33.28456405988793,
+      "turnpoints": [
+        {
+          "order": 1,
+          "name": "U35101",
+          "label": "-M-GOHEON",
+          "lat": 35.6417,
+          "lng": 129.0888,
+          "radiusM": 400,
+          "taskType": "start",
+          "elevationM": 921.5821487931703
+        },
+        {
+          "order": 2,
+          "name": "U39103",
+          "label": "-M-GAJI",
+          "lat": 35.6202,
+          "lng": 129.0029,
+          "radiusM": 400,
+          "taskType": "sss",
+          "elevationM": 1112.4506016103664
+        },
+        {
+          "order": 3,
+          "name": "C27116",
+          "label": "-M-UNMUN",
+          "lat": 35.6157,
+          "lng": 128.9599,
+          "radiusM": 400,
+          "taskType": "turnpoint",
+          "elevationM": 1057.4231537647208
+        },
+        {
+          "order": 4,
+          "name": "M19079",
+          "label": "-M-SILHAE",
+          "lat": 35.5846,
+          "lng": 128.9228,
+          "radiusM": 1500,
+          "taskType": "turnpoint",
+          "elevationM": 688.1677507032327
+        },
+        {
+          "order": 5,
+          "name": "M14078",
+          "label": "-M-JUNGGAK",
+          "lat": 35.548,
+          "lng": 128.9039,
+          "radiusM": 400,
+          "taskType": "turnpoint",
+          "elevationM": 772.7007902392733
+        },
+        {
+          "order": 6,
+          "name": "M12002",
+          "label": "MILYANG-IC",
+          "lat": 35.4863,
+          "lng": 128.793031,
+          "radiusM": 1150,
+          "taskType": "ess",
+          "elevationM": 304.2783359975033
+        },
+        {
+          "order": 7,
+          "name": "M30032",
+          "label": "-T-JASISAN",
+          "lat": 35.472494,
+          "lng": 128.789558,
+          "radiusM": 400,
+          "taskType": "goal",
+          "elevationM": 248.55486311872895
+        }
+      ]
+    },
+    {
+      "id": "문경-m27-m24-m31-m30-북북서-기본-수정본-1775548439668",
+      "createdAt": "2026-04-07T07:53:59.668Z",
+      "updatedAt": "2026-04-07T07:53:59.668Z",
+      "name": "문경 M27-M24-M31-M30 북북서 기본 수정본",
+      "siteId": "mungyeong",
+      "siteName": "문경",
+      "date": "2026-04-08",
+      "taskType": "RACE",
+      "sssOpenTime": "12:00",
+      "taskDeadlineTime": "23:00",
+      "distanceKm": 11.80271201643828,
+      "turnpoints": [
+        {
+          "order": 1,
+          "name": "M27",
+          "label": "TAKEOFF- MUNGYEONG1",
+          "lat": 36.731167,
+          "lng": 128.174667,
+          "radiusM": 200,
+          "taskType": "start",
+          "elevationM": 813.3534972918919
+        },
+        {
+          "order": 2,
+          "name": "M24",
+          "label": "TAKEOFF- MUNGYEONG2",
+          "lat": 36.739667,
+          "lng": 128.174167,
+          "radiusM": 400,
+          "taskType": "sss",
+          "elevationM": 665.7724451815275
+        },
+        {
+          "order": 3,
+          "name": "M31",
+          "label": "MT- BUGOKRI",
+          "lat": 36.710333,
+          "lng": 128.2,
+          "radiusM": 400,
+          "taskType": "turnpoint",
+          "elevationM": 724.01646669345
+        },
+        {
+          "order": 4,
+          "name": "M20",
+          "label": "MT- UNDAL",
+          "lat": 36.756333,
+          "lng": 128.198833,
+          "radiusM": 400,
+          "taskType": "ess",
+          "elevationM": 1050.0445641362853
+        },
+        {
+          "order": 5,
+          "name": "L23",
+          "label": "LANDING- GOYORI",
+          "lat": 36.737,
+          "lng": 128.154167,
+          "radiusM": 400,
+          "taskType": "goal",
+          "elevationM": 236.1126072362809
+        }
+      ]
+    },
+    {
+      "id": "문경-m27-m24-m31-m30-메인-코스-수정본-1775548060281",
+      "createdAt": "2026-04-07T07:47:40.281Z",
+      "updatedAt": "2026-04-07T07:53:15.854Z",
+      "name": "문경 M27-M24-M31-M30 북북서 기본",
+      "siteId": "mungyeong",
+      "siteName": "문경",
+      "date": "2026-04-08",
+      "taskType": "RACE",
+      "sssOpenTime": "12:00",
+      "taskDeadlineTime": "23:00",
+      "distanceKm": 14.802200653537703,
+      "turnpoints": [
+        {
+          "order": 1,
+          "name": "M27",
+          "label": "TAKEOFF- MUNGYEONG1",
+          "lat": 36.731167,
+          "lng": 128.174667,
+          "radiusM": 200,
+          "taskType": "start",
+          "elevationM": 836.2635574662651
+        },
+        {
+          "order": 2,
+          "name": "M24",
+          "label": "TAKEOFF- MUNGYEONG2",
+          "lat": 36.739667,
+          "lng": 128.174167,
+          "radiusM": 400,
+          "taskType": "sss",
+          "elevationM": 687.3013372990347
+        },
+        {
+          "order": 3,
+          "name": "M31",
+          "label": "MT- BUGOKRI",
+          "lat": 36.710333,
+          "lng": 128.2,
+          "radiusM": 400,
+          "taskType": "turnpoint",
+          "elevationM": 748.9060130321714
+        },
+        {
+          "order": 4,
+          "name": "M20",
+          "label": "MT- UNDAL",
+          "lat": 36.756333,
+          "lng": 128.198833,
+          "radiusM": 400,
+          "taskType": "turnpoint",
+          "elevationM": 1077.0214868519413
+        },
+        {
+          "order": 5,
+          "name": "M28",
+          "label": "MT- BONGMYEONG",
+          "lat": 36.7205,
+          "lng": 128.144167,
+          "radiusM": 400,
+          "taskType": "ess",
+          "elevationM": 659.9481776373436
+        },
+        {
+          "order": 6,
+          "name": "L23",
+          "label": "LANDING- GOYORI",
+          "lat": 36.737,
+          "lng": 128.154167,
+          "radiusM": 400,
+          "taskType": "goal",
+          "elevationM": 235.1461853930904
+        }
+      ]
+    },
+    {
+      "id": "문경-m27-m24-m31-m30-메인-코스-1775547221512",
+      "createdAt": "2026-04-07T07:33:41.511Z",
+      "updatedAt": "2026-04-07T07:33:41.511Z",
+      "name": "문경 M27-M24-M31-M30 메인 코스",
+      "siteId": "mungyeong",
+      "siteName": "문경",
+      "date": "2026-04-08",
+      "taskType": "RACE",
+      "sssOpenTime": "12:00",
+      "taskDeadlineTime": "23:00",
+      "distanceKm": 23.96517516364338,
+      "turnpoints": [
+        {
+          "order": 1,
+          "name": "M27",
+          "label": "TAKEOFF- MUNGYEONG1",
+          "lat": 36.731167,
+          "lng": 128.174667,
+          "radiusM": 200,
+          "taskType": "start",
+          "elevationM": 813.3534972918919
+        },
+        {
+          "order": 2,
+          "name": "M24",
+          "label": "TAKEOFF- MUNGYEONG2",
+          "lat": 36.739667,
+          "lng": 128.174167,
+          "radiusM": 400,
+          "taskType": "sss",
+          "elevationM": 665.7724451815275
+        },
+        {
+          "order": 3,
+          "name": "M31",
+          "label": "MT- BUGOKRI",
+          "lat": 36.710333,
+          "lng": 128.2,
+          "radiusM": 400,
+          "taskType": "turnpoint",
+          "elevationM": 724.01646669345
+        },
+        {
+          "order": 4,
+          "name": "M20",
+          "label": "MT- UNDAL",
+          "lat": 36.756333,
+          "lng": 128.198833,
+          "radiusM": 400,
+          "taskType": "turnpoint",
+          "elevationM": 1050.0445641362853
+        },
+        {
+          "order": 5,
+          "name": "M10",
+          "label": "MT- JUHEUL",
+          "lat": 36.778833,
+          "lng": 128.106833,
+          "radiusM": 400,
+          "taskType": "turnpoint",
+          "elevationM": 907.2294132312168
+        },
+        {
+          "order": 6,
+          "name": "M28",
+          "label": "MT- BONGMYEONG",
+          "lat": 36.7205,
+          "lng": 128.144167,
+          "radiusM": 400,
+          "taskType": "ess",
+          "elevationM": 636.8980197967134
+        },
+        {
+          "order": 7,
+          "name": "L23",
+          "label": "LANDING- GOYORI",
+          "lat": 36.737,
+          "lng": 128.154167,
+          "radiusM": 400,
+          "taskType": "goal",
+          "elevationM": 236.1126072362809
+        }
+      ]
+    },
+    {
+      "id": "문경-m27-m28-m29-세이프-코스-1775545822732",
+      "createdAt": "2026-04-07T07:10:22.732Z",
+      "updatedAt": "2026-04-07T07:10:22.732Z",
+      "name": "문경 M27-M28-M29 세이프 코스",
+      "siteId": "mungyeong",
+      "siteName": "문경",
+      "date": "2026-04-08",
+      "taskType": "RACE",
+      "sssOpenTime": "12:00",
+      "taskDeadlineTime": "23:00",
+      "distanceKm": 18.53560809078994,
+      "turnpoints": [
+        {
+          "order": 1,
+          "name": "M27",
+          "label": "TAKEOFF- MUNGYEONG1",
+          "lat": 36.731167,
+          "lng": 128.174667,
+          "radiusM": 200,
+          "taskType": "start",
+          "elevationM": 813.3534972918919
+        },
+        {
+          "order": 2,
+          "name": "M28",
+          "label": "MT- BONGMYEONG",
+          "lat": 36.7205,
+          "lng": 128.144167,
+          "radiusM": 400,
+          "taskType": "sss",
+          "elevationM": 636.8980197967134
+        },
+        {
+          "order": 3,
+          "name": "M29",
+          "label": "GOLF COURSE",
+          "lat": 36.715,
+          "lng": 128.1625,
+          "radiusM": 400,
+          "taskType": "turnpoint",
+          "elevationM": 368.67933621910225
+        },
+        {
+          "order": 4,
+          "name": "M31",
+          "label": "MT- BUGOKRI",
+          "lat": 36.710333,
+          "lng": 128.2,
+          "radiusM": 1300,
+          "taskType": "turnpoint",
+          "elevationM": 724.01646669345
+        },
+        {
+          "order": 5,
+          "name": "M30",
+          "label": "--------- --------",
+          "lat": 36.723483,
+          "lng": 128.242633,
+          "radiusM": 400,
+          "taskType": "turnpoint",
+          "elevationM": 193.0030847070992
+        },
+        {
+          "order": 6,
+          "name": "M20",
+          "label": "MT- UNDAL",
+          "lat": 36.756333,
+          "lng": 128.198833,
+          "radiusM": 1000,
+          "taskType": "ess",
+          "elevationM": 1050.0445641362853
+        },
+        {
+          "order": 7,
+          "name": "L23",
+          "label": "LANDING- GOYORI",
+          "lat": 36.737,
+          "lng": 128.154167,
+          "radiusM": 400,
+          "taskType": "goal",
+          "elevationM": 236.1126072362809
+        }
+      ]
+    },
+    {
+      "id": "문경-m27-m28-m29-세이프-코스-1775545819877",
+      "createdAt": "2026-04-07T07:10:19.877Z",
+      "updatedAt": "2026-04-07T07:10:19.877Z",
+      "name": "문경 M27-M28-M29 세이프 코스",
+      "siteId": "mungyeong",
+      "siteName": "문경",
+      "date": "2026-04-08",
+      "taskType": "RACE",
+      "sssOpenTime": "12:00",
+      "taskDeadlineTime": "23:00",
+      "distanceKm": 18.53560809078994,
+      "turnpoints": [
+        {
+          "order": 1,
+          "name": "M27",
+          "label": "TAKEOFF- MUNGYEONG1",
+          "lat": 36.731167,
+          "lng": 128.174667,
+          "radiusM": 200,
+          "taskType": "start",
+          "elevationM": 813.3534972918919
+        },
+        {
+          "order": 2,
+          "name": "M28",
+          "label": "MT- BONGMYEONG",
+          "lat": 36.7205,
+          "lng": 128.144167,
+          "radiusM": 400,
+          "taskType": "sss",
+          "elevationM": 636.8980197967134
+        },
+        {
+          "order": 3,
+          "name": "M29",
+          "label": "GOLF COURSE",
+          "lat": 36.715,
+          "lng": 128.1625,
+          "radiusM": 400,
+          "taskType": "turnpoint",
+          "elevationM": 368.67933621910225
+        },
+        {
+          "order": 4,
+          "name": "M31",
+          "label": "MT- BUGOKRI",
+          "lat": 36.710333,
+          "lng": 128.2,
+          "radiusM": 1300,
+          "taskType": "turnpoint",
+          "elevationM": 724.01646669345
+        },
+        {
+          "order": 5,
+          "name": "M30",
+          "label": "--------- --------",
+          "lat": 36.723483,
+          "lng": 128.242633,
+          "radiusM": 400,
+          "taskType": "turnpoint",
+          "elevationM": 193.0030847070992
+        },
+        {
+          "order": 6,
+          "name": "M20",
+          "label": "MT- UNDAL",
+          "lat": 36.756333,
+          "lng": 128.198833,
+          "radiusM": 1000,
+          "taskType": "ess",
+          "elevationM": 1050.0445641362853
+        },
+        {
+          "order": 7,
+          "name": "L23",
+          "label": "LANDING- GOYORI",
+          "lat": 36.737,
+          "lng": 128.154167,
+          "radiusM": 400,
+          "taskType": "goal",
+          "elevationM": 236.1126072362809
+        }
+      ]
+    },
+    {
+      "id": "문경-m27-m28-m29-세이프-코스-1775545818688",
+      "createdAt": "2026-04-07T07:10:18.688Z",
+      "updatedAt": "2026-04-07T07:10:18.688Z",
+      "name": "문경 M27-M28-M29 세이프 코스",
+      "siteId": "mungyeong",
+      "siteName": "문경",
+      "date": "2026-04-08",
+      "taskType": "RACE",
+      "sssOpenTime": "12:00",
+      "taskDeadlineTime": "23:00",
+      "distanceKm": 18.53560809078994,
+      "turnpoints": [
+        {
+          "order": 1,
+          "name": "M27",
+          "label": "TAKEOFF- MUNGYEONG1",
+          "lat": 36.731167,
+          "lng": 128.174667,
+          "radiusM": 200,
+          "taskType": "start",
+          "elevationM": 813.3534972918919
+        },
+        {
+          "order": 2,
+          "name": "M28",
+          "label": "MT- BONGMYEONG",
+          "lat": 36.7205,
+          "lng": 128.144167,
+          "radiusM": 400,
+          "taskType": "sss",
+          "elevationM": 636.8980197967134
+        },
+        {
+          "order": 3,
+          "name": "M29",
+          "label": "GOLF COURSE",
+          "lat": 36.715,
+          "lng": 128.1625,
+          "radiusM": 400,
+          "taskType": "turnpoint",
+          "elevationM": 368.67933621910225
+        },
+        {
+          "order": 4,
+          "name": "M31",
+          "label": "MT- BUGOKRI",
+          "lat": 36.710333,
+          "lng": 128.2,
+          "radiusM": 1300,
+          "taskType": "turnpoint",
+          "elevationM": 724.01646669345
+        },
+        {
+          "order": 5,
+          "name": "M30",
+          "label": "--------- --------",
+          "lat": 36.723483,
+          "lng": 128.242633,
+          "radiusM": 400,
+          "taskType": "turnpoint",
+          "elevationM": 193.0030847070992
+        },
+        {
+          "order": 6,
+          "name": "M20",
+          "label": "MT- UNDAL",
+          "lat": 36.756333,
+          "lng": 128.198833,
+          "radiusM": 1000,
+          "taskType": "ess",
+          "elevationM": 1050.0445641362853
+        },
+        {
+          "order": 7,
+          "name": "L23",
+          "label": "LANDING- GOYORI",
+          "lat": 36.737,
+          "lng": 128.154167,
+          "radiusM": 400,
+          "taskType": "goal",
+          "elevationM": 236.1126072362809
+        }
+      ]
+    }
+  ]
+}

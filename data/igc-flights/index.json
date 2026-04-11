@@ -1,0 +1,26 @@
+[
+  {
+    "id": "09e91191-eaf6-4657-ba63-b23d41c59d00",
+    "title": "2024-10-09 SungHoon Son",
+    "sourceFileName": "2024-10-09-XCT-SSO-01.igc",
+    "pilot": "SungHoon Son",
+    "glider": "UP Trango X",
+    "flightDate": "2024-10-09",
+    "uploadedAt": "2026-04-09T14:50:38.452Z",
+    "distanceKm": 39.22,
+    "durationSeconds": 4234,
+    "fixCount": 4235
+  },
+  {
+    "id": "9538c70e-579c-4342-80cc-65b1a36747d3",
+    "title": "2024-05-13 sunghoon son",
+    "sourceFileName": "2024-05-13-XNA-190261-01.igc",
+    "pilot": "sunghoon son",
+    "glider": "Ozone Swift 6",
+    "flightDate": "2024-05-13",
+    "uploadedAt": "2026-04-09T14:57:23.590Z",
+    "distanceKm": 57.4,
+    "durationSeconds": 7418,
+    "fixCount": 7419
+  }
+]

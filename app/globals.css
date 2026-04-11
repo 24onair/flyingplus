@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f4efe4;
+  --surface: rgba(255, 252, 246, 0.92);
+  --surface-strong: #fffaf0;
+  --line: rgba(104, 74, 33, 0.15);
+  --text: #1f2937;
+  --muted: #6b7280;
+  --accent: #1d6b57;
+  --accent-soft: #d8eee7;
+  --warn: #b45309;
+  --warn-soft: #fef3c7;
+  --danger: #991b1b;
+  --danger-soft: #fee2e2;
+  --btn-primary-bg: #1f2a37;
+  --btn-primary-text: #f9fafb;
+  --btn-primary-hover: #111827;
+  --btn-secondary-bg: rgba(255, 252, 246, 0.96);
+  --btn-secondary-text: #1f2937;
+  --btn-secondary-border: rgba(104, 74, 33, 0.22);
+  --btn-secondary-hover: #f7f1e6;
+  --btn-accent-bg: #1d6b57;
+  --btn-accent-text: #f4fbf8;
+  --btn-accent-hover: #175646;
+  --btn-danger-bg: #ffffff;
+  --btn-danger-text: #7f1d1d;
+  --btn-danger-border: rgba(153, 27, 27, 0.24);
+  --btn-danger-hover: #fff1f1;
+  --shadow: 0 20px 45px rgba(65, 47, 20, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(29, 107, 87, 0.14), transparent 25%),
+    radial-gradient(circle at top right, rgba(180, 83, 9, 0.14), transparent 24%),
+    linear-gradient(180deg, #f6f1e8 0%, #efe7d7 100%);
+  font-family:
+    "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.page-wrap {
+  width: min(1200px, calc(100vw - 24px));
+  margin: 0 auto;
+  padding: 24px 0 48px;
+}
+
+.glass {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  padding: 0.8rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease,
+    box-shadow 160ms ease;
+  border: 1px solid transparent;
+  box-shadow: 0 8px 18px rgba(28, 25, 23, 0.06);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+  opacity: 0.55;
+}
+
+.btn-primary {
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+}
+
+.btn-primary:hover {
+  background: var(--btn-primary-hover);
+  color: var(--btn-primary-text);
+}
+
+.btn-secondary {
+  background: var(--btn-secondary-bg);
+  border-color: var(--btn-secondary-border);
+  color: var(--btn-secondary-text);
+}
+
+.btn-secondary:hover {
+  background: var(--btn-secondary-hover);
+  border-color: rgba(104, 74, 33, 0.35);
+  color: var(--btn-secondary-text);
+}
+
+.btn-accent {
+  background: var(--btn-accent-bg);
+  color: var(--btn-accent-text);
+}
+
+.btn-accent:hover {
+  background: var(--btn-accent-hover);
+  color: var(--btn-accent-text);
+}
+
+.btn-danger {
+  background: var(--btn-danger-bg);
+  border-color: var(--btn-danger-border);
+  color: var(--btn-danger-text);
+}
+
+.btn-danger:hover {
+  background: var(--btn-danger-hover);
+  border-color: rgba(153, 27, 27, 0.36);
+  color: #7f1d1d;
+}

@@ -1,0 +1,1157 @@
+{
+  "mungyeong": {
+    "draft": {
+      "siteId": "mungyeong",
+      "siteName": "문경",
+      "regionName": "문경",
+      "tagline": "내륙 산악형 XC",
+      "regionType": "inland_mountain",
+      "launch": {
+        "name": "1 이륙장",
+        "lat": 36.731101,
+        "lng": 128.174374,
+        "elevationM": 860
+      },
+      "primaryLanding": {
+        "name": "문경 대표 랜딩장",
+        "lat": 36.737458,
+        "lng": 128.155549,
+        "elevationM": 239
+      },
+      "preferredWind": {
+        "best": [
+          "NE",
+          "ENE",
+          "E",
+          "WSW",
+          "W",
+          "WNW"
+        ],
+        "conditional": [
+          "NNE",
+          "ESE",
+          "SW",
+          "NW"
+        ],
+        "caution": [
+          "SE",
+          "SSW",
+          "NNW"
+        ],
+        "reject": [
+          "N",
+          "SSE",
+          "S"
+        ]
+      },
+      "windThresholds": {
+        "surfaceKmh": {
+          "good": [
+            10,
+            18
+          ],
+          "caution": [
+            [
+              7,
+              9
+            ],
+            [
+              19,
+              22
+            ]
+          ],
+          "rejectBelow": 6,
+          "rejectAbove": 23
+        },
+        "alt900Kmh": {
+          "good": [
+            14,
+            24
+          ],
+          "caution": [
+            [
+              10,
+              13
+            ],
+            [
+              25,
+              28
+            ]
+          ],
+          "rejectBelow": 9,
+          "rejectAbove": 29
+        },
+        "alt1200Kmh": {
+          "good": [
+            16,
+            26
+          ],
+          "caution": [
+            [
+              12,
+              15
+            ],
+            [
+              27,
+              31
+            ]
+          ],
+          "rejectBelow": 11,
+          "rejectAbove": 32
+        },
+        "alt1500Kmh": {
+          "good": [
+            18,
+            28
+          ],
+          "caution": [
+            [
+              14,
+              17
+            ],
+            [
+              29,
+              34
+            ]
+          ],
+          "rejectBelow": 13,
+          "rejectAbove": 35
+        }
+      },
+      "thermalThresholds": {
+        "good": [
+          2.5,
+          4
+        ],
+        "caution": [
+          [
+            1.8,
+            2.4
+          ],
+          [
+            4.1,
+            4.8
+          ]
+        ],
+        "rejectBelow": 1.7,
+        "rejectAbove": 5
+      },
+      "baseThresholdsM": {
+        "good": [
+          1800,
+          2300
+        ],
+        "caution": [
+          1600,
+          1799
+        ],
+        "rejectBelow": 1599
+      },
+      "launchWindows": [
+        {
+          "start": "10:30",
+          "end": "11:30",
+          "grade": "conditional",
+          "label": "로컬 상승 체크 후 출발"
+        },
+        {
+          "start": "11:30",
+          "end": "13:30",
+          "grade": "main",
+          "label": "XC 출발 핵심 시간대"
+        },
+        {
+          "start": "13:30",
+          "end": "15:00",
+          "grade": "late",
+          "label": "상층풍 강화 여부 확인 필요"
+        }
+      ],
+      "riskProfile": {
+        "seaBreezeSensitive": false,
+        "windShiftSensitive": false,
+        "valleyCrossSensitive": true,
+        "lateStartPenalty": false
+      },
+      "scoreAdjustments": [
+        {
+          "ruleId": "MG-01",
+          "condition": "thermal >= 3.0",
+          "delta": 4,
+          "reason": "써멀 가산"
+        }
+      ],
+      "waypointUpload": {
+        "fileName": "mungyeong-waypoints.wpt",
+        "fileType": "wpt"
+      },
+      "routeNotes": {
+        "bottleneckNotes": "문경 병목 구간 메모를 여기에 보강",
+        "retrieveNotes": "문경 회수 메모를 여기에 보강",
+        "operationsNotes": "문경 운영 메모를 여기에 보강"
+      }
+    },
+    "updatedAt": null
+  },
+  "goheonsan": {
+    "draft": {
+      "siteId": "goheonsan",
+      "siteName": "울산 고헌산",
+      "regionName": "울산 고헌산",
+      "tagline": "바람 전환 민감형 XC",
+      "regionType": "coastal_risk",
+      "launch": {
+        "name": "고헌산 대표 이륙장",
+        "lat": 35.655,
+        "lng": 129.042,
+        "elevationM": 960
+      },
+      "primaryLanding": {
+        "name": "울산 고헌산 대표 랜딩장",
+        "lat": 35.655,
+        "lng": 129.042,
+        "elevationM": 460
+      },
+      "preferredWind": {
+        "best": [
+          "WNW",
+          "NW",
+          "W"
+        ],
+        "conditional": [
+          "NNW",
+          "SW"
+        ],
+        "caution": [
+          "N",
+          "S"
+        ],
+        "reject": [
+          "E",
+          "ENE",
+          "ESE",
+          "SE"
+        ]
+      },
+      "windThresholds": {
+        "surfaceKmh": {
+          "good": [
+            8,
+            15
+          ],
+          "caution": [
+            [
+              6,
+              7
+            ],
+            [
+              16,
+              18
+            ]
+          ],
+          "rejectBelow": 5,
+          "rejectAbove": 19
+        },
+        "alt900Kmh": {
+          "good": [
+            12,
+            20
+          ],
+          "caution": [
+            [
+              9,
+              11
+            ],
+            [
+              21,
+              24
+            ]
+          ],
+          "rejectBelow": 8,
+          "rejectAbove": 25
+        },
+        "alt1200Kmh": {
+          "good": [
+            14,
+            22
+          ],
+          "caution": [
+            [
+              10,
+              13
+            ],
+            [
+              23,
+              26
+            ]
+          ],
+          "rejectBelow": 9,
+          "rejectAbove": 27
+        },
+        "alt1500Kmh": {
+          "good": [
+            16,
+            24
+          ],
+          "caution": [
+            [
+              12,
+              15
+            ],
+            [
+              25,
+              29
+            ]
+          ],
+          "rejectBelow": 11,
+          "rejectAbove": 30
+        }
+      },
+      "thermalThresholds": {
+        "good": [
+          2.3,
+          3.8
+        ],
+        "caution": [
+          [
+            1.8,
+            2.2
+          ],
+          [
+            3.9,
+            4.5
+          ]
+        ],
+        "rejectBelow": 1.7,
+        "rejectAbove": 4.8
+      },
+      "baseThresholdsM": {
+        "good": [
+          1700,
+          2200
+        ],
+        "caution": [
+          1500,
+          1699
+        ],
+        "rejectBelow": 1499
+      },
+      "launchWindows": [
+        {
+          "start": "10:30",
+          "end": "11:15",
+          "grade": "conditional",
+          "label": "초기 판단 구간"
+        },
+        {
+          "start": "11:15",
+          "end": "13:00",
+          "grade": "main",
+          "label": "가장 안정적인 XC 출발 후보"
+        },
+        {
+          "start": "13:00",
+          "end": "14:00",
+          "grade": "late",
+          "label": "해풍/전환 리스크 확대 가능"
+        }
+      ],
+      "riskProfile": {
+        "seaBreezeSensitive": true,
+        "windShiftSensitive": true,
+        "valleyCrossSensitive": false,
+        "lateStartPenalty": true
+      },
+      "scoreAdjustments": [
+        {
+          "ruleId": "GH-01",
+          "condition": "after 13:00",
+          "delta": -6,
+          "reason": "늦은 출발 감점"
+        }
+      ],
+      "waypointUpload": {
+        "fileName": "2024.05.17_TeamSeo_WayPoints_138Ozi_.wpt",
+        "fileType": "wpt"
+      },
+      "routeNotes": {
+        "bottleneckNotes": "울산 고헌산 병목 구간 메모를 여기에 보강",
+        "retrieveNotes": "울산 고헌산 회수 메모를 여기에 보강",
+        "operationsNotes": "울산 고헌산 운영 메모를 여기에 보강"
+      }
+    },
+    "updatedAt": "2026-04-07T08:10:19.867Z"
+  },
+  "영월-마추픽추-이륙장": {
+    "draft": {
+      "siteId": "영월-마추픽추-이륙장",
+      "siteName": "영월 마추픽추 이륙장-남풍&북풍",
+      "regionName": "강원",
+      "tagline": "https://www.windy.com/37.151/128.529?37.138,128.534,14,i:pre",
+      "regionType": "inland_mountain",
+      "launch": {
+        "name": "영월 마추픽추 이륙장-남풍&북풍",
+        "lat": 37.1507117,
+        "lng": 128.5288563,
+        "elevationM": 920
+      },
+      "primaryLanding": {
+        "name": "영월 마추픽추 이륙장-남풍&북풍 대표 랜딩장",
+        "lat": 37.130881,
+        "lng": 128.534471,
+        "elevationM": 176
+      },
+      "preferredWind": {
+        "best": [
+          "E",
+          "W",
+          "WNW"
+        ],
+        "conditional": [
+          "ENE",
+          "ESE",
+          "WSW",
+          "NW"
+        ],
+        "caution": [
+          "SE",
+          "SW",
+          "NNW"
+        ],
+        "reject": [
+          "N",
+          "NNE",
+          "NE",
+          "SSE",
+          "S",
+          "SSW"
+        ]
+      },
+      "windThresholds": {
+        "surfaceKmh": {
+          "good": [
+            10,
+            18
+          ],
+          "caution": [
+            [
+              7,
+              9
+            ],
+            [
+              19,
+              22
+            ]
+          ],
+          "rejectBelow": 6,
+          "rejectAbove": 23
+        },
+        "alt900Kmh": {
+          "good": [
+            14,
+            24
+          ],
+          "caution": [
+            [
+              10,
+              13
+            ],
+            [
+              25,
+              28
+            ]
+          ],
+          "rejectBelow": 9,
+          "rejectAbove": 29
+        },
+        "alt1200Kmh": {
+          "good": [
+            16,
+            26
+          ],
+          "caution": [
+            [
+              12,
+              15
+            ],
+            [
+              27,
+              31
+            ]
+          ],
+          "rejectBelow": 11,
+          "rejectAbove": 32
+        },
+        "alt1500Kmh": {
+          "good": [
+            18,
+            28
+          ],
+          "caution": [
+            [
+              14,
+              17
+            ],
+            [
+              29,
+              34
+            ]
+          ],
+          "rejectBelow": 13,
+          "rejectAbove": 35
+        }
+      },
+      "thermalThresholds": {
+        "good": [
+          2.5,
+          4
+        ],
+        "caution": [
+          [
+            1.8,
+            2.4
+          ],
+          [
+            4.1,
+            4.8
+          ]
+        ],
+        "rejectBelow": 1.7,
+        "rejectAbove": 5
+      },
+      "baseThresholdsM": {
+        "good": [
+          1800,
+          2300
+        ],
+        "caution": [
+          1600,
+          1799
+        ],
+        "rejectBelow": 1599
+      },
+      "launchWindows": [
+        {
+          "start": "10:30",
+          "end": "11:30",
+          "grade": "conditional",
+          "label": "로컬 상승 체크 후 출발"
+        },
+        {
+          "start": "11:30",
+          "end": "13:30",
+          "grade": "main",
+          "label": "XC 출발 핵심 시간대"
+        },
+        {
+          "start": "13:30",
+          "end": "15:00",
+          "grade": "late",
+          "label": "상층풍 변화 체크"
+        }
+      ],
+      "riskProfile": {
+        "seaBreezeSensitive": false,
+        "windShiftSensitive": false,
+        "valleyCrossSensitive": true,
+        "lateStartPenalty": false
+      },
+      "scoreAdjustments": [
+        {
+          "ruleId": "NEW-01",
+          "condition": "thermal >= 3.0",
+          "delta": 4,
+          "reason": "써멀 가산"
+        }
+      ],
+      "waypointUpload": {
+        "fileName": "new-site-waypoints.wpt",
+        "fileType": "wpt"
+      },
+      "routeNotes": {
+        "bottleneckNotes": "주 계곡 횡단 구간과 바람 전환 구간을 나중에 보강",
+        "retrieveNotes": "대표 랜딩장 회수는 양호하나 북측은 차량 회수 확인 필요",
+        "operationsNotes": "https://www.windy.com/37.151/128.529?37.138,128.534,14,i:pressure,p:metars"
+      }
+    },
+    "updatedAt": "2026-04-09T13:46:29.765Z"
+  },
+  "hapcheon": {
+    "draft": {
+      "siteId": "hapcheon",
+      "siteName": "합천",
+      "regionName": "합천",
+      "tagline": "장거리 확장형 XC",
+      "regionType": "long_distance",
+      "launch": {
+        "name": "합천 대표 이륙장",
+        "lat": 35.566,
+        "lng": 128.165,
+        "elevationM": 820
+      },
+      "primaryLanding": {
+        "name": "합천 대표 랜딩장",
+        "lat": 35.566,
+        "lng": 128.165,
+        "elevationM": 320
+      },
+      "preferredWind": {
+        "best": [
+          "WSW",
+          "W",
+          "WNW",
+          "NW"
+        ],
+        "conditional": [
+          "SW",
+          "NNW"
+        ],
+        "caution": [
+          "N",
+          "SSW"
+        ],
+        "reject": [
+          "NE",
+          "ENE",
+          "E",
+          "ESE",
+          "SE",
+          "S"
+        ]
+      },
+      "windThresholds": {
+        "surfaceKmh": {
+          "good": [
+            9,
+            17
+          ],
+          "caution": [
+            [
+              6,
+              8
+            ],
+            [
+              18,
+              21
+            ]
+          ],
+          "rejectBelow": 5,
+          "rejectAbove": 22
+        },
+        "alt900Kmh": {
+          "good": [
+            13,
+            23
+          ],
+          "caution": [
+            [
+              10,
+              12
+            ],
+            [
+              24,
+              27
+            ]
+          ],
+          "rejectBelow": 9,
+          "rejectAbove": 28
+        },
+        "alt1200Kmh": {
+          "good": [
+            15,
+            25
+          ],
+          "caution": [
+            [
+              11,
+              14
+            ],
+            [
+              26,
+              30
+            ]
+          ],
+          "rejectBelow": 10,
+          "rejectAbove": 31
+        },
+        "alt1500Kmh": {
+          "good": [
+            17,
+            27
+          ],
+          "caution": [
+            [
+              13,
+              16
+            ],
+            [
+              28,
+              33
+            ]
+          ],
+          "rejectBelow": 12,
+          "rejectAbove": 34
+        }
+      },
+      "thermalThresholds": {
+        "good": [
+          2.7,
+          4.2
+        ],
+        "caution": [
+          [
+            2,
+            2.6
+          ],
+          [
+            4.3,
+            5
+          ]
+        ],
+        "rejectBelow": 1.9,
+        "rejectAbove": 5.3
+      },
+      "baseThresholdsM": {
+        "good": [
+          1900,
+          2400
+        ],
+        "caution": [
+          1700,
+          1899
+        ],
+        "rejectBelow": 1699
+      },
+      "launchWindows": [
+        {
+          "start": "10:30",
+          "end": "11:30",
+          "grade": "conditional",
+          "label": "로컬 및 첫 연결 확인 단계"
+        },
+        {
+          "start": "11:30",
+          "end": "14:00",
+          "grade": "main",
+          "label": "XC 확장에 유리한 시간대"
+        },
+        {
+          "start": "14:00",
+          "end": "15:30",
+          "grade": "late",
+          "label": "바람 변화와 회수 방향 확인"
+        }
+      ],
+      "riskProfile": {
+        "seaBreezeSensitive": false,
+        "windShiftSensitive": true,
+        "valleyCrossSensitive": true,
+        "lateStartPenalty": true
+      },
+      "scoreAdjustments": [
+        {
+          "ruleId": "HC-01",
+          "condition": "base >= 2100",
+          "delta": 5,
+          "reason": "장거리 확장 가산"
+        }
+      ],
+      "waypointUpload": {
+        "fileName": "hapcheon-waypoints.wpt",
+        "fileType": "wpt"
+      },
+      "routeNotes": {
+        "bottleneckNotes": "합천 병목 구간 메모를 여기에 보강",
+        "retrieveNotes": "합천 회수 메모를 여기에 보강",
+        "operationsNotes": "합천 운영 메모를 여기에 보강"
+      }
+    },
+    "updatedAt": "2026-04-10T11:02:10.501Z"
+  },
+  "논개-이륙장": {
+    "draft": {
+      "siteId": "논개-이륙장",
+      "siteName": "논개 이륙장",
+      "regionName": "전북",
+      "tagline": "장수군 논개 이륙장 - 북서 (http://www.windguru.cz/int/index.php?go=1&v",
+      "regionType": "inland_mountain",
+      "launch": {
+        "name": "논개 이륙장",
+        "lat": 35.631037,
+        "lng": 127.255348,
+        "elevationM": 399
+      },
+      "primaryLanding": {
+        "name": "논개 이륙장 대표 랜딩장",
+        "lat": 35.632759,
+        "lng": 127.243267,
+        "elevationM": 375
+      },
+      "preferredWind": {
+        "best": [
+          "WNW",
+          "NW"
+        ],
+        "conditional": [
+          "W",
+          "NNW"
+        ],
+        "caution": [
+          "N",
+          "NNE",
+          "NE",
+          "SW",
+          "WSW"
+        ],
+        "reject": [
+          "ENE",
+          "E",
+          "ESE",
+          "SE",
+          "SSE",
+          "S",
+          "SSW"
+        ]
+      },
+      "windThresholds": {
+        "surfaceKmh": {
+          "good": [
+            10,
+            18
+          ],
+          "caution": [
+            [
+              7,
+              9
+            ],
+            [
+              19,
+              22
+            ]
+          ],
+          "rejectBelow": 6,
+          "rejectAbove": 23
+        },
+        "alt900Kmh": {
+          "good": [
+            14,
+            24
+          ],
+          "caution": [
+            [
+              10,
+              13
+            ],
+            [
+              25,
+              28
+            ]
+          ],
+          "rejectBelow": 9,
+          "rejectAbove": 29
+        },
+        "alt1200Kmh": {
+          "good": [
+            16,
+            26
+          ],
+          "caution": [
+            [
+              12,
+              15
+            ],
+            [
+              27,
+              31
+            ]
+          ],
+          "rejectBelow": 11,
+          "rejectAbove": 32
+        },
+        "alt1500Kmh": {
+          "good": [
+            18,
+            28
+          ],
+          "caution": [
+            [
+              14,
+              17
+            ],
+            [
+              29,
+              34
+            ]
+          ],
+          "rejectBelow": 13,
+          "rejectAbove": 35
+        }
+      },
+      "thermalThresholds": {
+        "good": [
+          2.5,
+          4
+        ],
+        "caution": [
+          [
+            1.8,
+            2.4
+          ],
+          [
+            4.1,
+            4.8
+          ]
+        ],
+        "rejectBelow": 1.7,
+        "rejectAbove": 5
+      },
+      "baseThresholdsM": {
+        "good": [
+          1800,
+          2300
+        ],
+        "caution": [
+          1600,
+          1799
+        ],
+        "rejectBelow": 1599
+      },
+      "launchWindows": [
+        {
+          "start": "10:30",
+          "end": "11:30",
+          "grade": "conditional",
+          "label": "로컬 상승 체크 후 출발"
+        },
+        {
+          "start": "11:30",
+          "end": "13:30",
+          "grade": "main",
+          "label": "XC 출발 핵심 시간대"
+        },
+        {
+          "start": "13:30",
+          "end": "15:00",
+          "grade": "late",
+          "label": "상층풍 변화 체크"
+        }
+      ],
+      "riskProfile": {
+        "seaBreezeSensitive": false,
+        "windShiftSensitive": false,
+        "valleyCrossSensitive": true,
+        "lateStartPenalty": false
+      },
+      "scoreAdjustments": [
+        {
+          "ruleId": "NEW-01",
+          "condition": "thermal >= 3.0",
+          "delta": 4,
+          "reason": "써멀 가산"
+        }
+      ],
+      "waypointUpload": {
+        "fileName": "new-site-waypoints.wpt",
+        "fileType": "wpt"
+      },
+      "routeNotes": {
+        "bottleneckNotes": "주 계곡 횡단 구간과 바람 전환 구간을 나중에 보강",
+        "retrieveNotes": "대표 랜딩장 회수는 양호하나 북측은 차량 회수 확인 필요",
+        "operationsNotes": "장수군 논개 이륙장 - 북서 (http://www.windguru.cz/int/index.php?go=1&vs=1&sc=173587&wj=knots&tj=c&odh=4&doh=22&fhours=180)\n장수읍 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4574025000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=86&main_cate_no=55&display_group=1)"
+      }
+    },
+    "updatedAt": "2026-04-10T13:03:12.378Z"
+  },
+  "자양산-이륙장": {
+    "draft": {
+      "siteId": "자양산-이륙장",
+      "siteName": "자양산 이륙장",
+      "regionName": "경남·부산·울산",
+      "tagline": "함안군 자양산 이륙장 - 북풍 https://www.windguru.cz/164101\n윈디기상-이슬점    ",
+      "regionType": "inland_mountain",
+      "launch": {
+        "name": "자양산 이륙장",
+        "lat": 35.29264,
+        "lng": 128.453522,
+        "elevationM": 920
+      },
+      "primaryLanding": {
+        "name": "자양산 이륙장 대표 랜딩장",
+        "lat": 35.29264,
+        "lng": 128.453522,
+        "elevationM": 230
+      },
+      "preferredWind": {
+        "best": [
+          "N",
+          "NNE",
+          "NNW"
+        ],
+        "conditional": [
+          "NE",
+          "W",
+          "NW"
+        ],
+        "caution": [
+          "ENE",
+          "SW",
+          "WNW"
+        ],
+        "reject": [
+          "E",
+          "ESE",
+          "SE",
+          "SSE",
+          "S"
+        ]
+      },
+      "windThresholds": {
+        "surfaceKmh": {
+          "good": [
+            10,
+            18
+          ],
+          "caution": [
+            [
+              7,
+              9
+            ],
+            [
+              19,
+              22
+            ]
+          ],
+          "rejectBelow": 6,
+          "rejectAbove": 23
+        },
+        "alt900Kmh": {
+          "good": [
+            14,
+            24
+          ],
+          "caution": [
+            [
+              10,
+              13
+            ],
+            [
+              25,
+              28
+            ]
+          ],
+          "rejectBelow": 9,
+          "rejectAbove": 29
+        },
+        "alt1200Kmh": {
+          "good": [
+            16,
+            26
+          ],
+          "caution": [
+            [
+              12,
+              15
+            ],
+            [
+              27,
+              31
+            ]
+          ],
+          "rejectBelow": 11,
+          "rejectAbove": 32
+        },
+        "alt1500Kmh": {
+          "good": [
+            18,
+            28
+          ],
+          "caution": [
+            [
+              14,
+              17
+            ],
+            [
+              29,
+              34
+            ]
+          ],
+          "rejectBelow": 13,
+          "rejectAbove": 35
+        }
+      },
+      "thermalThresholds": {
+        "good": [
+          2.5,
+          4
+        ],
+        "caution": [
+          [
+            1.8,
+            2.4
+          ],
+          [
+            4.1,
+            4.8
+          ]
+        ],
+        "rejectBelow": 1.7,
+        "rejectAbove": 5
+      },
+      "baseThresholdsM": {
+        "good": [
+          1800,
+          2300
+        ],
+        "caution": [
+          1600,
+          1799
+        ],
+        "rejectBelow": 1599
+      },
+      "launchWindows": [
+        {
+          "start": "10:30",
+          "end": "11:30",
+          "grade": "conditional",
+          "label": "로컬 상승 체크 후 출발"
+        },
+        {
+          "start": "11:30",
+          "end": "13:30",
+          "grade": "main",
+          "label": "XC 출발 핵심 시간대"
+        },
+        {
+          "start": "13:30",
+          "end": "15:00",
+          "grade": "late",
+          "label": "상층풍 변화 체크"
+        }
+      ],
+      "riskProfile": {
+        "seaBreezeSensitive": false,
+        "windShiftSensitive": false,
+        "valleyCrossSensitive": true,
+        "lateStartPenalty": false
+      },
+      "scoreAdjustments": [
+        {
+          "ruleId": "NEW-01",
+          "condition": "thermal >= 3.0",
+          "delta": 4,
+          "reason": "써멀 가산"
+        }
+      ],
+      "waypointUpload": {
+        "fileName": "new-site-waypoints.wpt",
+        "fileType": "wpt"
+      },
+      "routeNotes": {
+        "bottleneckNotes": "주 계곡 횡단 구간과 바람 전환 구간을 나중에 보강",
+        "retrieveNotes": "대표 랜딩장 회수는 양호하나 북측은 차량 회수 확인 필요",
+        "operationsNotes": "함안군 자양산 이륙장 - 북풍 https://www.windguru.cz/164101\n윈디기상-이슬점               https://www.windy.com/?2023031703,35.290,128.457,14,m:eDYajJg\n산서리 - 실시간 관측자료   http://www.kma.go.kr/cgi-bin/aws/nph-aws_txt_min?201305132135&0&MINDB_01M&920&a"
+      }
+    },
+    "updatedAt": "2026-04-11T02:33:37.176Z"
+  }
+}

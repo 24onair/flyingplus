@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IGC Dashboard Prototype</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="./viewer.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <p class="eyebrow">Independent Prototype</p>
+        <div class="hero-actions">
+          <a class="playback-button secondary-link" href="/">XC 도우미 홈으로</a>
+          <a id="detail-back-link" class="playback-button secondary-link" href="./list.html">리스트로 돌아가기</a>
+        </div>
+        <h1>IGC Flight Dashboard</h1>
+        <p class="subtitle">
+          메인 XC 앱과 분리된 독립 분석 뷰입니다. 샘플 IGC 1개를 읽어
+          요약/트랙/프로파일을 확인합니다.
+        </p>
+      </section>
+
+      <section class="panel" id="status-panel">
+        <p class="status">샘플 비행 데이터를 불러오는 중...</p>
+      </section>
+
+      <section class="metrics-grid" id="metrics-grid" hidden></section>
+
+      <section class="content-grid map-first-grid" id="content-grid" hidden>
+        <article class="panel">
+          <div class="panel-head">
+            <h2>실제 트랙 맵</h2>
+            <p>OpenStreetMap 배경 + 비행 트랙 + 선언 Task</p>
+          </div>
+          <div class="playback-toolbar">
+            <button id="playback-toggle" class="playback-button" type="button">재생</button>
+            <input id="playback-range" class="playback-range" type="range" min="0" max="0" value="0" step="1" />
+            <div class="speed-toolbar" id="speed-toolbar">
+              <button class="speed-button is-active" type="button" data-speed="1">1x</button>
+              <button class="speed-button" type="button" data-speed="4">4x</button>
+              <button class="speed-button" type="button" data-speed="16">16x</button>
+              <button class="speed-button" type="button" data-speed="32">32x</button>
+            </div>
+            <div class="playback-readout">
+              <strong id="playback-time">--:--:--</strong>
+              <span id="playback-meta">속도 - / 상승률 -</span>
+            </div>
+          </div>
+          <div class="map-style-toolbar" id="map-style-toolbar">
+            <button class="speed-button is-active" type="button" data-map-style="basic">기본 지도</button>
+            <button class="speed-button" type="button" data-map-style="terrain">지형도</button>
+          </div>
+          <div id="track-map" class="map-view"></div>
+          <div class="map-legend" aria-label="비행 모드 범례">
+            <div class="map-legend-item">
+              <span class="map-legend-swatch thermal"></span>
+              <span>Thermal: 초록</span>
+            </div>
+            <div class="map-legend-item">
+              <span class="map-legend-swatch glide"></span>
+              <span>Glide: 파랑</span>
+            </div>
+            <div class="map-legend-item">
+              <span class="map-legend-swatch transition"></span>
+              <span>Transition: 주황</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <h2>고도 프로파일</h2>
+            <p>GPS 고도 기준 프로파일</p>
+          </div>
+          <svg id="altitude-svg" viewBox="0 0 800 300" class="chart-svg"></svg>
+          <div id="altitude-footer" class="altitude-footer">
+            <div class="altitude-footer-card">
+              <h3>비행 시간</h3>
+              <p id="altitude-footer-time">--:--:--</p>
+            </div>
+            <div class="altitude-footer-card">
+              <h3>현재 고도</h3>
+              <p id="altitude-footer-altitude">-m</p>
+            </div>
+            <div class="altitude-footer-card">
+              <h3>직전 대비</h3>
+              <p id="altitude-footer-delta">-</p>
+            </div>
+            <div class="altitude-footer-card">
+              <h3>지나는 구간 고도</h3>
+              <p id="altitude-footer-segment">-</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="content-grid" id="stats-grid" hidden>
+        <article class="panel">
+          <div class="panel-head">
+            <h2>속도 / 상승률</h2>
+            <p>연속 fix 계산 기준</p>
+          </div>
+          <div id="flight-stats" class="stack"></div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <h2>구간 통계</h2>
+            <p>선언 task point 기준 구간 거리/고도 변화</p>
+          </div>
+          <div id="segment-stats" class="stack"></div>
+        </article>
+      </section>
+
+      <section class="content-grid" id="anomaly-grid" hidden>
+        <article class="panel">
+          <div class="panel-head">
+            <h2>이상 속도 체크</h2>
+            <p>비정상 최고속도 후보를 따로 분리합니다.</p>
+          </div>
+          <div id="anomaly-stats" class="stack"></div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <h2>의심 구간 목록</h2>
+            <p>짧은 시간에 과도한 속도/고도 변화가 있는 구간</p>
+          </div>
+          <div id="anomaly-list" class="stack"></div>
+        </article>
+      </section>
+
+      <section class="content-grid" id="mode-grid" hidden>
+        <article class="panel">
+          <div class="panel-head">
+            <h2>Thermal / Glide 자동 분석</h2>
+            <p>상승률과 속도로 비행 모드를 자동 분류합니다.</p>
+          </div>
+          <div id="mode-stats" class="stack"></div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <h2>분석된 구간</h2>
+            <p>thermal / glide 구간을 시간순으로 보여줍니다.</p>
+          </div>
+          <div id="mode-list" class="stack"></div>
+        </article>
+      </section>
+
+      <section class="content-grid" id="lists-grid" hidden>
+        <article class="panel">
+          <div class="panel-head">
+            <h2>선언 Task</h2>
+            <p>IGC 내부 C record / LXNAOZN 기준</p>
+          </div>
+          <div id="task-list" class="stack"></div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <h2>비행 상태 이벤트</h2>
+            <p>Naviter `LXNA::PHASE` 이벤트</p>
+          </div>
+          <div id="phase-list" class="stack"></div>
+        </article>
+      </section>
+    </main>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script type="module" src="./viewer.js"></script>
+  </body>
+</html>

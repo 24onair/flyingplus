@@ -1,0 +1,2401 @@
+[
+  {
+    "id": "001-자양산-이륙장-128454-35293",
+    "sourceName": "자양산 이륙장",
+    "normalizedName": "자양산 이륙장",
+    "category": "launch_site",
+    "lat": 35.29264,
+    "lng": 128.453522,
+    "altitudeM": 0,
+    "descriptionText": "함안군 자양산 이륙장 - 북풍 https://www.windguru.cz/164101\n윈디기상-이슬점               https://www.windy.com/?2023031703,35.290,128.457,14,m:eDYajJg\n산서리 - 실시간 관측자료   http://www.kma.go.kr/cgi-bin/aws/nph-aws_txt_min?201305132135&0&MINDB_01M&920&a",
+    "windHint": null,
+    "sourceLinks": [
+      "https://www.windguru.cz/164101",
+      "https://www.windy.com/?2023031703,35.290,128.457,14,m:eDYajJg",
+      "http://www.kma.go.kr/cgi-bin/aws/nph-aws_txt_min?201305132135&0&MINDB_01M&920&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "002-바람재-이륙장-128526-35183",
+    "sourceName": "바람재 이륙장",
+    "normalizedName": "바람재 이륙장",
+    "category": "launch_site",
+    "lat": 35.182753,
+    "lng": 128.526392,
+    "altitudeM": 0,
+    "descriptionText": "마산 바람재 이륙장 - 남동 / 동 (http://www.windguru.cz/int/index.php?sc=191308)\n윈디기상 - 이슬점             https://www.windy.com/?2023031906,35.182,128.525,15\n가포동 - 실시간 관측자료 http://www.kma.go.kr/cgi-bin/aws/nph-aws_txt_min?201606091401&0&MINDB_01M&155&a",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=191308",
+      "https://www.windy.com/?2023031906,35.182,128.525,15",
+      "http://www.kma.go.kr/cgi-bin/aws/nph-aws_txt_min?201606091401&0&MINDB_01M&155&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "003-한우산-이륙장-128205-35395",
+    "sourceName": "한우산 이륙장",
+    "normalizedName": "한우산 이륙장",
+    "category": "launch_site",
+    "lat": 35.394857,
+    "lng": 128.205471,
+    "altitudeM": 0,
+    "descriptionText": "의령군 한우산 이륙장 - 남동 / 남 (http://www.windguru.cz/int/index.php?\ngo=1&lang=eng&vs=1&sc=164103&wj=ms&tj=c&odh=4&doh=22&fhours=180)\n가례면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4872031000)\n무전리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201305132137&0&MINDB_01M&263&a)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4872031000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201305132137&0&MINDB_01M&263&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "004-음달산-이륙장-128802-35426",
+    "sourceName": "음달산 이륙장",
+    "normalizedName": "음달산 이륙장",
+    "category": "launch_site",
+    "lat": 35.4263837,
+    "lng": 128.8017688,
+    "altitudeM": 0,
+    "descriptionText": "밀양시 음달산 이륙장 - 북풍,남서   https://www.windguru.cz/133652\n윈디 기상-이슬점              https://www.windy.com/?2023031906,35.428,128.801,16,m:eEdajJP\n내이동 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201305132138&0&MINDB_01M&288&a)\n천사부메랑 - www.1004boom.kr",
+    "windHint": null,
+    "sourceLinks": [
+      "https://www.windguru.cz/133652",
+      "https://www.windy.com/?2023031906,35.428,128.801,16,m:eEdajJP",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201305132138&0&MINDB_01M&288&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "005-대암산-이륙장-128218-35534",
+    "sourceName": "대암산 이륙장",
+    "normalizedName": "대암산 이륙장",
+    "category": "launch_site",
+    "lat": 35.533763,
+    "lng": 128.217616,
+    "altitudeM": 0,
+    "descriptionText": "합천군 대암산 이륙장 - 동풍.서풍 (http://www.windguru.cz/int/index.php?\ngo=1&lang=eng&vs=1&sc=133660&wj=ms&tj=c&odh=4&doh=22&fhours=180)\n초계면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4889036000)\n가현리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306122307&0&MINDB_01M&935&a)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=21&main_cate_no=32&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4889036000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306122307&0&MINDB_01M&935&a",
+      "http://1004boom.kr/front/php/product.php?product_no=21&main_cate_no=32&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "006-원정산-이륙장-128771-35634",
+    "sourceName": "원정산 이륙장",
+    "normalizedName": "원정산 이륙장",
+    "category": "launch_site",
+    "lat": 35.633861,
+    "lng": 128.770752,
+    "altitudeM": 0,
+    "descriptionText": "청도군 원정산 이륙장 - 서풍 / 북서풍 (http://www.windguru.cz/int/index.php?\ngo=1&lang=eng&vs=1&sc=163197&wj=ms&tj=c&odh=4&doh=22&fhours=180)\n청도읍 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4782025300)\n송북리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201305132147&0&MINDB_01M&813&a)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=188&main_cate_no=31&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4782025300",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201305132147&0&MINDB_01M&813&a",
+      "http://1004boom.kr/front/php/product.php?product_no=188&main_cate_no=31&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "007-대니산-이륙장-128408-35677",
+    "sourceName": "대니산 이륙장",
+    "normalizedName": "대니산 이륙장",
+    "category": "launch_site",
+    "lat": 35.67703,
+    "lng": 128.408332,
+    "altitudeM": 0,
+    "descriptionText": "대구시 대니산 이륙장 - 남동/북동 (http://www.windguru.cz/int/index.php?sc=238121)\n현풍면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=2771036000)\n원교리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306051000&0&MINDB_01M&828&a)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=54&main_cate_no=32&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=238121",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=2771036000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306051000&0&MINDB_01M&828&a",
+      "http://1004boom.kr/front/php/product.php?product_no=54&main_cate_no=32&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "008-깃대봉-이륙장-128356-35094",
+    "sourceName": "깃대봉 이륙장",
+    "normalizedName": "깃대봉 이륙장",
+    "category": "launch_site",
+    "lat": 35.093577,
+    "lng": 128.356104,
+    "altitudeM": 0,
+    "descriptionText": "고성군 깃대봉 이륙장 - 서풍 (http://www.windguru.cz/int/index.php?vs=1&sc=353074)\n구만면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4882039000)\n명성리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192253&0&MINDB_01M&929&a)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=162&main_cate_no=80&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=353074",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4882039000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192253&0&MINDB_01M&929&a",
+      "http://1004boom.kr/front/php/product.php?product_no=162&main_cate_no=80&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "009-월아산-이륙장-128195-35191",
+    "sourceName": "월아산 이륙장",
+    "normalizedName": "월아산 이륙장",
+    "category": "launch_site",
+    "lat": 35.19089,
+    "lng": 128.194914,
+    "altitudeM": 0,
+    "descriptionText": "진주시 월아산 이륙장 - 남풍 (http://www.windguru.cz/int/index.php?\ngo=1&lang=eng&vs=1&sc=164119&wj=ms&tj=c&odh=4&doh=22&fhours=180)\n금산면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4817025000)\n평거동 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192255&0&MINDB_01M&192&a)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=160&main_cate_no=80&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4817025000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192255&0&MINDB_01M&192&a",
+      "http://1004boom.kr/front/php/product.php?product_no=160&main_cate_no=80&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "010-계룡산-이륙장-128616-34862",
+    "sourceName": "계룡산 이륙장",
+    "normalizedName": "계룡산 이륙장",
+    "category": "launch_site",
+    "lat": 34.862236,
+    "lng": 128.615699,
+    "altitudeM": 0,
+    "descriptionText": "거제시 계룡산 이륙장 - 남서   https://www.windguru.cz/165133                          윈디기상-이슬점               https://www.windy.com/?2023031906,34.859,128.618,14\n동부면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4831032000)\n저구리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192250&0&MINDB_01M&947&a)\n천사부메랑 - www.1004boom.kr",
+    "windHint": null,
+    "sourceLinks": [
+      "https://www.windguru.cz/165133",
+      "https://www.windy.com/?2023031906,34.859,128.618,14",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4831032000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192250&0&MINDB_01M&947&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "011-진례-이륙장-128741-35221",
+    "sourceName": "진례 이륙장",
+    "normalizedName": "진례 이륙장",
+    "category": "launch_site",
+    "lat": 35.220521,
+    "lng": 128.741012,
+    "altitudeM": 0,
+    "descriptionText": "김해시 진례 이륙장 - 북동 / 동풍 (http://www.windguru.cz/int/index.php?\ngo=1&lang=eng&vs=1&sc=164120&wj=ms&tj=c&odh=4&doh=22&fhours=180)\n진례면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4825033000)\n우동리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192207&0&MINDB_01M&673&a)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4825033000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192207&0&MINDB_01M&673&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "012-봉화산-이륙장-128779-35317",
+    "sourceName": "봉화산 이륙장",
+    "normalizedName": "봉화산 이륙장",
+    "category": "launch_site",
+    "lat": 35.316631,
+    "lng": 128.779421,
+    "altitudeM": 0,
+    "descriptionText": "김해시 봉화산 이륙장 - 남풍 (http://www.windguru.cz/int/index.php?=1&lang=eng&vs=1&sc=133655&wj=ms&tj=c&odh=4&doh=22&fhours=180)\n한림면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4825034000)\n봉림리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192209&0&MINDB_01M&925&a)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=178&main_cate_no=30&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?=1&lang=eng&vs=1&sc=133655&wj=ms&tj=c&odh=4&doh=22&fhours=180",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4825034000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192209&0&MINDB_01M&925&a",
+      "http://1004boom.kr/front/php/product.php?product_no=178&main_cate_no=30&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "013-와룡산-이륙장-128098-34954",
+    "sourceName": "와룡산 이륙장",
+    "normalizedName": "와룡산 이륙장",
+    "category": "launch_site",
+    "lat": 34.954408,
+    "lng": 128.098354,
+    "altitudeM": 0,
+    "descriptionText": "사천시 와룡산 이륙장 - 남풍 (http://www.windguru.cz/int/index.php?vs=1&sc=238941)\n향촌동 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4824057000)\n대방동 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192252&0&MINDB_01M&907&a)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=174&main_cate_no=32&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=238941",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4824057000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192252&0&MINDB_01M&907&a",
+      "http://1004boom.kr/front/php/product.php?product_no=174&main_cate_no=32&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "014-각산-이륙장-128056-34957",
+    "sourceName": "각산 이륙장",
+    "normalizedName": "각산 이륙장",
+    "category": "launch_site",
+    "lat": 34.957257,
+    "lng": 128.056297,
+    "altitudeM": 0,
+    "descriptionText": "사천시 각산 이륙장 - 남서 / 북동 (http://www.windguru.cz/int/index.php?vs=1&sc=232878)\n동서동 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4824051000)\n대방동 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192252&0&MINDB_01M&907&a)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=121&main_cate_no=30&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=232878",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4824051000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192252&0&MINDB_01M&907&a",
+      "http://1004boom.kr/front/php/product.php?product_no=121&main_cate_no=30&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "015-구제봉-이륙장-127718-35130",
+    "sourceName": "구제봉 이륙장",
+    "normalizedName": "구제봉 이륙장",
+    "category": "launch_site",
+    "lat": 35.129912,
+    "lng": 127.71791,
+    "altitudeM": 0,
+    "descriptionText": "하동군 구제봉 이륙장 - 북풍 (http://www.windguru.cz/int/index.php?vs=1&sc=357903)\n악양면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4885032000)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=357903",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4885032000"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "016-형제봉-이륙장-127685-35206",
+    "sourceName": "형제봉 이륙장",
+    "normalizedName": "형제봉 이륙장",
+    "category": "launch_site",
+    "lat": 35.205689,
+    "lng": 127.685165,
+    "altitudeM": 0,
+    "descriptionText": "하동군 형제봉 이륙장 - 동풍 (http://www.windguru.cz/int/index.php?go=1&vs=1&sc=271376&wj=kmh&tj=c&odh=4&doh=22&fhours=180)\n악양면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4885032000)\n읍내리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306142256&0&MINDB_01M&932&a)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?go=1&vs=1&sc=271376&wj=kmh&tj=c&odh=4&doh=22&fhours=180",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4885032000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306142256&0&MINDB_01M&932&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "017-특리-이륙장-127833-35451",
+    "sourceName": "특리 이륙장",
+    "normalizedName": "특리 이륙장",
+    "category": "launch_site",
+    "lat": 35.450812,
+    "lng": 127.833481,
+    "altitudeM": 0,
+    "descriptionText": "산청군 특리 이륙장 - 동풍 / 서풍 (http://www.windguru.cz/int/index.php?vs=1&sc=357949)\n오부면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4886032000)\n지리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192256&0&MINDB_01M&289&a)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=160&main_cate_no=80&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=357949",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4886032000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192256&0&MINDB_01M&289&a",
+      "http://1004boom.kr/front/php/product.php?product_no=160&main_cate_no=80&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "018-망실봉-이륙장-127877-35668",
+    "sourceName": "망실봉 이륙장",
+    "normalizedName": "망실봉 이륙장",
+    "category": "launch_site",
+    "lat": 35.668245,
+    "lng": 127.877297,
+    "altitudeM": 0,
+    "descriptionText": "거창군 망실봉 이륙장 - 동풍 (http://www.windguru.cz/int/index.php?vs=1&sc=434356)\n거창읍 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4888025000)\n정장리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192256&0&MINDB_01M&284&a)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=26&main_cate_no=30&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=434356",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4888025000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192256&0&MINDB_01M&284&a",
+      "http://1004boom.kr/front/php/product.php?product_no=26&main_cate_no=30&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "019-논개-이륙장-127540-35624",
+    "sourceName": "논개 이륙장",
+    "normalizedName": "논개 이륙장",
+    "category": "launch_site",
+    "lat": 35.624163,
+    "lng": 127.539768,
+    "altitudeM": 0,
+    "descriptionText": "장수군 논개 이륙장 - 북서 (http://www.windguru.cz/int/index.php?go=1&vs=1&sc=173587&wj=knots&tj=c&odh=4&doh=22&fhours=180)\n장수읍 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4574025000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=86&main_cate_no=55&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?go=1&vs=1&sc=173587&wj=knots&tj=c&odh=4&doh=22&fhours=180",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4574025000",
+      "http://1004boom.kr/front/php/product.php?product_no=86&main_cate_no=55&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "020-황금산-이륙장-128278-36467",
+    "sourceName": "황금산 이륙장",
+    "normalizedName": "황금산 이륙장",
+    "category": "launch_site",
+    "lat": 36.467405,
+    "lng": 128.278341,
+    "altitudeM": 0,
+    "descriptionText": "상주시 황금산 이륙장 - 서풍 / 동풍 (http://www.windguru.cz/int/index.php?sc=359903)\n사벌면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4725032000)\n낙상리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306122225&0&MINDB_01M&849&a)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=359903",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4725032000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306122225&0&MINDB_01M&849&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "021-문경-이륙장-128175-36731",
+    "sourceName": "문경 이륙장",
+    "normalizedName": "문경 이륙장",
+    "category": "launch_site",
+    "lat": 36.730699,
+    "lng": 128.174615,
+    "altitudeM": 0,
+    "descriptionText": "문경시 문경 이륙장 - 서풍 / 동풍 (http://www.windguru.cz/int/index.php?\ngo=1&lang=eng&vs=1&sc=124527&wj=kmh&tj=c&odh=0&doh=24&fhours=180)\n문경읍 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4728025000)\n외어리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306122219&0&MINDB_01M&818&a)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4728025000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306122219&0&MINDB_01M&818&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "022-오산-이륙장-127480-35180",
+    "sourceName": "오산 이륙장",
+    "normalizedName": "오산 이륙장",
+    "category": "launch_site",
+    "lat": 35.180263,
+    "lng": 127.479858,
+    "altitudeM": 0,
+    "descriptionText": "구례군 오산 이륙장 - 북풍\n(http://www.windguru.cz/int/index.php?vs=1&sc=306474)문척면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4673031000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=164&main_cate_no=80&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=306474",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4673031000",
+      "http://1004boom.kr/front/php/product.php?product_no=164&main_cate_no=80&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "023-경각산-이륙장-127143-35721",
+    "sourceName": "경각산 이륙장",
+    "normalizedName": "경각산 이륙장",
+    "category": "launch_site",
+    "lat": 35.720838,
+    "lng": 127.142544,
+    "altitudeM": 0,
+    "descriptionText": "전주시 경각산 이륙장 - 북서 (http://www.windguru.cz/int/index.php?go=1&lang=eng&vs=1&sc=124531&wj=kmh&tj=c&odh=0&doh=24&fhours=180)\n신덕면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4575036000)\n원기리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306122229&0&MINDB_01M&317&a)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?go=1&lang=eng&vs=1&sc=124531&wj=kmh&tj=c&odh=0&doh=24&fhours=180",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4575036000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306122229&0&MINDB_01M&317&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "024-미륵산-이륙장-127036-36033",
+    "sourceName": "미륵산 이륙장",
+    "normalizedName": "미륵산 이륙장",
+    "category": "launch_site",
+    "lat": 36.032859,
+    "lng": 127.035728,
+    "altitudeM": 0,
+    "descriptionText": "익산시 미륵산 이륙장 - 남서 (http://www.windguru.cz/int/index.php?vs=1&sc=189790&wj=kmh&tj=c&odh=0&doh=24&fhours=180)\n삼기면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4514043000)\n신흥동 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306122233&0&MINDB_01M&702&a)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=189790&wj=kmh&tj=c&odh=0&doh=24&fhours=180",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4514043000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306122233&0&MINDB_01M&702&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "025-두산-이륙장-128397-36996",
+    "sourceName": "두산 이륙장",
+    "normalizedName": "두산 이륙장",
+    "category": "launch_site",
+    "lat": 36.996143,
+    "lng": 128.397474,
+    "altitudeM": 0,
+    "descriptionText": "단양군 두산 이륙장 - 북북서 (http://www.windguru.cz/int/index.php?sc=228253&switchlang=1)\n가곡면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4380032000)\n별곡리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306141938&0&MINDB_01M&601&a)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=176&main_cate_no=30&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=228253&switchlang=1",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4380032000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306141938&0&MINDB_01M&601&a",
+      "http://1004boom.kr/front/php/product.php?product_no=176&main_cate_no=30&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "026-간월재-이륙장-129044-35547",
+    "sourceName": "간월재 이륙장",
+    "normalizedName": "간월재 이륙장",
+    "category": "launch_site",
+    "lat": 35.546544,
+    "lng": 129.044123,
+    "altitudeM": 0,
+    "descriptionText": "울산시 간월재 이륙장 - 동풍 / 서풍 (http://www.windguru.cz/int/index.php?vs=1&sc=191314)\n상북면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=3171038000)\n향산리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192219&0&MINDB_01M&900&a)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=144&main_cate_no=31&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=191314",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=3171038000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192219&0&MINDB_01M&900&a",
+      "http://1004boom.kr/front/php/product.php?product_no=144&main_cate_no=31&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "027-주월산-이륙장-127212-34812",
+    "sourceName": "주월산 이륙장",
+    "normalizedName": "주월산 이륙장",
+    "category": "launch_site",
+    "lat": 34.812042,
+    "lng": 127.211552,
+    "altitudeM": 0,
+    "descriptionText": "보성군 주월산 이륙장 - 동풍 / 서풍 (http://www.windguru.cz/int/index.php?sc=299224)\n조성면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4678037000)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=299224",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4678037000"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "028-비봉산-이륙장-128143-37009",
+    "sourceName": "비봉산 이륙장",
+    "normalizedName": "비봉산 이륙장",
+    "category": "launch_site",
+    "lat": 37.00879,
+    "lng": 128.143029,
+    "altitudeM": 0,
+    "descriptionText": "제천시 비봉산 이륙장 - 서풍 (http://www.windguru.cz/int/index.php?vs=1&sc=306210)\n청풍면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4315032000)\n하천리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306122215&0&MINDB_01M&621&a)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=306210",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4315032000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306122215&0&MINDB_01M&621&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "029-방광산-이륙장-129058-36444",
+    "sourceName": "방광산 이륙장",
+    "normalizedName": "방광산 이륙장",
+    "category": "launch_site",
+    "lat": 36.443726,
+    "lng": 129.058414,
+    "altitudeM": 0,
+    "descriptionText": "청송군 방광산 이륙장 - 남풍 (http://www.windguru.cz/int/index.php?vs=1&sc=346230)\n청송읍 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4775025000)\n청송읍 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192246&0&MINDB_01M&276&a)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=25&main_cate_no=30&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=346230",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4775025000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192246&0&MINDB_01M&276&a",
+      "http://1004boom.kr/front/php/product.php?product_no=25&main_cate_no=30&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "030-사곡-이륙장-127007-36498",
+    "sourceName": "사곡 이륙장",
+    "normalizedName": "사곡 이륙장",
+    "category": "launch_site",
+    "lat": 36.497942,
+    "lng": 127.00736,
+    "altitudeM": 0,
+    "descriptionText": "공주시 사곡 이륙장 - 북서 (http://www.windguru.cz/int/index.php?vs=1&sc=370987)\n사곡면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4415039000)\n웅진동 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306122241&0&MINDB_01M&612&a)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=370987",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4415039000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306122241&0&MINDB_01M&612&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "031-사곡-이륙장-127012-36501",
+    "sourceName": "사곡 이륙장",
+    "normalizedName": "사곡 이륙장",
+    "category": "launch_site",
+    "lat": 36.500667,
+    "lng": 127.012167,
+    "altitudeM": 0,
+    "descriptionText": "공주시 사곡 이륙장 - 동풍 (http://www.windguru.cz/int/index.php?vs=1&sc=370986)\n사곡면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4415039000)\n웅진동 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306122241&0&MINDB_01M&612&a)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=370986",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4415039000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306122241&0&MINDB_01M&612&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "032-사곡-이륙장-127016-36519",
+    "sourceName": "사곡 이륙장",
+    "normalizedName": "사곡 이륙장",
+    "category": "launch_site",
+    "lat": 36.519363,
+    "lng": 127.016373,
+    "altitudeM": 0,
+    "descriptionText": "공주시 사곡 이륙장 - 남서 (http://www.windguru.cz/int/index.php?vs=1&sc=306145)\n사곡면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4415039000)\n웅진동 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306122241&0&MINDB_01M&612&a)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=306145",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4415039000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306122241&0&MINDB_01M&612&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "033-감악산-이륙장-127928-35596",
+    "sourceName": "감악산 이륙장",
+    "normalizedName": "감악산 이륙장",
+    "category": "launch_site",
+    "lat": 35.595693,
+    "lng": 127.928109,
+    "altitudeM": 0,
+    "descriptionText": "거창군 감악산 이륙장 - 남동 (http://www.windguru.cz/int/index.php?vs=1&sc=271072)\n거창읍 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4888025000)\n회양리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192258&0&MINDB_01M&945&a)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=36&main_cate_no=31&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=271072",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4888025000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192258&0&MINDB_01M&945&a",
+      "http://1004boom.kr/front/php/product.php?product_no=36&main_cate_no=31&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "034-식장산-이륙장-127480-36302",
+    "sourceName": "식장산 이륙장",
+    "normalizedName": "식장산 이륙장",
+    "category": "launch_site",
+    "lat": 36.302399,
+    "lng": 127.48003,
+    "altitudeM": 0,
+    "descriptionText": "대전시 식장산 이륙장 - 서풍 (http://www.windguru.cz/int/index.php?vs=1&sc=306143)\n판암1동 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=3011055100)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=24&main_cate_no=30&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=306143",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=3011055100",
+      "http://1004boom.kr/front/php/product.php?product_no=24&main_cate_no=30&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "035-옥마봉-이륙장-126634-36320",
+    "sourceName": "옥마봉 이륙장",
+    "normalizedName": "옥마봉 이륙장",
+    "category": "launch_site",
+    "lat": 36.319793,
+    "lng": 126.633997,
+    "altitudeM": 0,
+    "descriptionText": "보령시 옥마봉 이륙장 - 서풍,북서,남서 (http://www.windguru.cz/int/index.php?go=1&lang=eng&vs=1&sc=124420&wj=kmh&tj=c&odh=9&doh=20&fhours=180)\n남포면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4418036000)\n요암동 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306162239&0&MINDB_01M&235&a)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?go=1&lang=eng&vs=1&sc=124420&wj=kmh&tj=c&odh=9&doh=20&fhours=180",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4418036000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306162239&0&MINDB_01M&235&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "036-무주-이륙장-127659-36033",
+    "sourceName": "무주 이륙장",
+    "normalizedName": "무주 이륙장",
+    "category": "launch_site",
+    "lat": 36.032789,
+    "lng": 127.658901,
+    "altitudeM": 0,
+    "descriptionText": "무주군 무주이륙장 - 서풍 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4888025000)\n무주읍 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4573025000)\n당산리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306142318&0&MINDB_01M&701&a)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4888025000",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4573025000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306142318&0&MINDB_01M&701&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "037-향적봉-이륙장-127746-35858",
+    "sourceName": "향적봉 이륙장",
+    "normalizedName": "향적봉 이륙장",
+    "category": "launch_site",
+    "lat": 35.85817,
+    "lng": 127.746449,
+    "altitudeM": 0,
+    "descriptionText": "무주군 향적봉 이륙장 - 서풍 (http://www.windguru.cz/int/index.php?vs=1&sc=355486)\n설천면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4573032000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=162&main_cate_no=80&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=355486",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4573032000",
+      "http://1004boom.kr/front/php/product.php?product_no=162&main_cate_no=80&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "038-매산리-이륙장-127275-37359",
+    "sourceName": "매산리 이륙장",
+    "normalizedName": "매산리 이륙장",
+    "category": "launch_site",
+    "lat": 37.359447,
+    "lng": 127.275453,
+    "altitudeM": 0,
+    "descriptionText": "광주시 매산리 이륙장 - 남서 (http://www.windguru.cz/int/index.php?vs=1&sc=306067)\n오포읍 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4161025000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=158&main_cate_no=1&display_group=2)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=306067",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4161025000",
+      "http://1004boom.kr/front/php/product.php?product_no=158&main_cate_no=1&display_group=2"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "039-유명산-이륙장-127485-37571",
+    "sourceName": "유명산 이륙장",
+    "normalizedName": "유명산 이륙장",
+    "category": "launch_site",
+    "lat": 37.5712203,
+    "lng": 127.4851881,
+    "altitudeM": 0,
+    "descriptionText": "양평군 유명산 이륙장 - 남풍 / 남동 / 서풍  (http://www.windguru.cz/int/index.php?vs=1&sc=306041)\n옥천면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4183034000)\n옥천리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306141931&0&MINDB_01M&449&a)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=306041",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4183034000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306141931&0&MINDB_01M&449&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "040-정광산-이륙장-127281-37323",
+    "sourceName": "정광산 이륙장",
+    "normalizedName": "정광산 이륙장",
+    "category": "launch_site",
+    "lat": 37.323076,
+    "lng": 127.28116,
+    "altitudeM": 0,
+    "descriptionText": "용인시 정광산 이륙장 - 서풍 (http://www.windguru.cz/int/index.php?vs=1&sc=306071)\n모현면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4146131000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=161&main_cate_no=80&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=306071",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4146131000",
+      "http://1004boom.kr/front/php/product.php?product_no=161&main_cate_no=80&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "041-어섬-이륙장-126651-37247",
+    "sourceName": "어섬 이륙장",
+    "normalizedName": "어섬 이륙장",
+    "category": "launch_site",
+    "lat": 37.246762,
+    "lng": 126.650734,
+    "altitudeM": 0,
+    "descriptionText": "화성시 어섬 이륙장 - 서풍 (http://www.windguru.cz/int/index.php?sc=306039)\n송산면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4159034000)\n삼존리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306141934&0&MINDB_01M&488&a)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=306039",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4159034000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306141934&0&MINDB_01M&488&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "042-대룡산-이륙장-127820-37845",
+    "sourceName": "대룡산 이륙장",
+    "normalizedName": "대룡산 이륙장",
+    "category": "launch_site",
+    "lat": 37.845342,
+    "lng": 127.819748,
+    "altitudeM": 0,
+    "descriptionText": "춘천시 대룡산 이륙장 - 남,남서,서,북서  (http://www.windguru.cz/int/index.php?go=1&lang=eng&vs=1&sc=183446&wj=kmh&tj=c&odh=0&doh=24&fhours=180)\n동내면 - 기상청  (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4211039000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=13&main_cate_no=31&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?go=1&lang=eng&vs=1&sc=183446&wj=kmh&tj=c&odh=0&doh=24&fhours=180",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4211039000",
+      "http://1004boom.kr/front/php/product.php?product_no=13&main_cate_no=31&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "043-괘방산-이륙장-128994-37719",
+    "sourceName": "괘방산 이륙장",
+    "normalizedName": "괘방산 이륙장",
+    "category": "launch_site",
+    "lat": 37.71859,
+    "lng": 128.993783,
+    "altitudeM": 0,
+    "descriptionText": "강릉시 괘방산 이륙장 - 동풍 (http://www.windguru.cz/int/index.php?vs=1&sc=306087)\n강동면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4215034000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=12&main_cate_no=31&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=306087",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4215034000",
+      "http://1004boom.kr/front/php/product.php?product_no=12&main_cate_no=31&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "044-흑성산-이륙장-127208-36797",
+    "sourceName": "흑성산 이륙장",
+    "normalizedName": "흑성산 이륙장",
+    "category": "launch_site",
+    "lat": 36.79712,
+    "lng": 127.208033,
+    "altitudeM": 0,
+    "descriptionText": "천안시 흑성산 이륙장 - 서풍 / 북서 (http://www.windguru.cz/int/index.php?vs=1&sc=306481)\n목천읍 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4413125000)\n신방동 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306122204&0&MINDB_01M&232&a)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=306481",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4413125000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306122204&0&MINDB_01M&232&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "045-곰돌이-이륙장-129103-35651",
+    "sourceName": "곰돌이 이륙장",
+    "normalizedName": "곰돌이 이륙장",
+    "category": "launch_site",
+    "lat": 35.651054,
+    "lng": 129.102659,
+    "altitudeM": 0,
+    "descriptionText": "울산시 곰돌이 이륙장 - 남동 (http://www.windguru.cz/int/index.php?vs=1&sc=306244)\n두서면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=3171037000)\n향산리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192219&0&MINDB_01M&900&a)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=23&main_cate_no=32&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=306244",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=3171037000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192219&0&MINDB_01M&900&a",
+      "http://1004boom.kr/front/php/product.php?product_no=23&main_cate_no=32&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "046-방장산-이륙장-126738-35449",
+    "sourceName": "방장산 이륙장",
+    "normalizedName": "방장산 이륙장",
+    "category": "launch_site",
+    "lat": 35.449239,
+    "lng": 126.738024,
+    "altitudeM": 0,
+    "descriptionText": "고창군 방장산 이륙장 - 서풍 / 남서 (http://www.windguru.cz/int/index.php?vs=1&sc=306459)\n고창읍 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4579025000)\n덕산리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306142254&0&MINDB_01M&251&a)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=306459",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4579025000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306142254&0&MINDB_01M&251&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "047-장등산-이륙장-127605-34653",
+    "sourceName": "장등산 이륙장",
+    "normalizedName": "장등산 이륙장",
+    "category": "launch_site",
+    "lat": 34.653297,
+    "lng": 127.605214,
+    "altitudeM": 0,
+    "descriptionText": "여수시 장등산 이륙장 - 남서 (http://www.windguru.cz/int/index.php?sc=137024&switchlang=1)\n화양면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4613033000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=145&main_cate_no=30&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=137024&switchlang=1",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4613033000",
+      "http://1004boom.kr/front/php/product.php?product_no=145&main_cate_no=30&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "048-사자산-이륙장-126969-34687",
+    "sourceName": "사자산 이륙장",
+    "normalizedName": "사자산 이륙장",
+    "category": "launch_site",
+    "lat": 34.686934,
+    "lng": 126.968651,
+    "altitudeM": 0,
+    "descriptionText": "장흥군 사자산 이륙장 - 남풍 (http://www.windguru.cz/int/index.php?sc=127595)\n안양면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4680032000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=162&main_cate_no=80&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=127595",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4680032000",
+      "http://1004boom.kr/front/php/product.php?product_no=162&main_cate_no=80&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "049-월랑봉-이륙장-126823-33476",
+    "sourceName": "월랑봉 이륙장",
+    "normalizedName": "월랑봉 이륙장",
+    "category": "launch_site",
+    "lat": 33.475984,
+    "lng": 126.823211,
+    "altitudeM": 0,
+    "descriptionText": "제주도 월랑봉 이륙장 - 동풍 (http://www.windguru.cz/int/index.php?go=1&lang=eng&vs=1&sc=178996&wj=ms&tj=c&odh=0&doh=24&fhours=180)\n구좌읍 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=5011025600)\n세화리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201311131547&0&MINDB_01M&781&a)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=20&main_cate_no=31&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?go=1&lang=eng&vs=1&sc=178996&wj=ms&tj=c&odh=0&doh=24&fhours=180",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=5011025600",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201311131547&0&MINDB_01M&781&a",
+      "http://1004boom.kr/front/php/product.php?product_no=20&main_cate_no=31&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "050-군산-이륙장-126370-33253",
+    "sourceName": "군산 이륙장",
+    "normalizedName": "군산 이륙장",
+    "category": "launch_site",
+    "lat": 33.253008,
+    "lng": 126.370025,
+    "altitudeM": 0,
+    "descriptionText": "서귀포시 군산이륙장 - 남풍 (http://www.windguru.cz/int/index.php?sc=183470)\n안덕면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=5013031000)\n대포동 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201311131543&0&MINDB_01M&330&a)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=16&main_cate_no=31&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=183470",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=5013031000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201311131543&0&MINDB_01M&330&a",
+      "http://1004boom.kr/front/php/product.php?product_no=16&main_cate_no=31&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "051-새별오름-이륙장-126359-33368",
+    "sourceName": "새별오름 이륙장",
+    "normalizedName": "새별오름 이륙장",
+    "category": "launch_site",
+    "lat": 33.36756,
+    "lng": 126.35891,
+    "altitudeM": 0,
+    "descriptionText": "제주시 새별오름 이륙장 - 서풍 (http://www.windguru.cz/int/index.php?go=1&lang=eng&vs=1&sc=185580&wj=knots&tj=c&odh=3&doh=22&fhours=180)\n애월읍 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=5011025300)\n유수암리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201311131539&0&MINDB_01M&727&a)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=35&main_cate_no=32&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?go=1&lang=eng&vs=1&sc=185580&wj=knots&tj=c&odh=3&doh=22&fhours=180",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=5011025300",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201311131539&0&MINDB_01M&727&a",
+      "http://1004boom.kr/front/php/product.php?product_no=35&main_cate_no=32&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "052-고근산-이륙장-126514-33267",
+    "sourceName": "고근산 이륙장",
+    "normalizedName": "고근산 이륙장",
+    "category": "launch_site",
+    "lat": 33.26668,
+    "lng": 126.51392,
+    "altitudeM": 0,
+    "descriptionText": "서귀포시 고근산 이륙장 - 남풍 / 북풍 (http://www.windguru.cz/int/index.php?vs=1&sc=306480)\n서홍동 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=5013058000)\n강정동 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201311131543&0&MINDB_01M&685&a)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=121&main_cate_no=30&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=306480",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=5013058000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201311131543&0&MINDB_01M&685&a",
+      "http://1004boom.kr/front/php/product.php?product_no=121&main_cate_no=30&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "053-금악오름-이륙장-126307-33357",
+    "sourceName": "금악오름 이륙장",
+    "normalizedName": "금악오름 이륙장",
+    "category": "launch_site",
+    "lat": 33.35652,
+    "lng": 126.307411,
+    "altitudeM": 0,
+    "descriptionText": "제주시 금악오름 이륙장 - 동풍 / 북풍 (http://www.windguru.cz/int/index.php?vs=1&sc=283825)\n한림읍 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=5011025000)\n한림리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201311131537&0&MINDB_01M&779&a)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=158&main_cate_no=1&display_group=2)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=283825",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=5011025000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201311131537&0&MINDB_01M&779&a",
+      "http://1004boom.kr/front/php/product.php?product_no=158&main_cate_no=1&display_group=2"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "054-황령산-이륙장-129083-35158",
+    "sourceName": "황령산 이륙장",
+    "normalizedName": "황령산 이륙장",
+    "category": "launch_site",
+    "lat": 35.158091,
+    "lng": 129.082789,
+    "altitudeM": 0,
+    "descriptionText": "부산시 황령산 이륙장 - 남동 (http://www.windguru.cz/int/index.php?sc=285311)\n대연동 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=2629053000)\n광안동 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192213&0&MINDB_01M&962&a)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=21&main_cate_no=32&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=285311",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=2629053000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192213&0&MINDB_01M&962&a",
+      "http://1004boom.kr/front/php/product.php?product_no=21&main_cate_no=32&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "055-봉래산-이륙장-128486-37198",
+    "sourceName": "봉래산 이륙장",
+    "normalizedName": "봉래산 이륙장",
+    "category": "launch_site",
+    "lat": 37.197826,
+    "lng": 128.485665,
+    "altitudeM": 0,
+    "descriptionText": "영월군 봉래산 이륙장 - 남풍 / 남서 (http://www.windguru.cz/int/index.php?go=1&vs=1&sc=358718&wj=kmh&tj=c&odh=4&doh=22&fhours=180)\n영월읍 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4275025000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=2&main_cate_no=30&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?go=1&vs=1&sc=358718&wj=kmh&tj=c&odh=4&doh=22&fhours=180",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4275025000",
+      "http://1004boom.kr/front/php/product.php?product_no=2&main_cate_no=30&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "056-것대산-이륙장-127537-36645",
+    "sourceName": "것대산 이륙장",
+    "normalizedName": "것대산 이륙장",
+    "category": "launch_site",
+    "lat": 36.645421,
+    "lng": 127.537451,
+    "altitudeM": 0,
+    "descriptionText": "청주시 것대산 이륙장 - 남서 / 서 (http://www.windguru.cz/int/index.php?vs=1&sc=183303)\n용암1동 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4311172000)\n복대동 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306122212&0&MINDB_01M&131&a)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=183303",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4311172000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306122212&0&MINDB_01M&131&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "057-불탄산-이륙장-127264-37399",
+    "sourceName": "불탄산 이륙장",
+    "normalizedName": "불탄산 이륙장",
+    "category": "launch_site",
+    "lat": 37.398562,
+    "lng": 127.26438,
+    "altitudeM": 0,
+    "descriptionText": "광주시 불탄산 이륙장 - 서풍 (http://www.windguru.cz/int/index.php?go=1&lang=eng&vs=1&sc=124528&wj=kmh&tj=c&odh=0&doh=24&fhours=180)\n오포읍 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4161025000)\n송정동 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306141944&0&MINDB_01M&546&a)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=121&main_cate_no=30&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?go=1&lang=eng&vs=1&sc=124528&wj=kmh&tj=c&odh=0&doh=24&fhours=180",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4161025000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306141944&0&MINDB_01M&546&a",
+      "http://1004boom.kr/front/php/product.php?product_no=121&main_cate_no=30&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "058-장암산-이륙장-128421-37381",
+    "sourceName": "장암산 이륙장",
+    "normalizedName": "장암산 이륙장",
+    "category": "launch_site",
+    "lat": 37.381241,
+    "lng": 128.421249,
+    "altitudeM": 0,
+    "descriptionText": "평창군 장암산 이륙장 - 서풍 (http://www.windguru.cz/int/index.php?go=1&lang=eng&vs=1&sc=124417&wj=kmh&tj=c&odh=0&doh=24&fhours=180)\n평창읍 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4276025000)\n여만리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306162148&0&MINDB_01M&526&a)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?go=1&lang=eng&vs=1&sc=124417&wj=kmh&tj=c&odh=0&doh=24&fhours=180",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4276025000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306162148&0&MINDB_01M&526&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "059-달마산-이륙장-126563-34347",
+    "sourceName": "달마산 이륙장",
+    "normalizedName": "달마산 이륙장",
+    "category": "launch_site",
+    "lat": 34.346519,
+    "lng": 126.563101,
+    "altitudeM": 0,
+    "descriptionText": "해남군 달마산 이륙장 - 남동 (http://www.windguru.cz/int/index.php?sc=167641)\n북평면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4682035000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=145&main_cate_no=30&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=167641",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4682035000",
+      "http://1004boom.kr/front/php/product.php?product_no=145&main_cate_no=30&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "060-마복산-이륙장-127374-34519",
+    "sourceName": "마복산 이륙장",
+    "normalizedName": "마복산 이륙장",
+    "category": "launch_site",
+    "lat": 34.519358,
+    "lng": 127.374244,
+    "altitudeM": 0,
+    "descriptionText": "고흥군 마복산 이륙장 - 남풍 / 북풍 (http://www.windguru.cz/int/index.php?sc=236918)\n포두면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4677035000)\n구암리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306181807&0&MINDB_01M&787&a)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=11&main_cate_no=30&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=236918",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4677035000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306181807&0&MINDB_01M&787&a",
+      "http://1004boom.kr/front/php/product.php?product_no=11&main_cate_no=30&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "061-장암산-이륙장-126579-35258",
+    "sourceName": "장암산 이륙장",
+    "normalizedName": "장암산 이륙장",
+    "category": "launch_site",
+    "lat": 35.258411,
+    "lng": 126.57928,
+    "altitudeM": 0,
+    "descriptionText": "영광군 장암산 이륙장 - 북서 / 남동 (http://www.windguru.cz/int/index.php?sc=236140)\n묘량면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4687032000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=174&main_cate_no=32&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=236140",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4687032000",
+      "http://1004boom.kr/front/php/product.php?product_no=174&main_cate_no=32&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "062-도비산-이륙장-126410-36710",
+    "sourceName": "도비산 이륙장",
+    "normalizedName": "도비산 이륙장",
+    "category": "launch_site",
+    "lat": 36.709818,
+    "lng": 126.409636,
+    "altitudeM": 0,
+    "descriptionText": "서산시 도비산 이륙장 - 서풍 / 동풍 (http://www.windguru.cz/int/index.php?sc=169887&wj=kmh&tj=c&odh=9&doh=20&fhours=180)\n부석면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4421032000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=22&main_cate_no=32&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=169887&wj=kmh&tj=c&odh=9&doh=20&fhours=180",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4421032000",
+      "http://1004boom.kr/front/php/product.php?product_no=22&main_cate_no=32&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "063-봉수대-이륙장-129107-37573",
+    "sourceName": "봉수대 이륙장",
+    "normalizedName": "봉수대 이륙장",
+    "category": "launch_site",
+    "lat": 37.572746,
+    "lng": 129.106565,
+    "altitudeM": 0,
+    "descriptionText": "동해시 봉수대 이륙장 - 남풍 / 북풍 / 동풍 (http://www.windguru.cz/int/index.php?sc=173617)\n묵호동 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4217059000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=16&main_cate_no=31&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=173617",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4217059000",
+      "http://1004boom.kr/front/php/product.php?product_no=16&main_cate_no=31&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "064-칠포-이륙장-129394-36133",
+    "sourceName": "칠포 이륙장",
+    "normalizedName": "칠포 이륙장",
+    "category": "launch_site",
+    "lat": 36.133438,
+    "lng": 129.394484,
+    "altitudeM": 0,
+    "descriptionText": "포항시 칠포 이륙장 - 동풍 (http://www.windguru.cz/int/index.php?sc=109954)\n흥해읍 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4711325000)\n덕성리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192246&0&MINDB_01M&804&a)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=158&main_cate_no=1&display_group=2)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=109954",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4711325000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192246&0&MINDB_01M&804&a",
+      "http://1004boom.kr/front/php/product.php?product_no=158&main_cate_no=1&display_group=2"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "065-오서산-이륙장-126656-36462",
+    "sourceName": "오서산 이륙장",
+    "normalizedName": "오서산 이륙장",
+    "category": "launch_site",
+    "lat": 36.462262,
+    "lng": 126.655712,
+    "altitudeM": 0,
+    "descriptionText": "보령시 오서산 이륙장 - 서풍.북서.남서 (http://www.windguru.cz/int/index.php?sc=181366)\n청소면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4418034000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=175&main_cate_no=31&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=181366",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4418034000",
+      "http://1004boom.kr/front/php/product.php?product_no=175&main_cate_no=31&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "066-양백산-이륙장-128381-36968",
+    "sourceName": "양백산 이륙장",
+    "normalizedName": "양백산 이륙장",
+    "category": "launch_site",
+    "lat": 36.968238,
+    "lng": 128.380823,
+    "altitudeM": 0,
+    "descriptionText": "단양군 양백산 이륙장 - 북서 / 남동 (http://www.windguru.cz/int/index.php?go=1&vs=1&sc=232291&wj=kmh&tj=c&odh=4&doh=22&fhours=180&switchlang=1)\n단양읍 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4380025000)\n별곡리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306141938&0&MINDB_01M&601&a)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?go=1&vs=1&sc=232291&wj=kmh&tj=c&odh=4&doh=22&fhours=180&switchlang=1",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4380025000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306141938&0&MINDB_01M&601&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "067-백화산-이륙장-127879-36262",
+    "sourceName": "백화산 이륙장",
+    "normalizedName": "백화산 이륙장",
+    "category": "launch_site",
+    "lat": 36.262096,
+    "lng": 127.878928,
+    "altitudeM": 0,
+    "descriptionText": "영동군 백화산 이륙장 - 서풍 (http://www.windguru.cz/int/index.php?vs=1&sc=435989)\n황강면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4374032000)\n지정리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306142324&0&MINDB_01M&626&a)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=435989",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4374032000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306142324&0&MINDB_01M&626&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "068-벽도산-이륙장-129160-35807",
+    "sourceName": "벽도산 이륙장",
+    "normalizedName": "벽도산 이륙장",
+    "category": "launch_site",
+    "lat": 35.806642,
+    "lng": 129.159651,
+    "altitudeM": 0,
+    "descriptionText": "경주시 벽도산 이륙장 - 북서 (http://www.windguru.cz/int/index.php?vs=1&sc=435992)\n건천읍 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4713025600)\n탑동 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192227&0&MINDB_01M&283&a)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=177&main_cate_no=30&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=435992",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4713025600",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192227&0&MINDB_01M&283&a",
+      "http://1004boom.kr/front/php/product.php?product_no=177&main_cate_no=30&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "069-비학산-이륙장-129231-36126",
+    "sourceName": "비학산 이륙장",
+    "normalizedName": "비학산 이륙장",
+    "category": "launch_site",
+    "lat": 36.12557,
+    "lng": 129.230676,
+    "altitudeM": 0,
+    "descriptionText": "포항시 비학산 이륙장 - 동풍 (http://www.windguru.cz/int/index.php?vs=1&sc=435998)\n신광면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4711331000)\n현내리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192243&0&MINDB_01M&830&a)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=176&main_cate_no=30&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=435998",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4711331000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192243&0&MINDB_01M&830&a",
+      "http://1004boom.kr/front/php/product.php?product_no=176&main_cate_no=30&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "070-국당-이륙장-129293-35981",
+    "sourceName": "국당 이륙장",
+    "normalizedName": "국당 이륙장",
+    "category": "launch_site",
+    "lat": 35.981097,
+    "lng": 129.292645,
+    "altitudeM": 0,
+    "descriptionText": "경주시 국당 이륙장 - 서북서 (http://www.windguru.cz/int/index.php?sc=177690)\n강동면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4713037000)\n송도동 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192240&0&MINDB_01M&138&a)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=145&main_cate_no=30&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=177690",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4713037000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192240&0&MINDB_01M&138&a",
+      "http://1004boom.kr/front/php/product.php?product_no=145&main_cate_no=30&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "071-화순-이륙장-127007-35068",
+    "sourceName": "화순 이륙장",
+    "normalizedName": "화순 이륙장",
+    "category": "launch_site",
+    "lat": 35.067989,
+    "lng": 127.006781,
+    "altitudeM": 0,
+    "descriptionText": "화순군 만연산 이륙장 - 서풍 (http://www.windguru.cz/int/index.php?go=1&lang=eng&vs=1&sc=206747&wj=ms&tj=c&odh=0&doh=24&fhours=180)\n동면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4679042000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=174&main_cate_no=32&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?go=1&lang=eng&vs=1&sc=206747&wj=ms&tj=c&odh=0&doh=24&fhours=180",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4679042000",
+      "http://1004boom.kr/front/php/product.php?product_no=174&main_cate_no=32&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "072-노안-이륙장-126670-35116",
+    "sourceName": "노안 이륙장",
+    "normalizedName": "노안 이륙장",
+    "category": "launch_site",
+    "lat": 35.115766,
+    "lng": 126.669745,
+    "altitudeM": 0,
+    "descriptionText": "광주시 노안 이륙장 - 동풍 (http://www.windguru.cz/int/index.php?go=1&lang=eng&vs=1&sc=206746&wj=ms&tj=c&odh=0&doh=24&fhours=180&switchlang=1)\n삼도동 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=2920068000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=161&main_cate_no=80&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?go=1&lang=eng&vs=1&sc=206746&wj=ms&tj=c&odh=0&doh=24&fhours=180&switchlang=1",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=2920068000",
+      "http://1004boom.kr/front/php/product.php?product_no=161&main_cate_no=80&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "073-오성산-이륙장-126785-36015",
+    "sourceName": "오성산 이륙장",
+    "normalizedName": "오성산 이륙장",
+    "category": "launch_site",
+    "lat": 36.01547,
+    "lng": 126.784501,
+    "altitudeM": 0,
+    "descriptionText": "군산시 오성산 이륙장 - 서풍/동풍 (http://www.windguru.cz/int/index.php?vs=1&sc=306460)\n성산면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4513037000)\n내흥동 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306162257&0&MINDB_01M&140&a)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=306460",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4513037000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306162257&0&MINDB_01M&140&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "074-진천-이륙장-127514-36854",
+    "sourceName": "진천 이륙장",
+    "normalizedName": "진천 이륙장",
+    "category": "launch_site",
+    "lat": 36.854042,
+    "lng": 127.513676,
+    "altitudeM": 0,
+    "descriptionText": "진천군 진천 이륙장 - 북서 (http://www.windguru.cz/int/index.php?vs=1&sc=440175)\n초평면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4375032000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=12&main_cate_no=31&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=440175",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4375032000",
+      "http://1004boom.kr/front/php/product.php?product_no=12&main_cate_no=31&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "075-창평-이륙장-127024-35207",
+    "sourceName": "창평 이륙장",
+    "normalizedName": "창평 이륙장",
+    "category": "launch_site",
+    "lat": 35.207197,
+    "lng": 127.023711,
+    "altitudeM": 0,
+    "descriptionText": "담양군 창평 이륙장 - 북풍 (http://www.windguru.cz/int/index.php?vs=1&sc=440180)\n창평면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=INTEREST&wideCode=4600000000&cityCode=4671000000&dongCode=4671034000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=13&main_cate_no=31&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=440180",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=INTEREST&wideCode=4600000000&cityCode=4671000000&dongCode=4671034000",
+      "http://1004boom.kr/front/php/product.php?product_no=13&main_cate_no=31&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "076-호락산-이륙장-127338-35281",
+    "sourceName": "호락산 이륙장",
+    "normalizedName": "호락산 이륙장",
+    "category": "launch_site",
+    "lat": 35.280975,
+    "lng": 127.338195,
+    "altitudeM": 0,
+    "descriptionText": "곡성군 호락산 이륙장 - 북서 (http://www.windguru.cz/int/index.php?vs=1&sc=440181)\n고달면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4672036000)\n학정리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306162139&0&MINDB_01M&768&a)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=19&main_cate_no=32&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=440181",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4672036000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306162139&0&MINDB_01M&768&a",
+      "http://1004boom.kr/front/php/product.php?product_no=19&main_cate_no=32&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "077-오봉대-이륙장-127323-35252",
+    "sourceName": "오봉대 이륙장",
+    "normalizedName": "오봉대 이륙장",
+    "category": "launch_site",
+    "lat": 35.2516126,
+    "lng": 127.3230025,
+    "altitudeM": 0,
+    "descriptionText": "곡성군 오봉대 이륙장 - 북풍 (http://www.windguru.cz/int/index.php?vs=1&sc=440182)\n오곡면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4672031000)\n학정리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306162139&0&MINDB_01M&768&a)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=161&main_cate_no=80&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=440182",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4672031000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306162139&0&MINDB_01M&768&a",
+      "http://1004boom.kr/front/php/product.php?product_no=161&main_cate_no=80&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "078-덕기봉-이륙장-127530-36045",
+    "sourceName": "덕기봉 이륙장",
+    "normalizedName": "덕기봉 이륙장",
+    "category": "launch_site",
+    "lat": 36.044638,
+    "lng": 127.5302983,
+    "altitudeM": 0,
+    "descriptionText": "금산군 덕기봉 이륙장 - 서풍 (http://www.windguru.cz/int/index.php?sc=250053)\n남일면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4471035000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=175&main_cate_no=31&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=250053",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4471035000",
+      "http://1004boom.kr/front/php/product.php?product_no=175&main_cate_no=31&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "079-남산-이륙장-127896-37678",
+    "sourceName": "남산 이륙장",
+    "normalizedName": "남산 이륙장",
+    "category": "launch_site",
+    "lat": 37.678488,
+    "lng": 127.89588,
+    "altitudeM": 0,
+    "descriptionText": "홍천군 남산 이륙장 - 북서/남동 (http://www.windguru.cz/int/index.php?vs=1&sc=440187)\n홍천읍 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4272025000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=158&main_cate_no=1&display_group=2)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=440187",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4272025000",
+      "http://1004boom.kr/front/php/product.php?product_no=158&main_cate_no=1&display_group=2"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "080-사명산-이륙장-127960-38106",
+    "sourceName": "사명산 이륙장",
+    "normalizedName": "사명산 이륙장",
+    "category": "launch_site",
+    "lat": 38.106399,
+    "lng": 127.959867,
+    "altitudeM": 0,
+    "descriptionText": "양구군 사명산 이륙장 - 동풍 (http://www.windguru.cz/int/index.php?vs=1&sc=440189)\n양구읍 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4280025000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=162&main_cate_no=80&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=440189",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4280025000",
+      "http://1004boom.kr/front/php/product.php?product_no=162&main_cate_no=80&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "081-기룡산-이륙장-128170-38078",
+    "sourceName": "기룡산 이륙장",
+    "normalizedName": "기룡산 이륙장",
+    "category": "launch_site",
+    "lat": 38.078062,
+    "lng": 128.16968,
+    "altitudeM": 0,
+    "descriptionText": "인제군 기룡산 이륙장 - 동풍 / 남동 (http://www.windguru.cz/int/index.php?vs=1&sc=440191)\n인제읍 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4281025000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=163&main_cate_no=80&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=440191",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4281025000",
+      "http://1004boom.kr/front/php/product.php?product_no=163&main_cate_no=80&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "082-대관령-이륙장-128759-37694",
+    "sourceName": "대관령 이륙장",
+    "normalizedName": "대관령 이륙장",
+    "category": "launch_site",
+    "lat": 37.693873,
+    "lng": 128.758607,
+    "altitudeM": 0,
+    "descriptionText": "평창군 대관령 이륙장 - 동풍/남동 (http://www.windguru.cz/int/index.php?vs=1&sc=306183)\n대관령면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4276038000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=1&main_cate_no=30&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=306183",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4276038000",
+      "http://1004boom.kr/front/php/product.php?product_no=1&main_cate_no=30&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "083-초록봉-이륙장-129072-37523",
+    "sourceName": "초록봉 이륙장",
+    "normalizedName": "초록봉 이륙장",
+    "category": "launch_site",
+    "lat": 37.523035,
+    "lng": 129.072146,
+    "altitudeM": 0,
+    "descriptionText": "동해시 초록봉 이륙장 - 동풍 (http://www.windguru.cz/int/index.php?vs=1&sc=440193)\n천곡동 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4217051000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=36&main_cate_no=31&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=440193",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4217051000",
+      "http://1004boom.kr/front/php/product.php?product_no=36&main_cate_no=31&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "084-망운산-이륙장-127845-34845",
+    "sourceName": "망운산 이륙장",
+    "normalizedName": "망운산 이륙장",
+    "category": "launch_site",
+    "lat": 34.845226,
+    "lng": 127.845111,
+    "altitudeM": 0,
+    "descriptionText": "남해군 망운산 이륙장 - 남동 (http://www.windguru.cz/int/index.php?vs=1&sc=306217)\n남해읍 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4884025000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=2&main_cate_no=30&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=306217",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4884025000",
+      "http://1004boom.kr/front/php/product.php?product_no=2&main_cate_no=30&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "085-제주시-서우봉-이륙장-126677-33548",
+    "sourceName": "제주시 서우봉 이륙장",
+    "normalizedName": "제주시 서우봉 이륙장",
+    "category": "launch_site",
+    "lat": 33.548477,
+    "lng": 126.676784,
+    "altitudeM": 0,
+    "descriptionText": "(https://www.youtube.com/watch?v=vXiMHV7ePr0)\nhttps://www.youtube.com/embed/vXiMHV7ePr0 (https://www.youtube.com/embed/vXiMHV7ePr0)\n제주시 서우봉 이륙장 - 서풍 (http://www.windguru.cz/int/index.php?vs=1&sc=440198)\n조천읍 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=5011025900)\n건입동 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201311131537&0&MINDB_01M&184&a)",
+    "windHint": null,
+    "sourceLinks": [
+      "https://www.youtube.com/watch?v=vXiMHV7ePr0",
+      "https://www.youtube.com/embed/vXiMHV7ePr0",
+      "http://www.windguru.cz/int/index.php?vs=1&sc=440198",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=5011025900",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201311131537&0&MINDB_01M&184&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "086-서독산-이륙장-126871-37415",
+    "sourceName": "서독산 이륙장",
+    "normalizedName": "서독산 이륙장",
+    "category": "launch_site",
+    "lat": 37.4153,
+    "lng": 126.870761,
+    "altitudeM": 0,
+    "descriptionText": "광명시 서독산 이륙장 - 서풍 (http://www.windguru.cz/int/index.php?sc=135114)\n학온동 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4121066000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=25&main_cate_no=30&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=135114",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4121066000",
+      "http://1004boom.kr/front/php/product.php?product_no=25&main_cate_no=30&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "087-원적산-이륙장-127449-37352",
+    "sourceName": "원적산 이륙장",
+    "normalizedName": "원적산 이륙장",
+    "category": "launch_site",
+    "lat": 37.352011,
+    "lng": 127.449131,
+    "altitudeM": 0,
+    "descriptionText": "이천시 원적산 이륙장 - 남동 (http://www.windguru.cz/int/index.php?sc=228259)\n백사면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4150032000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=145&main_cate_no=30&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=228259",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4150032000",
+      "http://1004boom.kr/front/php/product.php?product_no=145&main_cate_no=30&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "088-송라산-이륙장-127315-37669",
+    "sourceName": "송라산 이륙장",
+    "normalizedName": "송라산 이륙장",
+    "category": "launch_site",
+    "lat": 37.668977,
+    "lng": 127.314677,
+    "altitudeM": 0,
+    "descriptionText": "남양주시 송라산 이륙장 - 서풍/동풍 (http://www.windguru.cz/int/index.php?go=1&lang=eng&vs=1&sc=124534&wj=kmh&tj=c&odh=9&doh=20&fhours=180)\n화도읍 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4136025600)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=84&main_cate_no=31&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?go=1&lang=eng&vs=1&sc=124534&wj=kmh&tj=c&odh=9&doh=20&fhours=180",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4136025600",
+      "http://1004boom.kr/front/php/product.php?product_no=84&main_cate_no=31&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "089-서운산-이륙장-127281-36929",
+    "sourceName": "서운산 이륙장",
+    "normalizedName": "서운산 이륙장",
+    "category": "launch_site",
+    "lat": 36.929311,
+    "lng": 127.281332,
+    "altitudeM": 0,
+    "descriptionText": "안성시 서운산 이륙장 - 서풍 (http://www.windguru.cz/int/index.php?sc=181249)\n서운면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4155033000)\n인리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306150939&0&MINDB_01M&468&a)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=181249",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4155033000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306150939&0&MINDB_01M&468&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "090-가례비-이륙장-127006-37822",
+    "sourceName": "가례비 이륙장",
+    "normalizedName": "가례비 이륙장",
+    "category": "launch_site",
+    "lat": 37.821582,
+    "lng": 127.006459,
+    "altitudeM": 0,
+    "descriptionText": "양주시 가례비 이륙장 - 서풍 (http://www.windguru.cz/int/index.php?sc=181640)광적면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4163033000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=16&main_cate_no=31&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=181640",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4163033000",
+      "http://1004boom.kr/front/php/product.php?product_no=16&main_cate_no=31&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "091-운천-이륙장-127286-38091",
+    "sourceName": "운천 이륙장",
+    "normalizedName": "운천 이륙장",
+    "category": "launch_site",
+    "lat": 38.091202,
+    "lng": 127.286353,
+    "altitudeM": 0,
+    "descriptionText": "포천시 운천 이륙장 - 서풍 (http://www.windguru.cz/int/index.php?sc=163420)\n영북면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4165039000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=22&main_cate_no=32&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=163420",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4165039000",
+      "http://1004boom.kr/front/php/product.php?product_no=22&main_cate_no=32&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "092-연천군-갈말-이륙장-127092-38104",
+    "sourceName": "연천군 갈말 이륙장",
+    "normalizedName": "연천군 갈말 이륙장",
+    "category": "launch_site",
+    "lat": 38.103731,
+    "lng": 127.091517,
+    "altitudeM": 0,
+    "descriptionText": "연천군 갈말 이륙장 - 서북서 (http://www.windguru.cz/int/index.php?sc=163419)연천읍 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4180025000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=164&main_cate_no=80&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=163419",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4180025000",
+      "http://1004boom.kr/front/php/product.php?product_no=164&main_cate_no=80&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "093-봉화산-이륙장-126550-36832",
+    "sourceName": "봉화산 이륙장",
+    "normalizedName": "봉화산 이륙장",
+    "category": "launch_site",
+    "lat": 36.832336,
+    "lng": 126.550055,
+    "altitudeM": 0,
+    "descriptionText": "당진시 봉화산 이륙장 - 북서 (http://www.windguru.cz/int/index.php?sc=136385&wj=kmh&tj=c&odh=9&doh=20&fhours=180)\n정미면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4427034000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=145&main_cate_no=30&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=136385&wj=kmh&tj=c&odh=9&doh=20&fhours=180",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4427034000",
+      "http://1004boom.kr/front/php/product.php?product_no=145&main_cate_no=30&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "094-금오산-이륙장-126773-36593",
+    "sourceName": "금오산 이륙장",
+    "normalizedName": "금오산 이륙장",
+    "category": "launch_site",
+    "lat": 36.593376,
+    "lng": 126.7733,
+    "altitudeM": 0,
+    "descriptionText": "예산군 금오산 이륙장 - 서서남 (http://www.windguru.cz/int/index.php?sc=236781)\n금마면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4480032000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=110&main_cate_no=31&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=236781",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4480032000",
+      "http://1004boom.kr/front/php/product.php?product_no=110&main_cate_no=31&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "095-와우정사-이륙장-127286-37180",
+    "sourceName": "와우정사 이륙장",
+    "normalizedName": "와우정사 이륙장",
+    "category": "launch_site",
+    "lat": 37.179911,
+    "lng": 127.286353,
+    "altitudeM": 0,
+    "descriptionText": "용인시 와우정사 이륙장 - 동풍 (http://www.windguru.cz/int/index.php?go=1&vs=1&sc=219920&wj=knots&tj=c&odh=4&doh=22&fhours=180)\n원삼면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4146134000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=121&main_cate_no=30&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?go=1&vs=1&sc=219920&wj=knots&tj=c&odh=4&doh=22&fhours=180",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4146134000",
+      "http://1004boom.kr/front/php/product.php?product_no=121&main_cate_no=30&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "096-구봉산대부도-이륙장-126563-37276",
+    "sourceName": "구봉산대부도 이륙장",
+    "normalizedName": "구봉산대부도 이륙장",
+    "category": "launch_site",
+    "lat": 37.276136,
+    "lng": 126.563315,
+    "altitudeM": 0,
+    "descriptionText": "안산시 대부도 이륙장 - 북풍 (http://www.windguru.cz/int/index.php?sc=118468)\n대부도 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4127361000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=61&main_cate_no=30&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=118468",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4127361000",
+      "http://1004boom.kr/front/php/product.php?product_no=61&main_cate_no=30&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "097-동막골-이륙장-126888-37348",
+    "sourceName": "동막골 이륙장",
+    "normalizedName": "동막골 이륙장",
+    "category": "launch_site",
+    "lat": 37.347917,
+    "lng": 126.887884,
+    "altitudeM": 0,
+    "descriptionText": "안산시 동막골 이륙장 - 서풍 (http://www.windguru.cz/int/index.php?sc=234170)\n안산동 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4127161000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=178&main_cate_no=30&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=234170",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4127161000",
+      "http://1004boom.kr/front/php/product.php?product_no=178&main_cate_no=30&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "098-대부도연습장-126574-37264",
+    "sourceName": "대부도연습장",
+    "normalizedName": "대부도연습장",
+    "category": "launch_site",
+    "lat": 37.263636,
+    "lng": 126.574216,
+    "altitudeM": 0,
+    "descriptionText": "안산시 대부도 이륙장 - 서풍 (http://www.windguru.cz/int/index.php?vs=1&sc=306036)\n대부도 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4127361000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=3&main_cate_no=30&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=306036",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4127361000",
+      "http://1004boom.kr/front/php/product.php?product_no=3&main_cate_no=30&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "099-대부도수련원-이륙장-126645-37216",
+    "sourceName": "대부도수련원 이륙장",
+    "normalizedName": "대부도수련원 이륙장",
+    "category": "launch_site",
+    "lat": 37.215531,
+    "lng": 126.64464,
+    "altitudeM": 0,
+    "descriptionText": "대부도수련원 - 남서 (http://www.windguru.cz/int/index.php?sc=306040)\n선부1동 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4127358000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=177&main_cate_no=30&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=306040",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4127358000",
+      "http://1004boom.kr/front/php/product.php?product_no=177&main_cate_no=30&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "100-남양주-패러연습장-127176-37609",
+    "sourceName": "남양주 패러연습장",
+    "normalizedName": "남양주 패러연습장",
+    "category": "launch_site",
+    "lat": 37.608826,
+    "lng": 127.175503,
+    "altitudeM": 0,
+    "descriptionText": "남양주 패러연습장 - 동,서,남,북 (http://www.windguru.cz/int/index.php?sc=270688)\n지금동 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4136055000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=162&main_cate_no=80&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=270688",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4136055000",
+      "http://1004boom.kr/front/php/product.php?product_no=162&main_cate_no=80&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "101-은봉산-이륙장-126964-37785",
+    "sourceName": "은봉산 이륙장",
+    "normalizedName": "은봉산 이륙장",
+    "category": "launch_site",
+    "lat": 37.7853,
+    "lng": 126.963501,
+    "altitudeM": 0,
+    "descriptionText": "양주시 은봉산 이륙장 - 북풍 (http://www.windguru.cz/int/index.php?vs=1&sc=295586)\n백석읍 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4163025000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=54&main_cate_no=32&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=295586",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4163025000",
+      "http://1004boom.kr/front/php/product.php?product_no=54&main_cate_no=32&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "102-혜음령-이륙장-126902-37739",
+    "sourceName": "혜음령 이륙장",
+    "normalizedName": "혜음령 이륙장",
+    "category": "launch_site",
+    "lat": 37.738616,
+    "lng": 126.90196,
+    "altitudeM": 0,
+    "descriptionText": "파주시 혜음령 이륙장 - 서풍 (http://www.windguru.cz/int/index.php?vs=1&sc=344255&switchlang=1)\n광탄면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4148035000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=188&main_cate_no=31&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=344255&switchlang=1",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4148035000",
+      "http://1004boom.kr/front/php/product.php?product_no=188&main_cate_no=31&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "103-광교산-이륙장-127019-37352",
+    "sourceName": "광교산 이륙장",
+    "normalizedName": "광교산 이륙장",
+    "category": "launch_site",
+    "lat": 37.351908,
+    "lng": 127.018561,
+    "altitudeM": 0,
+    "descriptionText": "수원시 광교산 이륙장 - 서풍 (http://www.windguru.cz/int/index.php?sc=358265)\n파장동 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4111156000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=21&main_cate_no=32&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=358265",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4111156000",
+      "http://1004boom.kr/front/php/product.php?product_no=21&main_cate_no=32&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "104-연화산-이륙장-129206-35633",
+    "sourceName": "연화산 이륙장",
+    "normalizedName": "연화산 이륙장",
+    "category": "launch_site",
+    "lat": 35.632535,
+    "lng": 129.205871,
+    "altitudeM": 0,
+    "descriptionText": "울산시 연화산 이륙장 - 북동풍 (http://www.windguru.cz/int/index.php?sc=354686)\n두동면 - 기상쳥 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=3171036000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=35&main_cate_no=32&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=354686",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=3171036000",
+      "http://1004boom.kr/front/php/product.php?product_no=35&main_cate_no=32&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "105-송공산-이륙장-126255-34852",
+    "sourceName": "송공산 이륙장",
+    "normalizedName": "송공산 이륙장",
+    "category": "launch_site",
+    "lat": 34.851601,
+    "lng": 126.254754,
+    "altitudeM": 0,
+    "descriptionText": "목포시 송공산 이륙장 - 서풍 (http://www.windguru.cz/int/index.php?sc=236915)\n압해읍 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4691043000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=11&main_cate_no=30&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=236915",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4691043000",
+      "http://1004boom.kr/front/php/product.php?product_no=11&main_cate_no=30&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "106-한우산-이륙장-128192-35396",
+    "sourceName": "한우산 이륙장",
+    "normalizedName": "한우산 이륙장",
+    "category": "launch_site",
+    "lat": 35.395977,
+    "lng": 128.191652,
+    "altitudeM": 0,
+    "descriptionText": "의령군 한우산 이륙장 - 서풍 (http://www.windguru.cz/int/index.php?vs=1&sc=357905)\n대의면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4872033000)\n신포리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306122152&0&MINDB_01M&936&a)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=61&main_cate_no=30&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=357905",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4872033000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306122152&0&MINDB_01M&936&a",
+      "http://1004boom.kr/front/php/product.php?product_no=61&main_cate_no=30&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "107-금정산-이륙장-129060-35273",
+    "sourceName": "금정산 이륙장",
+    "normalizedName": "금정산 이륙장",
+    "category": "launch_site",
+    "lat": 35.273127,
+    "lng": 129.059787,
+    "altitudeM": 0,
+    "descriptionText": "부산 금정산 이륙장 - 서풍 (http://www.windguru.cz/int/index.php?sc=312387&sty=m_menu)\n금성동 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=2641070000)\n금산리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192215&0&MINDB_01M&257&a)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=2&main_cate_no=30&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=312387&sty=m_menu",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=2641070000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192215&0&MINDB_01M&257&a",
+      "http://1004boom.kr/front/php/product.php?product_no=2&main_cate_no=30&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "108-발례-이륙장-128909-35571",
+    "sourceName": "발례 이륙장",
+    "normalizedName": "발례 이륙장",
+    "category": "launch_site",
+    "lat": 35.571262,
+    "lng": 128.908682,
+    "altitudeM": 0,
+    "descriptionText": "밀양시 발례 이륙장 - 서풍 (http://www.windguru.cz/int/index.php?sc=408062&sty=m_menu)\n산내면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4827034000)\n송백리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192217&0&MINDB_01M&927&a)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=14&main_cate_no=31&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?sc=408062&sty=m_menu",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4827034000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306192217&0&MINDB_01M&927&a",
+      "http://1004boom.kr/front/php/product.php?product_no=14&main_cate_no=31&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "109-관모산-이륙장-126867-36708",
+    "sourceName": "관모산 이륙장",
+    "normalizedName": "관모산 이륙장",
+    "category": "launch_site",
+    "lat": 36.708201,
+    "lng": 126.867242,
+    "altitudeM": 0,
+    "descriptionText": "예산군 관모산 이륙장 - 북풍 (http://www.windguru.cz/int/index.php?vs=1&sc=443934)\n예산읍 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4481025000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=174&main_cate_no=32&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=443934",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4481025000",
+      "http://1004boom.kr/front/php/product.php?product_no=174&main_cate_no=32&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "110-광의-이륙장-127447-35293",
+    "sourceName": "광의 이륙장",
+    "normalizedName": "광의 이륙장",
+    "category": "launch_site",
+    "lat": 35.29271,
+    "lng": 127.447371,
+    "altitudeM": 0,
+    "descriptionText": "구례군 광의 이륙장 - 남풍/남서 (http://www.windguru.cz/int/index.php?vs=1&sc=443935)\n광의면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4673035000)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=443935",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4673035000"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "111-마래산-이륙장-127742-34766",
+    "sourceName": "마래산 이륙장 - 남풍",
+    "normalizedName": "마래산 이륙장",
+    "category": "launch_site",
+    "lat": 34.765519,
+    "lng": 127.742028,
+    "altitudeM": 0,
+    "descriptionText": "여수시 마래산 이륙장 - 남풍 (http://www.windguru.cz/int/index.php?vs=1&sc=443936)\n한려동 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4613053500)",
+    "windHint": "남풍",
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=443936",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4613053500"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "112-백월산-이륙장-126624-36606",
+    "sourceName": "백월산 이륙장",
+    "normalizedName": "백월산 이륙장",
+    "category": "launch_site",
+    "lat": 36.60633,
+    "lng": 126.623998,
+    "altitudeM": 0,
+    "descriptionText": "홍성군 백월산 이륙장 - 서풍,북서,남동 (http://www.windguru.cz/int/index.php?vs=1&sc=443937)\n구항면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4480039000)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=16&main_cate_no=31&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=443937",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4480039000",
+      "http://1004boom.kr/front/php/product.php?product_no=16&main_cate_no=31&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "113-난함산-이륙장-128062-36195",
+    "sourceName": "난함산 이륙장",
+    "normalizedName": "난함산 이륙장",
+    "category": "launch_site",
+    "lat": 36.195248,
+    "lng": 128.061705,
+    "altitudeM": 0,
+    "descriptionText": "김천시 난함산 이륙장 - 남동 (http://www.windguru.cz/int/index.php?vs=1&sc=443938)\n어모면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4715036000)\n관리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306142327&0&MINDB_01M&135&a)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=443938",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4715036000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306142327&0&MINDB_01M&135&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "114-박달산-이륙장-126880-37766",
+    "sourceName": "박달산 이륙장",
+    "normalizedName": "박달산 이륙장",
+    "category": "launch_site",
+    "lat": 37.765694,
+    "lng": 126.879902,
+    "altitudeM": 0,
+    "descriptionText": "파주시 박달산 이륙장 - 남서, 서 (http://www.windguru.cz/int/index.php?vs=1&sc=444984)\n광탄면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4148035000)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=444984",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4148035000"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "115-왜목-이륙장-126525-37046",
+    "sourceName": "왜목 이륙장",
+    "normalizedName": "왜목 이륙장",
+    "category": "launch_site",
+    "lat": 37.046032,
+    "lng": 126.524563,
+    "altitudeM": 0,
+    "descriptionText": "당진시 왜목 이륙장 - 남동 / 동 (http://www.windguru.cz/int/index.php?vs=1&sc=450296)\n석문면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4427032000)\n대죽리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306142147&0&MINDB_01M&606&a)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=450296",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4427032000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306142147&0&MINDB_01M&606&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "116-왕방산-이륙장-127365-35604",
+    "sourceName": "왕방산 이륙장",
+    "normalizedName": "왕방산 이륙장",
+    "category": "launch_site",
+    "lat": 35.604103,
+    "lng": 127.364759,
+    "altitudeM": 0,
+    "descriptionText": "임실군 왕방산 이륙장 - 남풍 (http://www.windguru.cz/int/index.php?vs=1&sc=450304)\n지사면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4575041000)\n이도리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306142153&0&MINDB_01M&244&a)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=450304",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4575041000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306142153&0&MINDB_01M&244&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "117-재석산-이륙장-127371-34871",
+    "sourceName": "재석산 이륙장",
+    "normalizedName": "재석산 이륙장",
+    "category": "launch_site",
+    "lat": 34.87125,
+    "lng": 127.370596,
+    "altitudeM": 0,
+    "descriptionText": "순천시 재석산 이륙장 - 남동 / 북서 (http://www.windguru.cz/int/index.php?vs=1&sc=450305)\n별량면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4615039000)\n벌교읍 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306142201&0&MINDB_01M&748&a)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=450305",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4615039000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306142201&0&MINDB_01M&748&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "118-흑성산-이륙장-127207-36792",
+    "sourceName": "흑성산 이륙장",
+    "normalizedName": "흑성산 이륙장",
+    "category": "launch_site",
+    "lat": 36.791622,
+    "lng": 127.207003,
+    "altitudeM": 0,
+    "descriptionText": "천안시 흑성산 이륙장 - 동풍/남동 (http://www.windguru.cz/int/index.php?vs=1&sc=306481)\n목천읍 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4413125000)\n신방동 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306122204&0&MINDB_01M&232&a)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=306481",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4413125000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306122204&0&MINDB_01M&232&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "119-예봉산-이륙장-127257-37566",
+    "sourceName": "예봉산 이륙장",
+    "normalizedName": "예봉산 이륙장",
+    "category": "launch_site",
+    "lat": 37.565603,
+    "lng": 127.257471,
+    "altitudeM": 0,
+    "descriptionText": "남양주시 예봉산 이륙장 - 서풍/남서/북서 (http://www.windguru.cz/int/index.php?vs=1&sc=450306)\n와부읍 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4136025000)\n창우동 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306181520&0&MINDB_01M&533&a)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=450306",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4136025000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306181520&0&MINDB_01M&533&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "120-딸각산-이륙장-127269-34536",
+    "sourceName": "딸각산 이륙장",
+    "normalizedName": "딸각산 이륙장",
+    "category": "launch_site",
+    "lat": 34.536187,
+    "lng": 127.268672,
+    "altitudeM": 0,
+    "descriptionText": "고흥군 딸각산 이륙장 - 서풍/남서 (http://www.windguru.cz/int/index.php?vs=1&sc=450307)\n풍양면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4677031000)\n봉암리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306181758&0&MINDB_01M&749&a)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=26&main_cate_no=30&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=450307",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4677031000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306181758&0&MINDB_01M&749&a",
+      "http://1004boom.kr/front/php/product.php?product_no=26&main_cate_no=30&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "121-문경활공랜드-128175-36740",
+    "sourceName": "문경활공랜드-서풍",
+    "normalizedName": "문경활공랜드",
+    "category": "launch_site",
+    "lat": 36.739538,
+    "lng": 128.174551,
+    "altitudeM": 0,
+    "descriptionText": "문경시 문경 이륙장 - 서풍 (http://www.windguru.cz/int/index.php?%3Cbr%20/%3Ego=1&lang=eng&vs=1&sc=124527&wj=kmh&tj=c&odh=0&doh=24&fhours=180)\n문경읍 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4728025000)\n외어리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306122219&0&MINDB_01M&818&a)",
+    "windHint": "서풍",
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?%3Cbr%20/%3Ego=1&lang=eng&vs=1&sc=124527&wj=kmh&tj=c&odh=0&doh=24&fhours=180",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4728025000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201306122219&0&MINDB_01M&818&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "122-미악산-이륙장-126554-33300",
+    "sourceName": "미악산 이륙장",
+    "normalizedName": "미악산 이륙장",
+    "category": "launch_site",
+    "lat": 33.300094,
+    "lng": 126.554432,
+    "altitudeM": 0,
+    "descriptionText": "제주도 미악산 이륙장 - 남서\n동홍동 - 기상청  (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=5013057000)\n서귀동 - 실시간 관측기상 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201308052215&0&MINDB_01M&189&a)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=5013057000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201308052215&0&MINDB_01M&189&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "123-미시령-이륙장-128439-38218",
+    "sourceName": "미시령 이륙장 - 동풍",
+    "normalizedName": "미시령 이륙장",
+    "category": "launch_site",
+    "lat": 38.217548,
+    "lng": 128.438501,
+    "altitudeM": 0,
+    "descriptionText": "고성군 미시령 이륙장 - 동풍 (http://www.windguru.cz/int/index.php?vs=1&sc=464090)\n토성면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4282033000)\n원암리 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201309161444&0&MINDB_01M&554&a)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=20&main_cate_no=31&display_group=1)",
+    "windHint": "동풍",
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=464090",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4282033000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201309161444&0&MINDB_01M&554&a",
+      "http://1004boom.kr/front/php/product.php?product_no=20&main_cate_no=31&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "124-대만-핑퉁-이륙장-120647-22753",
+    "sourceName": "대만 핑퉁 이륙장",
+    "normalizedName": "대만 핑퉁 이륙장",
+    "category": "launch_site",
+    "lat": 22.753329,
+    "lng": 120.646985,
+    "altitudeM": 0,
+    "descriptionText": "사이지마 이륙장 - 서풍 (http://www.windguru.cz/int/index.php?vs=1&sc=466419)\n대만 기상청 (http://www.cwb.gov.tw/V7/index.htm)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=466419",
+      "http://www.cwb.gov.tw/V7/index.htm"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "125-주작산-이륙장-126702-34507",
+    "sourceName": "주작산 이륙장",
+    "normalizedName": "주작산 이륙장",
+    "category": "launch_site",
+    "lat": 34.507397,
+    "lng": 126.702372,
+    "altitudeM": 0,
+    "descriptionText": "강진 주작산 이륙장 - 남남동 (http://www.windguru.cz/int/index.php?vs=1&sc=468859)\n신전면 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4681035000)\n북일면신월리-실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201310071803&0&MINDB_01M&785&a)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=468859",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4681035000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201310071803&0&MINDB_01M&785&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "126-무릉이륙장-129065-37478",
+    "sourceName": "무릉이륙장",
+    "normalizedName": "무릉이륙장",
+    "category": "launch_site",
+    "lat": 37.477506,
+    "lng": 129.064507,
+    "altitudeM": 0,
+    "descriptionText": "동해시 무릉이륙장 - 북서 (http://www.windguru.cz/int/index.php?vs=1&sc=472457)\n기상청 - 삼화동 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4217065000)\n교동 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201311062207&0&MINDB_01M&876&a)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=472457",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4217065000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201311062207&0&MINDB_01M&876&a"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "127-대만-이란이륙장-121842-24885",
+    "sourceName": "대만 이란이륙장 - 남서",
+    "normalizedName": "대만 이란이륙장",
+    "category": "launch_site",
+    "lat": 24.8849519,
+    "lng": 121.8421282,
+    "altitudeM": 0,
+    "descriptionText": "이란 이륙장 -남서 (http://www.windguru.cz/int/index.php?vs=1&sc=472459)\n대만 기상청 (http://www.cwb.gov.tw/V7/index.htm)",
+    "windHint": "남서",
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=472459",
+      "http://www.cwb.gov.tw/V7/index.htm"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "128-남포-이륙장-128789-35472",
+    "sourceName": "남포 이륙장",
+    "normalizedName": "남포 이륙장",
+    "category": "launch_site",
+    "lat": 35.472169,
+    "lng": 128.788819,
+    "altitudeM": 0,
+    "descriptionText": "밀양시 남포동 이륙장 - 남서풍 (http://www.windguru.cz/int/index.php?vs=1&sc=496140)\n가곡동 - 기상청 (http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4827054000)\n내이동 - 실시간 관측자료 (http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201305132138&0&MINDB_01M&288&a)\n천사부메랑 - www.1004boom.kr (http://1004boom.kr/front/php/product.php?product_no=20&main_cate_no=31&display_group=1)",
+    "windHint": null,
+    "sourceLinks": [
+      "http://www.windguru.cz/int/index.php?vs=1&sc=496140",
+      "http://www.kma.go.kr/weather/forecast/timeseries.jsp?searchType=SETINFO&setinfoCode=4827054000",
+      "http://203.247.66.10/cgi-bin/aws/nph-aws_txt_min?201305132138&0&MINDB_01M&288&a",
+      "http://1004boom.kr/front/php/product.php?product_no=20&main_cate_no=31&display_group=1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "129-안동-길안이륙장-128905-36472",
+    "sourceName": "안동 길안이륙장",
+    "normalizedName": "안동 길안이륙장",
+    "category": "launch_site",
+    "lat": 36.4716288,
+    "lng": 128.9048181,
+    "altitudeM": 0,
+    "descriptionText": "https://old.windguru.cz/int/index.php?vs=1&sc=875006   - 서풍:425m",
+    "windHint": null,
+    "sourceLinks": [
+      "https://old.windguru.cz/int/index.php?vs=1&sc=875006"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "130-김해-임호산이륙장-128865-35225",
+    "sourceName": "김해 임호산이륙장",
+    "normalizedName": "김해 임호산이륙장",
+    "category": "launch_site",
+    "lat": 35.2252407,
+    "lng": 128.8649142,
+    "altitudeM": 0,
+    "descriptionText": "남풍 - 170m",
+    "windHint": null,
+    "sourceLinks": [],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "131-정읍-칠보산-이륙장-126897-35558",
+    "sourceName": "정읍 칠보산 이륙장",
+    "normalizedName": "정읍 칠보산 이륙장",
+    "category": "launch_site",
+    "lat": 35.5582286,
+    "lng": 126.8972033,
+    "altitudeM": 0,
+    "descriptionText": "정읍 칠보산 이륙장 - 서북서 / 착륙장 \"라벤터\" 꽃 6월달 만개https://www.windy.com/35.559/126.900?2025051106,35.551,126.900,14,i:pressure,p:metars",
+    "windHint": null,
+    "sourceLinks": [
+      "https://www.windy.com/35.559/126.900?2025051106,35.551,126.900,14,i:pressure,p:metars"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "132-임실군-옥정호-나래산-127126-35606",
+    "sourceName": "임실군 옥정호 나래산",
+    "normalizedName": "임실군 옥정호 나래산",
+    "category": "launch_site",
+    "lat": 35.6056034,
+    "lng": 127.1259736,
+    "altitudeM": 0,
+    "descriptionText": "임실 나래산 - 북풍&북서  https://www.windy.com/35.606/127.126?35.603,127.126,15,i:pressure,p:metars,m:eEvajG1",
+    "windHint": null,
+    "sourceLinks": [
+      "https://www.windy.com/35.606/127.126?35.603,127.126,15,i:pressure,p:metars,m:eEvajG1"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "133-삼척-용화-이륙장-129291-37291",
+    "sourceName": "삼척 용화 이륙장-동풍",
+    "normalizedName": "삼척 용화 이륙장",
+    "category": "launch_site",
+    "lat": 37.2913363,
+    "lng": 129.2911963,
+    "altitudeM": 0,
+    "descriptionText": "용화 이륙장 -동풍 - https://www.windy.com/37.291/129.291?37.288,129.298,15,i:pressure,p:metars",
+    "windHint": "동풍",
+    "sourceLinks": [
+      "https://www.windy.com/37.291/129.291?37.288,129.298,15,i:pressure,p:metars"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "134-태백-귀네미마을-이륙장-129010-37342",
+    "sourceName": "태백 귀네미마을 이륙장-동풍",
+    "normalizedName": "태백 귀네미마을 이륙장",
+    "category": "launch_site",
+    "lat": 37.3415218,
+    "lng": 129.0095377,
+    "altitudeM": 0,
+    "descriptionText": "초급자이상 -동풍 / B급기체 이상 비행가능https://www.windy.com/37.342/129.010?37.336,129.017,14,i:pressure,p:metars",
+    "windHint": "동풍",
+    "sourceLinks": [
+      "https://www.windy.com/37.342/129.010?37.336,129.017,14,i:pressure,p:metars"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "135-완도-신지이륙장-126837-34323",
+    "sourceName": "완도 신지이륙장-남서&서풍",
+    "normalizedName": "완도 신지이륙장",
+    "category": "launch_site",
+    "lat": 34.3234454,
+    "lng": 126.836722,
+    "altitudeM": 0,
+    "descriptionText": "신지 이륙장-남서&서풍https://www.windy.com/34.323/126.837?34.319,126.837,15,i:pressure,p:metars",
+    "windHint": "남서&서풍",
+    "sourceLinks": [
+      "https://www.windy.com/34.323/126.837?34.319,126.837,15,i:pressure,p:metars"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "136-영월-마추픽추-이륙장-128529-37151",
+    "sourceName": "영월 마추픽추 이륙장-남풍&북풍",
+    "normalizedName": "영월 마추픽추 이륙장",
+    "category": "launch_site",
+    "lat": 37.1507117,
+    "lng": 128.5288563,
+    "altitudeM": 0,
+    "descriptionText": "https://www.windy.com/37.151/128.529?37.138,128.534,14,i:pressure,p:metars",
+    "windHint": "남풍&북풍",
+    "sourceLinks": [
+      "https://www.windy.com/37.151/128.529?37.138,128.534,14,i:pressure,p:metars"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "137-무척산이륙장-128861-35350",
+    "sourceName": "무척산이륙장-서풍",
+    "normalizedName": "무척산이륙장",
+    "category": "launch_site",
+    "lat": 35.349714,
+    "lng": 128.8607888,
+    "altitudeM": 0,
+    "descriptionText": "경남 김해시 생림면 생철리 산 181-1 https://www.windy.com/35.350/128.861?2025050918,35.347,128.863,15,i:pressure,p:metars",
+    "windHint": "서풍",
+    "sourceLinks": [
+      "https://www.windy.com/35.350/128.861?2025050918,35.347,128.863,15,i:pressure,p:metars"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "138-신어산이륙장-128922-35248",
+    "sourceName": "신어산이륙장-서풍",
+    "normalizedName": "신어산이륙장",
+    "category": "launch_site",
+    "lat": 35.2480292,
+    "lng": 128.9221257,
+    "altitudeM": 0,
+    "descriptionText": "https://www.windy.com/35.248/128.921?35.243,128.921,14,i:pressure,p:metars",
+    "windHint": "서풍",
+    "sourceLinks": [
+      "https://www.windy.com/35.248/128.921?35.243,128.921,14,i:pressure,p:metars"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "139-단호활공장-128625-36543",
+    "sourceName": "단호활공장-동풍",
+    "normalizedName": "단호활공장",
+    "category": "launch_site",
+    "lat": 36.5430674,
+    "lng": 128.6253169,
+    "altitudeM": 0,
+    "descriptionText": "단호이륙장이 산불로 민둥산 - 안동시 남후면 단호리 산 21-4 https://www.windy.com/36.541/128.616?36.537,128.623,14,i:pressure,p:metars",
+    "windHint": "동풍",
+    "sourceLinks": [
+      "https://www.windy.com/36.541/128.616?36.537,128.623,14,i:pressure,p:metars"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "140-음달서풍이륙장-128819-35441",
+    "sourceName": "음달서풍이륙장-서풍",
+    "normalizedName": "음달서풍이륙장",
+    "category": "launch_site",
+    "lat": 35.4406709,
+    "lng": 128.8189061,
+    "altitudeM": 0,
+    "descriptionText": "4륜차량 이동가능https://www.windy.com/35.440/128.818?35.432,128.818,14,i:pressure,p:metars",
+    "windHint": "서풍",
+    "sourceLinks": [
+      "https://www.windy.com/35.440/128.818?35.432,128.818,14,i:pressure,p:metars"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  },
+  {
+    "id": "141-강릉밥봉활공장-129053-37599",
+    "sourceName": "강릉밥봉활공장",
+    "normalizedName": "강릉밥봉활공장",
+    "category": "launch_site",
+    "lat": 37.5985524,
+    "lng": 129.0532548,
+    "altitudeM": 0,
+    "descriptionText": "동풍-323m / 도직해변 착륙장\nhttps://www.windguru.cz/173617",
+    "windHint": null,
+    "sourceLinks": [
+      "https://www.windguru.cz/173617"
+    ],
+    "sourceFile": "전국 활공장 기상정보.kml"
+  }
+]
