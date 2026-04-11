@@ -518,11 +518,13 @@ export function CourseMapPlaceholder({
           },
         });
 
-        const bounds = new mapboxgl.LngLatBounds();
+        const taskBounds = new mapboxgl.LngLatBounds();
+
+        validRoute.forEach((point) => {
+          taskBounds.extend([point.lng, point.lat]);
+        });
 
         visibleWaypoints.forEach((waypoint) => {
-          bounds.extend([waypoint.lng, waypoint.lat]);
-
           const dot = document.createElement("div");
           dot.className = "h-3.5 w-3.5 rounded-full border-2 border-white shadow";
           dot.style.backgroundColor = waypointCategoryColor(waypoint.category);
@@ -552,8 +554,6 @@ export function CourseMapPlaceholder({
         });
 
         validRoute.forEach((point, index) => {
-          bounds.extend([point.lng, point.lat]);
-
           const markerLabel = point.label
             ? `${point.name} / ${point.label}`
             : point.name;
@@ -595,8 +595,6 @@ export function CourseMapPlaceholder({
             return;
           }
 
-          bounds.extend([bottleneck.location.lng, bottleneck.location.lat]);
-
           const el = document.createElement("div");
           el.className = "h-4 w-4 rounded-full border-2 border-white shadow-lg";
           el.style.backgroundColor = severityColor(bottleneck.severity);
@@ -613,10 +611,16 @@ export function CourseMapPlaceholder({
           markers.push(marker);
         });
 
-        if (!bounds.isEmpty() && !viewportRef.current) {
-          currentMap.fitBounds(bounds, {
-            padding: 56,
-            maxZoom: 11.5,
+        if (!taskBounds.isEmpty()) {
+          currentMap.fitBounds(taskBounds, {
+            padding:
+              isFullscreen && !isCompactViewport
+                ? { top: 80, right: 440, bottom: 80, left: 80 }
+                : isCompactViewport
+                  ? 40
+                  : 72,
+            maxZoom: 12.5,
+            duration: 0,
           });
         }
 
