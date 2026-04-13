@@ -185,6 +185,12 @@ export function CourseMapPlaceholder({
   );
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [useNativeFullscreen, setUseNativeFullscreen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchStatus, setSearchStatus] = useState<
+    "idle" | "searching" | "found" | "empty" | "error"
+  >("idle");
+  const [searchMessage, setSearchMessage] = useState("");
+  const [centerLabel, setCenterLabel] = useState("");
 
   const validRoute = useMemo(
     () =>
@@ -712,6 +718,71 @@ export function CourseMapPlaceholder({
     visibleWaypoints,
   ]);
 
+  async function searchPlace() {
+    const query = searchQuery.trim();
+
+    if (!query || !accessToken) {
+      return;
+    }
+
+    setSearchStatus("searching");
+    setSearchMessage("");
+
+    try {
+      const response = await fetch(
+        `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
+          query
+        )}.json?access_token=${encodeURIComponent(
+          accessToken
+        )}&language=ko&limit=1&country=kr`
+      );
+
+      if (!response.ok) {
+        throw new Error("지명 검색 요청 실패");
+      }
+
+      const payload = (await response.json()) as {
+        features?: Array<{
+          place_name_ko?: string;
+          place_name?: string;
+          text_ko?: string;
+          text?: string;
+          center?: [number, number];
+        }>;
+      };
+
+      const feature = payload.features?.[0];
+
+      if (!feature?.center || feature.center.length < 2) {
+        setSearchStatus("empty");
+        setSearchMessage("검색 결과가 없습니다.");
+        setCenterLabel("");
+        return;
+      }
+
+      const label =
+        feature.text_ko ??
+        feature.text ??
+        feature.place_name_ko ??
+        feature.place_name ??
+        query;
+
+      mapInstanceRef.current?.flyTo({
+        center: feature.center,
+        zoom: Math.max(mapInstanceRef.current?.getZoom() ?? 11, 11),
+        essential: true,
+      });
+
+      setCenterLabel(label);
+      setSearchStatus("found");
+      setSearchMessage(`${label} 검색 완료`);
+    } catch {
+      setSearchStatus("error");
+      setSearchMessage("지명 검색에 실패했습니다.");
+      setCenterLabel("");
+    }
+  }
+
   async function toggleFullscreen() {
     if (!useNativeFullscreen) {
       setIsFullscreen((current) => !current);
@@ -774,6 +845,41 @@ export function CourseMapPlaceholder({
         ref={mapRef}
         className={isFullscreen ? "h-[100dvh] w-full" : "h-[420px] w-full"}
       />
+
+      {accessToken ? (
+        <div className="pointer-events-auto absolute left-3 right-3 top-3 z-20 flex flex-col gap-2 sm:left-4 sm:right-auto sm:top-4 sm:w-[360px]">
+          <div className="flex items-center gap-2 rounded-2xl bg-white/92 p-2 shadow-sm backdrop-blur">
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(event) => setSearchQuery(event.target.value)}
+              onKeyDown={(event) => {
+                if (event.key === "Enter") {
+                  event.preventDefault();
+                  void searchPlace();
+                }
+              }}
+              placeholder="지명 검색"
+              className="min-w-0 flex-1 rounded-xl border border-stone-200 bg-white px-3 py-2 text-sm font-medium text-stone-900"
+            />
+            <button
+              type="button"
+              onClick={() => {
+                void searchPlace();
+              }}
+              disabled={searchStatus === "searching" || !searchQuery.trim()}
+              className="rounded-xl bg-stone-900 px-3 py-2 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-60"
+            >
+              {searchStatus === "searching" ? "검색 중..." : "검색"}
+            </button>
+          </div>
+          {searchStatus === "empty" || searchStatus === "error" ? (
+            <div className="rounded-2xl border border-red-200 bg-white/92 px-3 py-2 text-sm font-medium text-red-700 shadow-sm backdrop-blur">
+              {searchMessage}
+            </div>
+          ) : null}
+        </div>
+      ) : null}
 
       <button
         type="button"
@@ -883,6 +989,19 @@ export function CourseMapPlaceholder({
               `.env.local`에 `NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN=...`을 넣고 dev 서버를 다시
               시작하면 이 코스가 지도 위에 표시됩니다.
             </p>
+          </div>
+        </div>
+      ) : null}
+
+      {centerLabel ? (
+        <div className="pointer-events-none absolute left-1/2 top-1/2 z-[15] flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-2">
+          <div className="rounded-full border-2 border-sky-500 bg-white/95 px-4 py-2 text-sm font-semibold text-stone-900 shadow-lg backdrop-blur">
+            {centerLabel}
+          </div>
+          <div className="relative h-7 w-7">
+            <span className="absolute left-1/2 top-0 h-7 w-[2px] -translate-x-1/2 rounded-full bg-sky-500/90" />
+            <span className="absolute left-0 top-1/2 h-[2px] w-7 -translate-y-1/2 rounded-full bg-sky-500/90" />
+            <span className="absolute left-1/2 top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white bg-sky-500 shadow" />
           </div>
         </div>
       ) : null}
