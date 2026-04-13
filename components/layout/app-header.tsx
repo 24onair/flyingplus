@@ -68,16 +68,21 @@ export function AppHeader() {
   }
 
   return (
-    <header className="sticky top-0 z-20 border-b border-stone-200/70 bg-[rgba(248,244,236,0.8)] backdrop-blur-xl">
+    <header className="sticky top-0 z-20 border-b border-[color:var(--line)] bg-[rgba(248,245,239,0.8)] backdrop-blur-2xl">
       <div className="mx-auto w-[min(1200px,calc(100vw-24px))] py-3 md:py-4">
         <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-          <Link href="/" className="flex min-w-0 items-center gap-3">
-            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-stone-900 text-xl text-white">
-            🪂
+          <Link
+            href="/"
+            className="flex min-w-0 items-center gap-3 rounded-[26px] border border-[color:var(--line)] bg-[rgba(255,253,249,0.72)] px-3 py-2 shadow-[0_12px_28px_rgba(23,20,17,0.06)] transition hover:border-[color:var(--line-strong)] hover:bg-[rgba(255,253,249,0.92)]"
+          >
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[18px] bg-[linear-gradient(145deg,#171411,#2b241d)] text-xl text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.12)]">
+              🪂
             </div>
             <div className="min-w-0">
-              <p className="text-sm font-semibold text-stone-500">XC 도우미</p>
-              <p className="truncate text-base font-bold text-stone-900 md:text-lg">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">
+                XC 도우미
+              </p>
+              <p className="truncate text-base font-black tracking-[-0.04em] text-stone-950 md:text-[1.1rem]">
                 Hike & Fly Planner
               </p>
             </div>
@@ -91,10 +96,10 @@ export function AppHeader() {
                   href={
                     serializedParams ? `${item.href}?${serializedParams}` : item.href
                   }
-                  className={`shrink-0 rounded-full px-4 py-2 text-sm font-semibold transition hover:bg-white hover:text-stone-900 ${
+                  className={`shrink-0 rounded-full border px-4 py-2 text-sm font-semibold tracking-[-0.02em] transition ${
                     isItemActive(pathname, item.href)
-                      ? "bg-white text-stone-900 shadow-sm"
-                      : "text-stone-600"
+                      ? "border-[color:var(--line)] bg-[rgba(255,253,249,0.92)] text-stone-950 shadow-[0_10px_22px_rgba(23,20,17,0.06)]"
+                      : "border-transparent text-stone-600 hover:border-[color:var(--line)] hover:bg-[rgba(255,253,249,0.7)] hover:text-stone-950"
                   }`}
                 >
                   {item.label}
@@ -110,10 +115,10 @@ export function AppHeader() {
                     href={
                       serializedParams ? `${item.href}?${serializedParams}` : item.href
                     }
-                    className={`shrink-0 rounded-full border px-3 py-1.5 text-xs font-semibold transition ${
+                    className={`shrink-0 rounded-full border px-3 py-1.5 text-xs font-semibold tracking-[-0.01em] transition ${
                       isItemActive(pathname, item.href, item.activePrefixes)
-                        ? "border-stone-300 bg-white text-stone-900 shadow-sm"
-                        : "border-stone-200 bg-stone-50/80 text-stone-600 hover:border-stone-300 hover:bg-white hover:text-stone-900"
+                        ? "border-[color:var(--line-strong)] bg-[rgba(255,253,249,0.94)] text-stone-950 shadow-[0_8px_18px_rgba(23,20,17,0.05)]"
+                        : "border-[color:var(--line)] bg-[rgba(248,243,235,0.72)] text-stone-600 hover:border-[color:var(--line-strong)] hover:bg-[rgba(255,253,249,0.9)] hover:text-stone-950"
                     }`}
                   >
                     {item.label}
