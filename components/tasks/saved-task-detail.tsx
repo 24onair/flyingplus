@@ -122,15 +122,18 @@ async function readTaskApiResponse(response: Response) {
 export function SavedTaskDetail({
   task,
   embed = false,
+  draftMode = false,
 }: {
   task: SavedTaskRecord;
   embed?: boolean;
+  draftMode?: boolean;
 }) {
   const router = useRouter();
   const { user, profile, isLoading: authLoading, getAccessToken } = useAuth();
-  const canRenameOriginal = Boolean(profile?.isAdmin) || user?.id === task.userId;
+  const canRenameOriginal =
+    !draftMode && (Boolean(profile?.isAdmin) || user?.id === task.userId);
   const [isQrOpen, setIsQrOpen] = useState(false);
-  const [taskName, setTaskName] = useState(`${task.name} 수정본`);
+  const [taskName, setTaskName] = useState(draftMode ? task.name : `${task.name} 수정본`);
   const [editableTurnpoints, setEditableTurnpoints] = useState<EditableTurnpoint[]>(
     normalizeTurnpoints(task.turnpoints)
   );
@@ -577,10 +580,10 @@ export function SavedTaskDetail({
         <div className="flex items-start justify-between gap-4">
           <div>
             <p className="text-sm font-semibold text-stone-500">
-              {embed ? "워드프레스 임베드" : "저장된 타스크 편집"}
+              {draftMode ? "신규 타스크 만들기" : embed ? "워드프레스 임베드" : "저장된 타스크 편집"}
             </p>
             <h1 className={`mt-1 font-bold text-stone-900 ${embed ? "text-2xl" : "text-3xl"}`}>
-              {task.name}
+              {draftMode ? taskName : task.name}
             </h1>
             <p className="mt-2 text-sm text-stone-600">
               {task.siteName} / {task.date} / {task.taskType}
@@ -712,9 +715,13 @@ export function SavedTaskDetail({
           <div className="mt-4 rounded-[24px] border border-amber-200 bg-amber-50 p-4">
             <div className="flex items-center justify-between gap-3">
               <div>
-                <p className="text-sm font-semibold text-amber-900">새 타스크로 저장</p>
+                <p className="text-sm font-semibold text-amber-900">
+                  {draftMode ? "현재 타스크 저장" : "새 타스크로 저장"}
+                </p>
                 <p className="mt-1 text-xs text-amber-800">
-                  수정한 내용은 기존 타스크를 덮어쓰지 않고 새 타스크로 저장됩니다.
+                  {draftMode
+                    ? "현재 입력한 신규 타스크를 저장합니다."
+                    : "수정한 내용은 기존 타스크를 덮어쓰지 않고 새 타스크로 저장됩니다."}
                 </p>
               </div>
               <button

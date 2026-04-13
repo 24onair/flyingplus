@@ -1,5 +1,7 @@
 import { PersonalTasksPage } from "@/components/tasks/personal-tasks-page";
 import { isEmbedValue } from "@/lib/embed";
+import Link from "next/link";
+import { withEmbedParam } from "@/lib/embed";
 
 export const dynamic = "force-dynamic";
 
@@ -20,6 +22,11 @@ export default async function SavedTasksPage({
           <p className="mt-2 text-sm text-stone-600">
             공개 타스크를 보고 상세 화면으로 이동할 수 있습니다.
           </p>
+          <div className="mt-4">
+            <Link href={withEmbedParam("/tasks/new", embed)} className="btn btn-primary">
+              신규 타스크 만들기
+            </Link>
+          </div>
         </div>
       ) : (
         <div className="glass rounded-[28px] border p-5">
@@ -29,6 +36,11 @@ export default async function SavedTasksPage({
             공개 타스크는 모두 볼 수 있고, 일반 회원은 본인 타스크만 추가로 확인할 수 있습니다.
             관리자는 전체 저장 타스크를 모두 확인할 수 있습니다.
           </p>
+          <div className="mt-4">
+            <Link href={withEmbedParam("/tasks/new", embed)} className="btn btn-primary">
+              신규 타스크 만들기
+            </Link>
+          </div>
         </div>
       )}
 

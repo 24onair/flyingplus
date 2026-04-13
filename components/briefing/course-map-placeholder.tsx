@@ -83,6 +83,7 @@ type CourseMapProps = {
 };
 
 const accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
+const DEFAULT_MAP_CENTER: [number, number] = [128, 36.2];
 const categoryOptions: Array<WaypointCategory | "all"> = [
   "all",
   "launch",
@@ -140,7 +141,7 @@ function waypointCategoryLabel(category: WaypointCategory | "all") {
 
 export function CourseMapPlaceholder({
   courseName,
-  siteName,
+  siteName: _siteName,
   route,
   bottlenecks,
   waypoints = [],
@@ -337,7 +338,7 @@ export function CourseMapPlaceholder({
   }, [isFullscreen]);
 
   useEffect(() => {
-    if (!accessToken || !mapRef.current || validRoute.length === 0) {
+    if (!accessToken || !mapRef.current) {
       return;
     }
 
@@ -360,8 +361,12 @@ export function CourseMapPlaceholder({
       mapInstance = new mapboxgl.Map({
         container: mapRef.current,
         style: "mapbox://styles/mapbox/outdoors-v12",
-        center: viewportRef.current?.center ?? [validRoute[0].lng, validRoute[0].lat],
-        zoom: viewportRef.current?.zoom ?? 9,
+        center:
+          viewportRef.current?.center ??
+          (validRoute[0]
+            ? [validRoute[0].lng, validRoute[0].lat]
+            : DEFAULT_MAP_CENTER),
+        zoom: viewportRef.current?.zoom ?? (validRoute[0] ? 9 : 6.7),
         bearing: viewportRef.current?.bearing ?? 0,
         pitch: viewportRef.current?.pitch ?? 0,
       });
@@ -454,14 +459,20 @@ export function CourseMapPlaceholder({
 
         currentMap.addSource("course-route", {
           type: "geojson",
-          data: {
-            type: "Feature",
-            geometry: {
-              type: "LineString",
-              coordinates: routeCoordinates,
-            },
-            properties: {},
-          },
+          data:
+            routeCoordinates.length >= 2
+              ? {
+                  type: "Feature",
+                  geometry: {
+                    type: "LineString",
+                    coordinates: routeCoordinates,
+                  },
+                  properties: {},
+                }
+              : {
+                  type: "FeatureCollection",
+                  features: [],
+                },
         });
 
         currentMap.addLayer({
@@ -812,24 +823,6 @@ export function CourseMapPlaceholder({
     }
   }
 
-  if (validRoute.length === 0) {
-    return (
-      <section
-        ref={sectionRef}
-        className="glass relative min-h-[420px] overflow-hidden rounded-[32px] border p-5"
-      >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(29,107,87,0.16),transparent_30%),linear-gradient(180deg,rgba(255,255,255,0.8),rgba(245,239,228,0.92))]" />
-        <div className="relative z-10">
-          <p className="text-sm font-semibold text-stone-500">지도 데이터 없음</p>
-          <h1 className="mt-1 text-3xl font-bold text-stone-900">{siteName}</h1>
-          <p className="mt-2 max-w-lg text-sm leading-6 text-stone-600">
-            현재 코스에 좌표 데이터가 없어 지도를 그릴 수 없습니다.
-          </p>
-        </div>
-      </section>
-    );
-  }
-
   return (
     <section
       ref={sectionRef}
@@ -897,6 +890,11 @@ export function CourseMapPlaceholder({
             추천 코스
           </p>
           <p className="mt-1 text-sm font-bold text-stone-900 sm:mt-2 sm:text-lg">{courseName}</p>
+          {validRoute.length === 0 ? (
+            <p className="mt-2 text-xs font-medium text-stone-500">
+              지명을 검색한 뒤 지도를 클릭해 첫 타스크 포인트를 만들 수 있습니다.
+            </p>
+          ) : null}
         </div>
         <div className="hidden rounded-2xl bg-white/92 px-4 py-3 shadow-sm backdrop-blur md:block">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">
