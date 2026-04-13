@@ -132,6 +132,7 @@ export function SavedTaskDetail({
   const { user, profile, isLoading: authLoading, getAccessToken } = useAuth();
   const canRenameOriginal =
     !draftMode && (Boolean(profile?.isAdmin) || user?.id === task.userId);
+  const canDeleteTask = !draftMode && Boolean(profile?.isAdmin);
   const [isQrOpen, setIsQrOpen] = useState(false);
   const [taskName, setTaskName] = useState(draftMode ? task.name : `${task.name} 수정본`);
   const [editableTurnpoints, setEditableTurnpoints] = useState<EditableTurnpoint[]>(
@@ -162,6 +163,8 @@ export function SavedTaskDetail({
     "idle" | "saving" | "done" | "error"
   >("idle");
   const [renameError, setRenameError] = useState("");
+  const [deleteStatus, setDeleteStatus] = useState<"idle" | "deleting" | "error">("idle");
+  const [deleteError, setDeleteError] = useState("");
   const [waypointDatabase, setWaypointDatabase] = useState<WaypointRecord[]>([]);
   const emptyBottlenecks = useMemo(() => [], []);
 
@@ -567,6 +570,47 @@ export function SavedTaskDetail({
     }
   }
 
+  async function deleteCurrentTask() {
+    const confirmed = window.confirm("이 타스크를 완전히 삭제할까요?");
+
+    if (!confirmed) {
+      return;
+    }
+
+    setDeleteStatus("deleting");
+    setDeleteError("");
+
+    try {
+      const accessToken = await getAccessToken();
+
+      if (!accessToken) {
+        router.push(withEmbedParam("/auth/login", embed));
+        return;
+      }
+
+      const response = await fetch(`/api/tasks?taskId=${encodeURIComponent(task.id)}`, {
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+      });
+
+      const payload = response.headers.get("content-type")?.includes("application/json")
+        ? ((await response.json()) as { error?: string; details?: string })
+        : null;
+
+      if (!response.ok) {
+        throw new Error(payload?.error ?? payload?.details ?? "타스크 삭제 실패");
+      }
+
+      router.push(withEmbedParam("/tasks", embed));
+      router.refresh();
+    } catch (error) {
+      setDeleteStatus("error");
+      setDeleteError(error instanceof Error ? error.message : "알 수 없는 오류");
+    }
+  }
+
   return (
     <div className={embed ? "space-y-4" : "space-y-6"}>
       <XctskQrModal
@@ -836,6 +880,28 @@ export function SavedTaskDetail({
               </li>
             ))}
           </ul>
+
+          {canDeleteTask ? (
+            <div className="mt-6 rounded-[24px] border border-red-200 bg-red-50 p-4">
+              <p className="text-sm font-semibold text-red-900">타스크 삭제</p>
+              <p className="mt-1 text-xs leading-5 text-red-800">
+                이 작업은 되돌릴 수 없습니다. 관리자만 저장된 타스크를 삭제할 수 있습니다.
+              </p>
+              <div className="mt-3 flex flex-wrap items-center gap-3">
+                <button
+                  type="button"
+                  onClick={() => void deleteCurrentTask()}
+                  disabled={deleteStatus === "deleting"}
+                  className="btn btn-danger disabled:cursor-not-allowed disabled:opacity-60"
+                >
+                  {deleteStatus === "deleting" ? "삭제 중..." : "이 타스크 삭제"}
+                </button>
+                {deleteStatus === "error" && deleteError ? (
+                  <span className="text-sm font-medium text-red-900">{deleteError}</span>
+                ) : null}
+              </div>
+            </div>
+          ) : null}
         </aside>
       </div>
     </div>

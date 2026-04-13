@@ -307,3 +307,17 @@ export async function getSavedTask(taskId: string) {
   const [record] = await enrichSavedTasks([data as SavedTaskRow]);
   return record ?? null;
 }
+
+export async function deleteSavedTask(taskId: string) {
+  const supabase = createSupabaseAdminClient();
+  const { error, count } = await supabase
+    .from("saved_tasks")
+    .delete({ count: "exact" })
+    .eq("id", taskId);
+
+  if (error) {
+    throw new Error(error.message);
+  }
+
+  return (count ?? 0) > 0;
+}

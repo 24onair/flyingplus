@@ -23,6 +23,8 @@ export function SavedTasksList({
   const [editingId, setEditingId] = useState<string | null>(null);
   const [draftName, setDraftName] = useState("");
   const [savingId, setSavingId] = useState<string | null>(null);
+  const [deletingId, setDeletingId] = useState<string | null>(null);
+  const [deleteError, setDeleteError] = useState("");
 
   async function saveName(taskId: string) {
     if (!draftName.trim()) {
@@ -67,6 +69,47 @@ export function SavedTasksList({
     }
   }
 
+  async function deleteTask(taskId: string) {
+    const confirmed = window.confirm("이 타스크를 리스트에서 삭제할까요?");
+
+    if (!confirmed) {
+      return;
+    }
+
+    setDeletingId(taskId);
+    setDeleteError("");
+
+    try {
+      const accessToken = await getAccessToken();
+
+      if (!accessToken) {
+        router.push(withEmbedParam("/auth/login", embed));
+        return;
+      }
+
+      const response = await fetch(`/api/tasks?taskId=${encodeURIComponent(taskId)}`, {
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+      });
+
+      const payload = response.headers.get("content-type")?.includes("application/json")
+        ? ((await response.json()) as { error?: string; details?: string })
+        : null;
+
+      if (!response.ok) {
+        throw new Error(payload?.error ?? payload?.details ?? "타스크 삭제 실패");
+      }
+
+      setTasks((current) => current.filter((task) => task.id !== taskId));
+    } catch (error) {
+      setDeleteError(error instanceof Error ? error.message : "알 수 없는 오류");
+    } finally {
+      setDeletingId(null);
+    }
+  }
+
   if (tasks.length === 0) {
     return (
       <div className="glass rounded-[28px] border p-6 text-sm text-stone-600">
@@ -77,6 +120,11 @@ export function SavedTasksList({
 
   return (
     <div className="grid gap-4">
+      {deleteError ? (
+        <div className="glass rounded-[28px] border border-red-200 bg-red-50 p-4 text-sm text-red-900">
+          {deleteError}
+        </div>
+      ) : null}
       {tasks.map((task) => (
         <div
           key={task.id}
@@ -148,6 +196,16 @@ export function SavedTasksList({
                 className="btn btn-secondary"
               >
                 이름 변경
+              </button>
+            ) : null}
+            {isAdmin && !embed ? (
+              <button
+                type="button"
+                onClick={() => void deleteTask(task.id)}
+                disabled={deletingId === task.id}
+                className="btn btn-danger disabled:cursor-not-allowed disabled:opacity-60"
+              >
+                {deletingId === task.id ? "삭제 중..." : "삭제"}
               </button>
             ) : null}
           </div>
