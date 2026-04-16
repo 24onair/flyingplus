@@ -1,4 +1,5 @@
 import { PersonalTasksPage } from "@/components/tasks/personal-tasks-page";
+import { OpenTopLink } from "@/components/tasks/open-top-link";
 import { isEmbedValue } from "@/lib/embed";
 import Link from "next/link";
 import { withEmbedParam } from "@/lib/embed";
@@ -26,9 +27,9 @@ export default async function SavedTasksPage({
             <Link href={withEmbedParam("/tasks/new", embed)} className="btn btn-primary">
               신규 타스크 만들기
             </Link>
-            <Link href="/tasks/new" target="_top" className="btn btn-secondary md:hidden">
+            <OpenTopLink href="/tasks/new" className="btn btn-secondary md:hidden">
               전체 화면으로 열기
-            </Link>
+            </OpenTopLink>
           </div>
         </div>
       ) : (

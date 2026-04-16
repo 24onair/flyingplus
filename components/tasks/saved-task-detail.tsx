@@ -12,6 +12,7 @@ import { buildLoginPath, withEmbedParam } from "@/lib/embed";
 import { buildCupTaskFile } from "@/lib/export/cup";
 import { buildXctskTaskFile } from "@/lib/export/xctsk";
 import { computeTaskPath } from "@/lib/task/task-geometry";
+import { OpenTopLink } from "@/components/tasks/open-top-link";
 import type { TaskPointType, WaypointRecord } from "@/types/course";
 import type { SavedTaskRecord, SavedTaskVisibility } from "@/types/saved-task";
 
@@ -659,13 +660,12 @@ export function SavedTaskDetail({
               </button>
             ) : null}
             {embed ? (
-              <Link
+              <OpenTopLink
                 href={draftMode ? "/tasks/new" : `/tasks/${task.id}`}
-                target="_top"
                 className="btn btn-secondary md:hidden"
               >
                 전체 화면으로 열기
-              </Link>
+              </OpenTopLink>
             ) : null}
             <Link href={withEmbedParam("/tasks", embed)} className="btn btn-secondary">
               목록으로
