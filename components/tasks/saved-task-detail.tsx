@@ -655,8 +655,17 @@ export function SavedTaskDetail({
                   ? "이름 저장 중..."
                   : renameStatus === "done"
                     ? "이름 저장 완료"
-                    : "현재 이름 저장"}
+                  : "현재 이름 저장"}
               </button>
+            ) : null}
+            {embed ? (
+              <Link
+                href={draftMode ? "/tasks/new" : `/tasks/${task.id}`}
+                target="_top"
+                className="btn btn-secondary md:hidden"
+              >
+                전체 화면으로 열기
+              </Link>
             ) : null}
             <Link href={withEmbedParam("/tasks", embed)} className="btn btn-secondary">
               목록으로
