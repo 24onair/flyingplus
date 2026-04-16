@@ -351,6 +351,18 @@ export function TaskElevationProfile({
           : ""
       }`}
     >
+      {isFullscreen && !useNativeFullscreen ? (
+        <button
+          type="button"
+          onClick={() => {
+            void toggleFullscreen();
+          }}
+          className="fixed right-3 top-[calc(env(safe-area-inset-top)+12px)] z-[95] rounded-2xl bg-stone-900 px-3 py-2 text-xs font-semibold text-white shadow-lg sm:right-4 sm:top-[calc(env(safe-area-inset-top)+16px)] sm:px-4 sm:py-3 sm:text-sm"
+        >
+          전체 보기 닫기
+        </button>
+      ) : null}
+
       <div
         className={`flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between ${
           isFullscreen
@@ -371,7 +383,9 @@ export function TaskElevationProfile({
             onClick={() => {
               void toggleFullscreen();
             }}
-            className="w-full rounded-full border border-stone-300 bg-white px-3 py-2 text-xs font-semibold text-stone-700 sm:w-auto"
+            className={`w-full rounded-full border border-stone-300 bg-white px-3 py-2 text-xs font-semibold text-stone-700 sm:w-auto ${
+              isFullscreen && !useNativeFullscreen ? "hidden" : ""
+            }`}
           >
             {isFullscreen ? "전체 보기 닫기" : "프로파일 전체 보기"}
           </button>

@@ -959,6 +959,18 @@ export function CourseMapPlaceholder({
         className={isFullscreen ? "h-[100dvh] w-full" : "h-[420px] w-full"}
       />
 
+      {isFullscreen && !useNativeFullscreen ? (
+        <button
+          type="button"
+          onClick={() => {
+            void toggleFullscreen();
+          }}
+          className="pointer-events-auto fixed right-3 top-[calc(env(safe-area-inset-top)+12px)] z-[95] rounded-2xl bg-stone-900 px-3 py-2 text-xs font-semibold text-white shadow-lg sm:right-4 sm:top-[calc(env(safe-area-inset-top)+16px)] sm:px-4 sm:py-3 sm:text-sm"
+        >
+          전체 보기 닫기
+        </button>
+      ) : null}
+
       {accessToken ? (
         <div className="pointer-events-auto absolute left-3 right-3 top-[calc(env(safe-area-inset-top)+12px)] z-20 flex flex-col gap-2 sm:left-4 sm:right-auto sm:top-[calc(env(safe-area-inset-top)+16px)] sm:w-[360px]">
           <div className="flex items-center gap-2 rounded-2xl bg-white/92 p-2 shadow-sm backdrop-blur">
@@ -999,7 +1011,9 @@ export function CourseMapPlaceholder({
         onClick={() => {
           void toggleFullscreen();
         }}
-        className="pointer-events-auto absolute right-3 top-[calc(env(safe-area-inset-top)+12px)] z-20 rounded-2xl bg-stone-900 px-3 py-2 text-xs font-semibold text-white shadow-sm sm:right-4 sm:top-[calc(env(safe-area-inset-top)+16px)] sm:px-4 sm:py-3 sm:text-sm"
+        className={`pointer-events-auto absolute right-3 top-[calc(env(safe-area-inset-top)+12px)] z-20 rounded-2xl bg-stone-900 px-3 py-2 text-xs font-semibold text-white shadow-sm sm:right-4 sm:top-[calc(env(safe-area-inset-top)+16px)] sm:px-4 sm:py-3 sm:text-sm ${
+          isFullscreen && !useNativeFullscreen ? "hidden" : ""
+        }`}
       >
         {isFullscreen ? "전체 보기 닫기" : "지도 전체 보기"}
       </button>
