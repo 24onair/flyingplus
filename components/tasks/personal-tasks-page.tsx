@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useAuth } from "@/components/auth/auth-provider";
 import { canUsePersonalStorage } from "@/lib/auth/profile";
-import { withEmbedParam } from "@/lib/embed";
+import { buildLoginPath, withEmbedParam } from "@/lib/embed";
 import { SavedTasksList } from "@/components/tasks/saved-tasks-list";
 import type { SavedTaskRecord } from "@/types/saved-task";
 
@@ -145,7 +145,7 @@ export function PersonalTasksPage({ embed = false }: { embed?: boolean }) {
         <div className="glass rounded-[28px] border p-6 text-sm text-stone-700">
           내 타스크를 보려면 로그인이 필요합니다.{" "}
           <Link
-            href={withEmbedParam("/auth/login", embed)}
+            href={buildLoginPath(withEmbedParam("/tasks", embed), embed)}
             className="font-semibold text-stone-900 underline"
           >
             로그인하러 가기

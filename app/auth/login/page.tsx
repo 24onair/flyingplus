@@ -1,11 +1,27 @@
 import Link from "next/link";
 import { LoginForm } from "@/components/auth/login-form";
+import { isEmbedValue, withEmbedParam, withNextParam } from "@/lib/embed";
 import { hasSupabasePublicEnv } from "@/lib/supabase/env";
 
 export const dynamic = "force-dynamic";
 
-export default function LoginPage() {
+export default async function LoginPage({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
   const supabaseEnabled = hasSupabasePublicEnv();
+  const resolvedSearchParams = await searchParams;
+  const embed = isEmbedValue(resolvedSearchParams.embed);
+  const nextValue = Array.isArray(resolvedSearchParams.next)
+    ? resolvedSearchParams.next[0]
+    : resolvedSearchParams.next;
+  const defaultNextPath = withEmbedParam("/tasks/new", embed);
+  const nextPath =
+    typeof nextValue === "string" && nextValue.startsWith("/") && !nextValue.startsWith("//")
+      ? nextValue
+      : defaultNextPath;
+  const signupHref = withNextParam(withEmbedParam("/auth/signup", embed), nextPath);
 
   return (
     <div className="space-y-6">
@@ -25,7 +41,7 @@ export default function LoginPage() {
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
-            <Link href="/auth/signup" className="btn btn-secondary">
+            <Link href={signupHref} className="btn btn-secondary">
               회원가입으로 이동
             </Link>
           </div>
@@ -39,9 +55,8 @@ export default function LoginPage() {
           </div>
         ) : null}
 
-        <LoginForm supabaseEnabled={supabaseEnabled} />
+        <LoginForm supabaseEnabled={supabaseEnabled} nextPath={nextPath} />
       </section>
     </div>
   );
 }
-

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/components/auth/auth-provider";
-import { withEmbedParam } from "@/lib/embed";
+import { buildLoginPath, withEmbedParam } from "@/lib/embed";
 import type { SavedTaskRecord } from "@/types/saved-task";
 
 export function SavedTasksList({
@@ -37,7 +37,7 @@ export function SavedTasksList({
       const accessToken = await getAccessToken();
 
       if (!accessToken) {
-        router.push(withEmbedParam("/auth/login", embed));
+        router.push(buildLoginPath(withEmbedParam("/tasks", embed), embed));
         return;
       }
 
@@ -83,7 +83,7 @@ export function SavedTasksList({
       const accessToken = await getAccessToken();
 
       if (!accessToken) {
-        router.push(withEmbedParam("/auth/login", embed));
+        router.push(buildLoginPath(withEmbedParam("/tasks", embed), embed));
         return;
       }
 

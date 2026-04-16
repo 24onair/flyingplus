@@ -1,9 +1,17 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { useRouter } from "next/navigation";
 import { createBrowserSupabaseClient } from "@/lib/supabase/client";
 
-export function LoginForm({ supabaseEnabled }: { supabaseEnabled: boolean }) {
+export function LoginForm({
+  supabaseEnabled,
+  nextPath,
+}: {
+  supabaseEnabled: boolean;
+  nextPath: string;
+}) {
+  const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [status, setStatus] = useState<"idle" | "submitting" | "done" | "error">("idle");
@@ -61,7 +69,9 @@ export function LoginForm({ supabaseEnabled }: { supabaseEnabled: boolean }) {
     }
 
     setStatus("done");
-    setMessage("로그인되었습니다. 승인 상태에 따라 저장 기능이 열립니다.");
+    setMessage("로그인되었습니다. 작업 중이던 화면으로 이동합니다.");
+    router.replace(nextPath);
+    router.refresh();
   }
 
   return (

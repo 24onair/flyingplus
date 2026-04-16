@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useAuth } from "@/components/auth/auth-provider";
 import { canUsePersonalStorage } from "@/lib/auth/profile";
-import { withEmbedParam } from "@/lib/embed";
+import { buildLoginPath, withEmbedParam } from "@/lib/embed";
 import { SavedTaskDetail } from "@/components/tasks/saved-task-detail";
 import type { SavedTaskRecord } from "@/types/saved-task";
 
@@ -119,7 +119,10 @@ export function PersonalTaskDetailPage({
           <span>
             {" "}
             공개 타스크가 아니라면{" "}
-            <Link href={withEmbedParam("/auth/login", embed)} className="font-semibold underline">
+            <Link
+              href={buildLoginPath(withEmbedParam(`/tasks/${taskId}`, embed), embed)}
+              className="font-semibold underline"
+            >
               로그인
             </Link>
             해 주세요.

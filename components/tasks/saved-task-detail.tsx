@@ -2,13 +2,13 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useAuth } from "@/components/auth/auth-provider";
 import { CourseMapPlaceholder } from "@/components/briefing/course-map-placeholder";
 import { TaskElevationProfile } from "@/components/briefing/task-elevation-profile";
 import { XctskQrModal } from "@/components/briefing/xctsk-qr-modal";
 import { canUsePersonalStorage } from "@/lib/auth/profile";
-import { withEmbedParam } from "@/lib/embed";
+import { buildLoginPath, withEmbedParam } from "@/lib/embed";
 import { buildCupTaskFile } from "@/lib/export/cup";
 import { buildXctskTaskFile } from "@/lib/export/xctsk";
 import { computeTaskPath } from "@/lib/task/task-geometry";
@@ -129,7 +129,17 @@ export function SavedTaskDetail({
   draftMode?: boolean;
 }) {
   const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
   const { user, profile, isLoading: authLoading, getAccessToken } = useAuth();
+  const currentPath = useMemo(() => {
+    const query = searchParams.toString();
+    return `${pathname}${query ? `?${query}` : ""}`;
+  }, [pathname, searchParams]);
+  const loginPath = useMemo(
+    () => buildLoginPath(currentPath, embed),
+    [currentPath, embed]
+  );
   const canRenameOriginal =
     !draftMode && (Boolean(profile?.isAdmin) || user?.id === task.userId);
   const canDeleteTask = !draftMode && Boolean(profile?.isAdmin);
@@ -452,7 +462,7 @@ export function SavedTaskDetail({
     }
 
     if (!user) {
-      router.push(withEmbedParam("/auth/login", embed));
+      router.push(loginPath);
       return;
     }
 
@@ -474,7 +484,7 @@ export function SavedTaskDetail({
       const accessToken = await getAccessToken();
 
       if (!accessToken) {
-        router.push(withEmbedParam("/auth/login", embed));
+        router.push(loginPath);
         return;
       }
 
@@ -541,7 +551,7 @@ export function SavedTaskDetail({
       const accessToken = await getAccessToken();
 
       if (!accessToken) {
-        router.push(withEmbedParam("/auth/login", embed));
+        router.push(loginPath);
         return;
       }
 
@@ -584,7 +594,7 @@ export function SavedTaskDetail({
       const accessToken = await getAccessToken();
 
       if (!accessToken) {
-        router.push(withEmbedParam("/auth/login", embed));
+        router.push(loginPath);
         return;
       }
 
