@@ -143,8 +143,8 @@ export function PersonalTaskDetailPage({
   }
 
   return (
-    <div className={embed ? "space-y-3" : "space-y-4"}>
-      {!embed && isAdmin ? (
+    <div className={embed || autoOpenMapFullscreen ? "space-y-0" : "space-y-4"}>
+      {!embed && !autoOpenMapFullscreen && isAdmin ? (
         <div className="glass rounded-[24px] border p-4 text-sm text-stone-600">
           저장자{" "}
           <span className="font-semibold text-stone-900">

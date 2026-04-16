@@ -86,6 +86,16 @@ body[data-embed-mode="true"] .page-wrap {
   padding: 8px 0 20px;
 }
 
+body[data-map-fullscreen-mode="true"] .page-wrap {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+}
+
+body[data-map-fullscreen-mode="true"] {
+  background: #0c0a09;
+}
+
 .glass {
   background: var(--surface);
   border: 1px solid var(--line);
@@ -127,6 +137,11 @@ body[data-embed-mode="true"] .page-wrap {
   body[data-embed-mode="true"] .page-wrap {
     width: min(100%, calc(100vw - 12px));
     padding: 6px 0 16px;
+  }
+
+  body[data-map-fullscreen-mode="true"] .page-wrap {
+    width: 100%;
+    padding: 0;
   }
 }
 

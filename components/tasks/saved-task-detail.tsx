@@ -636,7 +636,7 @@ export function SavedTaskDetail({
   }
 
   return (
-    <div className={embed ? "space-y-4" : "space-y-6"}>
+    <div className={embed || autoOpenMapFullscreen ? "space-y-4" : "space-y-6"}>
       <XctskQrModal
         open={isQrOpen}
         onClose={() => setIsQrOpen(false)}
@@ -644,7 +644,8 @@ export function SavedTaskDetail({
         taskName={taskName}
       />
 
-      <div className={`glass border ${embed ? "rounded-[24px] p-4" : "rounded-[28px] p-5"}`}>
+      {!autoOpenMapFullscreen ? (
+        <div className={`glass border ${embed ? "rounded-[24px] p-4" : "rounded-[28px] p-5"}`}>
         <div className="flex items-start justify-between gap-4">
           <div>
             <p className="text-sm font-semibold text-stone-500">
@@ -702,6 +703,7 @@ export function SavedTaskDetail({
           </button>
         </div>
       </div>
+      ) : null}
 
       <div className="grid min-h-[calc(100vh-220px)] gap-6 lg:grid-cols-[1.45fr_0.75fr]">
         <CourseMapPlaceholder

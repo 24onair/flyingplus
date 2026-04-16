@@ -50,6 +50,7 @@ export function AppHeader() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const isEmbed = searchParams.get("embed") === "1";
+  const isMapFullscreen = searchParams.get("mapFullscreen") === "1";
   const serializedParams = searchParams.toString();
   const { profile } = useAuth();
   const utilityItems = utilityNavItems
@@ -63,7 +64,11 @@ export function AppHeader() {
         : item
     );
 
-  if (isEmbed) {
+  if (isEmbed || isMapFullscreen) {
+    return null;
+  }
+
+  if (pathname === "/") {
     return null;
   }
 
