@@ -180,6 +180,8 @@ export function CourseMapPlaceholder({
   const terrainElevationsChangeRef = useRef(onTerrainElevationsChange);
   const terrainProfileChangeRef = useRef(onTerrainProfileChange);
   const preserveViewportOnNextRouteChangeRef = useRef(false);
+  const autoOpenedFullscreenRef = useRef(false);
+  const isMapReadyRef = useRef(false);
   const viewportRef = useRef<{
     center: [number, number];
     zoom: number;
@@ -197,6 +199,7 @@ export function CourseMapPlaceholder({
   >("idle");
   const [searchMessage, setSearchMessage] = useState("");
   const [centerLabel, setCenterLabel] = useState("");
+  const [isMapReady, setIsMapReady] = useState(false);
 
   const validRoute = useMemo(
     () =>
@@ -321,7 +324,12 @@ export function CourseMapPlaceholder({
   }, [useNativeFullscreen]);
 
   useEffect(() => {
-    if (!autoOpenFullscreen || isFullscreen) {
+    if (
+      !autoOpenFullscreen ||
+      isFullscreen ||
+      autoOpenedFullscreenRef.current ||
+      !isMapReady
+    ) {
       return;
     }
 
@@ -329,8 +337,9 @@ export function CourseMapPlaceholder({
       return;
     }
 
+    autoOpenedFullscreenRef.current = true;
     setIsFullscreen(true);
-  }, [autoOpenFullscreen, isFullscreen, useNativeFullscreen]);
+  }, [autoOpenFullscreen, isFullscreen, isMapReady, useNativeFullscreen]);
 
   useEffect(() => {
     if (!isFullscreen || useNativeFullscreen) {
@@ -386,6 +395,9 @@ export function CourseMapPlaceholder({
     let disposed = false;
     let mapInstance: import("mapbox-gl").Map | null = null;
     const markers: import("mapbox-gl").Marker[] = [];
+
+    isMapReadyRef.current = false;
+    setIsMapReady(false);
 
     async function initMap() {
       const mapboxgl = (await import("mapbox-gl")).default;
@@ -477,6 +489,9 @@ export function CourseMapPlaceholder({
         if (!currentMap) {
           return;
         }
+
+        isMapReadyRef.current = true;
+        setIsMapReady(true);
 
         currentMap.addSource("mapbox-dem", {
           type: "raster-dem",
@@ -779,6 +794,8 @@ export function CourseMapPlaceholder({
 
     return () => {
       disposed = true;
+      isMapReadyRef.current = false;
+      setIsMapReady(false);
       if (resizeTimeoutRef.current) {
         window.clearTimeout(resizeTimeoutRef.current);
         resizeTimeoutRef.current = null;
@@ -869,7 +886,15 @@ export function CourseMapPlaceholder({
   }
 
   async function toggleFullscreen() {
-    if (!isFullscreen && topLevelFullscreenHref) {
+    let isEmbeddedContext = false;
+
+    try {
+      isEmbeddedContext = Boolean(window.top && window.top !== window.self);
+    } catch {
+      isEmbeddedContext = true;
+    }
+
+    if (!isFullscreen && topLevelFullscreenHref && isEmbeddedContext) {
       try {
         if (window.top && window.top !== window.self) {
           window.top.location.href = topLevelFullscreenHref;
