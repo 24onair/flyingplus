@@ -347,11 +347,17 @@ export function TaskElevationProfile({
         isFullscreen
           ? `${
               useNativeFullscreen ? "min-h-[100dvh]" : "fixed inset-0 z-[80]"
-            } min-h-[100dvh] overflow-y-auto rounded-none bg-stone-100 px-3 py-4 sm:px-4 md:px-6 md:py-6`
+            } min-h-[100dvh] overflow-y-auto rounded-none bg-stone-100 px-3 py-4 pt-[calc(env(safe-area-inset-top)+16px)] sm:px-4 md:px-6 md:py-6`
           : ""
       }`}
     >
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+      <div
+        className={`flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between ${
+          isFullscreen
+            ? "sticky top-[env(safe-area-inset-top)] z-20 -mx-3 bg-stone-100/95 px-3 py-2 backdrop-blur sm:-mx-4 sm:px-4 md:-mx-6 md:px-6"
+            : ""
+        }`}
+      >
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">
           전체 타스크 고도 프로파일
         </p>
