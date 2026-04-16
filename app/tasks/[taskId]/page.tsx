@@ -17,6 +17,7 @@ export default async function SavedTaskDetailPage({
     <PersonalTaskDetailPage
       taskId={normalizedTaskId}
       embed={isEmbedValue(resolvedSearchParams.embed)}
+      autoOpenMapFullscreen={isEmbedValue(resolvedSearchParams.mapFullscreen)}
     />
   );
 }

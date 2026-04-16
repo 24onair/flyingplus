@@ -12,7 +12,6 @@ import { buildLoginPath, withEmbedParam } from "@/lib/embed";
 import { buildCupTaskFile } from "@/lib/export/cup";
 import { buildXctskTaskFile } from "@/lib/export/xctsk";
 import { computeTaskPath } from "@/lib/task/task-geometry";
-import { OpenTopLink } from "@/components/tasks/open-top-link";
 import type { TaskPointType, WaypointRecord } from "@/types/course";
 import type { SavedTaskRecord, SavedTaskVisibility } from "@/types/saved-task";
 
@@ -124,10 +123,12 @@ export function SavedTaskDetail({
   task,
   embed = false,
   draftMode = false,
+  autoOpenMapFullscreen = false,
 }: {
   task: SavedTaskRecord;
   embed?: boolean;
   draftMode?: boolean;
+  autoOpenMapFullscreen?: boolean;
 }) {
   const router = useRouter();
   const pathname = usePathname();
@@ -141,6 +142,18 @@ export function SavedTaskDetail({
     () => buildLoginPath(currentPath, embed),
     [currentPath, embed]
   );
+  const topLevelMapFullscreenHref = useMemo(() => {
+    if (!embed) {
+      return undefined;
+    }
+
+    const params = new URLSearchParams(searchParams.toString());
+    params.delete("embed");
+    params.set("mapFullscreen", "1");
+    const query = params.toString();
+
+    return `${pathname}${query ? `?${query}` : ""}`;
+  }, [embed, pathname, searchParams]);
   const canRenameOriginal =
     !draftMode && (Boolean(profile?.isAdmin) || user?.id === task.userId);
   const canDeleteTask = !draftMode && Boolean(profile?.isAdmin);
@@ -659,14 +672,6 @@ export function SavedTaskDetail({
                   : "현재 이름 저장"}
               </button>
             ) : null}
-            {embed ? (
-              <OpenTopLink
-                href={draftMode ? "/tasks/new" : `/tasks/${task.id}`}
-                className="btn btn-secondary md:hidden"
-              >
-                전체 화면으로 열기
-              </OpenTopLink>
-            ) : null}
             <Link href={withEmbedParam("/tasks", embed)} className="btn btn-secondary">
               목록으로
             </Link>
@@ -725,6 +730,8 @@ export function SavedTaskDetail({
           onOpenXctskQr={() => setIsQrOpen(true)}
           onTerrainElevationsChange={setTerrainElevations}
           onTerrainProfileChange={setTerrainProfileSamples}
+          topLevelFullscreenHref={topLevelMapFullscreenHref}
+          autoOpenFullscreen={autoOpenMapFullscreen}
         />
 
         <aside className="glass rounded-[28px] border p-5">

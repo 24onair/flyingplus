@@ -28,9 +28,11 @@ async function readTaskResponse(response: Response) {
 export function PersonalTaskDetailPage({
   taskId,
   embed = false,
+  autoOpenMapFullscreen = false,
 }: {
   taskId: string;
   embed?: boolean;
+  autoOpenMapFullscreen?: boolean;
 }) {
   const { user, profile, isLoading, getAccessToken } = useAuth();
   const isAdmin = Boolean(profile?.isAdmin);
@@ -153,7 +155,11 @@ export function PersonalTaskDetailPage({
           ) : null}
         </div>
       ) : null}
-      <SavedTaskDetail task={task} embed={embed} />
+      <SavedTaskDetail
+        task={task}
+        embed={embed}
+        autoOpenMapFullscreen={autoOpenMapFullscreen}
+      />
     </div>
   );
 }

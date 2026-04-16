@@ -80,6 +80,8 @@ type CourseMapProps = {
       segmentIndex: number;
     }>
   ) => void;
+  topLevelFullscreenHref?: string;
+  autoOpenFullscreen?: boolean;
 };
 
 const accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
@@ -166,6 +168,8 @@ export function CourseMapPlaceholder({
   onOpenXctskQr,
   onTerrainElevationsChange,
   onTerrainProfileChange,
+  topLevelFullscreenHref,
+  autoOpenFullscreen = false,
 }: CourseMapProps) {
   const sectionRef = useRef<HTMLElement | null>(null);
   const mapRef = useRef<HTMLDivElement | null>(null);
@@ -315,6 +319,18 @@ export function CourseMapPlaceholder({
       );
     };
   }, [useNativeFullscreen]);
+
+  useEffect(() => {
+    if (!autoOpenFullscreen || isFullscreen) {
+      return;
+    }
+
+    if (useNativeFullscreen) {
+      return;
+    }
+
+    setIsFullscreen(true);
+  }, [autoOpenFullscreen, isFullscreen, useNativeFullscreen]);
 
   useEffect(() => {
     if (!isFullscreen || useNativeFullscreen) {
@@ -853,6 +869,27 @@ export function CourseMapPlaceholder({
   }
 
   async function toggleFullscreen() {
+    if (!isFullscreen && topLevelFullscreenHref) {
+      try {
+        if (window.top && window.top !== window.self) {
+          window.top.location.href = topLevelFullscreenHref;
+          return;
+        }
+      } catch {
+        // Fall through to additional navigation attempts below.
+      }
+
+      try {
+        window.open(topLevelFullscreenHref, "_top");
+        return;
+      } catch {
+        // Ignore and use current-window fallback below.
+      }
+
+      window.location.href = topLevelFullscreenHref;
+      return;
+    }
+
     if (!useNativeFullscreen) {
       setIsFullscreen((current) => !current);
       return;

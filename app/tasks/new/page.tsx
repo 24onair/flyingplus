@@ -20,6 +20,7 @@ export default async function NewTaskPage({
 }) {
   const resolvedSearchParams = await searchParams;
   const embed = isEmbedValue(resolvedSearchParams.embed);
+  const autoOpenMapFullscreen = isEmbedValue(resolvedSearchParams.mapFullscreen);
 
   const draftTask: SavedTaskRecord = {
     id: "draft-task",
@@ -49,7 +50,12 @@ export default async function NewTaskPage({
         </p>
       </div>
 
-      <SavedTaskDetail task={draftTask} embed={embed} draftMode />
+      <SavedTaskDetail
+        task={draftTask}
+        embed={embed}
+        draftMode
+        autoOpenMapFullscreen={autoOpenMapFullscreen}
+      />
     </div>
   );
 }

@@ -1,5 +1,4 @@
 import { PersonalTasksPage } from "@/components/tasks/personal-tasks-page";
-import { OpenTopLink } from "@/components/tasks/open-top-link";
 import { isEmbedValue } from "@/lib/embed";
 import Link from "next/link";
 import { withEmbedParam } from "@/lib/embed";
@@ -23,13 +22,10 @@ export default async function SavedTasksPage({
           <p className="mt-2 text-sm text-stone-600">
             공개 타스크를 보고 상세 화면으로 이동할 수 있습니다.
           </p>
-          <div className="mt-4 flex flex-wrap gap-3">
+          <div className="mt-4">
             <Link href={withEmbedParam("/tasks/new", embed)} className="btn btn-primary">
               신규 타스크 만들기
             </Link>
-            <OpenTopLink href="/tasks/new" className="btn btn-secondary md:hidden">
-              전체 화면으로 열기
-            </OpenTopLink>
           </div>
         </div>
       ) : (
