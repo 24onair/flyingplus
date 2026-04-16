@@ -29,10 +29,12 @@ export function PersonalTaskDetailPage({
   taskId,
   embed = false,
   autoOpenMapFullscreen = false,
+  autoOpenProfileFullscreen = false,
 }: {
   taskId: string;
   embed?: boolean;
   autoOpenMapFullscreen?: boolean;
+  autoOpenProfileFullscreen?: boolean;
 }) {
   const { user, profile, isLoading, getAccessToken } = useAuth();
   const isAdmin = Boolean(profile?.isAdmin);
@@ -143,8 +145,10 @@ export function PersonalTaskDetailPage({
   }
 
   return (
-    <div className={embed || autoOpenMapFullscreen ? "space-y-0" : "space-y-4"}>
-      {!embed && !autoOpenMapFullscreen && isAdmin ? (
+    <div
+      className={embed || autoOpenMapFullscreen || autoOpenProfileFullscreen ? "space-y-0" : "space-y-4"}
+    >
+      {!embed && !autoOpenMapFullscreen && !autoOpenProfileFullscreen && isAdmin ? (
         <div className="glass rounded-[24px] border p-4 text-sm text-stone-600">
           저장자{" "}
           <span className="font-semibold text-stone-900">
@@ -159,6 +163,7 @@ export function PersonalTaskDetailPage({
         task={task}
         embed={embed}
         autoOpenMapFullscreen={autoOpenMapFullscreen}
+        autoOpenProfileFullscreen={autoOpenProfileFullscreen}
       />
     </div>
   );

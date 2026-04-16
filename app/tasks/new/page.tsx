@@ -21,6 +21,7 @@ export default async function NewTaskPage({
   const resolvedSearchParams = await searchParams;
   const embed = isEmbedValue(resolvedSearchParams.embed);
   const autoOpenMapFullscreen = isEmbedValue(resolvedSearchParams.mapFullscreen);
+  const autoOpenProfileFullscreen = isEmbedValue(resolvedSearchParams.profileFullscreen);
 
   const draftTask: SavedTaskRecord = {
     id: "draft-task",
@@ -39,8 +40,8 @@ export default async function NewTaskPage({
   };
 
   return (
-    <div className={autoOpenMapFullscreen ? "space-y-0" : "space-y-6"}>
-      {!autoOpenMapFullscreen ? (
+    <div className={autoOpenMapFullscreen || autoOpenProfileFullscreen ? "space-y-0" : "space-y-6"}>
+      {!autoOpenMapFullscreen && !autoOpenProfileFullscreen ? (
         <div className={`glass border ${embed ? "rounded-[24px] p-4" : "rounded-[28px] p-5"}`}>
           <p className="text-sm font-semibold text-stone-500">신규 타스크</p>
           <h1 className={`mt-1 font-bold text-stone-900 ${embed ? "text-2xl" : "text-3xl"}`}>
@@ -56,6 +57,7 @@ export default async function NewTaskPage({
         embed={embed}
         draftMode
         autoOpenMapFullscreen={autoOpenMapFullscreen}
+        autoOpenProfileFullscreen={autoOpenProfileFullscreen}
       />
     </div>
   );

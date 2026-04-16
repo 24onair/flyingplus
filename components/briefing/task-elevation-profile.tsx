@@ -45,6 +45,8 @@ type TaskElevationProfileProps = {
     taskType: TaskPointType;
   }>;
   baseAltitudeM: number;
+  topLevelFullscreenHref?: string;
+  autoOpenFullscreen?: boolean;
 };
 
 export function TaskElevationProfile({
@@ -52,9 +54,12 @@ export function TaskElevationProfile({
   segments,
   waypoints,
   baseAltitudeM,
+  topLevelFullscreenHref,
+  autoOpenFullscreen = false,
 }: TaskElevationProfileProps) {
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const svgRef = useRef<SVGSVGElement | null>(null);
+  const autoOpenedFullscreenRef = useRef(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [useNativeFullscreen, setUseNativeFullscreen] = useState(false);
   const [hoveredDistanceKm, setHoveredDistanceKm] = useState<number | null>(null);
@@ -99,6 +104,20 @@ export function TaskElevationProfile({
   }, [useNativeFullscreen]);
 
   useEffect(() => {
+    if (
+      !autoOpenFullscreen ||
+      isFullscreen ||
+      autoOpenedFullscreenRef.current ||
+      useNativeFullscreen
+    ) {
+      return;
+    }
+
+    autoOpenedFullscreenRef.current = true;
+    setIsFullscreen(true);
+  }, [autoOpenFullscreen, isFullscreen, useNativeFullscreen]);
+
+  useEffect(() => {
     if (!isFullscreen || useNativeFullscreen) {
       return undefined;
     }
@@ -112,6 +131,35 @@ export function TaskElevationProfile({
   }, [isFullscreen, useNativeFullscreen]);
 
   async function toggleFullscreen() {
+    let isEmbeddedContext = false;
+
+    try {
+      isEmbeddedContext = Boolean(window.top && window.top !== window.self);
+    } catch {
+      isEmbeddedContext = true;
+    }
+
+    if (!isFullscreen && topLevelFullscreenHref && isEmbeddedContext) {
+      try {
+        if (window.top && window.top !== window.self) {
+          window.top.location.href = topLevelFullscreenHref;
+          return;
+        }
+      } catch {
+        // Fall through to additional navigation attempts below.
+      }
+
+      try {
+        window.open(topLevelFullscreenHref, "_top");
+        return;
+      } catch {
+        // Ignore and use current-window fallback below.
+      }
+
+      window.location.href = topLevelFullscreenHref;
+      return;
+    }
+
     if (!useNativeFullscreen) {
       setIsFullscreen((current) => !current);
       return;

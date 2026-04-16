@@ -124,11 +124,13 @@ export function SavedTaskDetail({
   embed = false,
   draftMode = false,
   autoOpenMapFullscreen = false,
+  autoOpenProfileFullscreen = false,
 }: {
   task: SavedTaskRecord;
   embed?: boolean;
   draftMode?: boolean;
   autoOpenMapFullscreen?: boolean;
+  autoOpenProfileFullscreen?: boolean;
 }) {
   const router = useRouter();
   const pathname = usePathname();
@@ -150,6 +152,19 @@ export function SavedTaskDetail({
     const params = new URLSearchParams(searchParams.toString());
     params.delete("embed");
     params.set("mapFullscreen", "1");
+    const query = params.toString();
+
+    return `${pathname}${query ? `?${query}` : ""}`;
+  }, [embed, pathname, searchParams]);
+  const topLevelProfileFullscreenHref = useMemo(() => {
+    if (!embed) {
+      return undefined;
+    }
+
+    const params = new URLSearchParams(searchParams.toString());
+    params.delete("embed");
+    params.delete("mapFullscreen");
+    params.set("profileFullscreen", "1");
     const query = params.toString();
 
     return `${pathname}${query ? `?${query}` : ""}`;
@@ -636,7 +651,9 @@ export function SavedTaskDetail({
   }
 
   return (
-    <div className={embed || autoOpenMapFullscreen ? "space-y-4" : "space-y-6"}>
+    <div
+      className={embed || autoOpenMapFullscreen || autoOpenProfileFullscreen ? "space-y-4" : "space-y-6"}
+    >
       <XctskQrModal
         open={isQrOpen}
         onClose={() => setIsQrOpen(false)}
@@ -644,7 +661,7 @@ export function SavedTaskDetail({
         taskName={taskName}
       />
 
-      {!autoOpenMapFullscreen ? (
+      {!autoOpenMapFullscreen && !autoOpenProfileFullscreen ? (
         <div className={`glass border ${embed ? "rounded-[24px] p-4" : "rounded-[28px] p-5"}`}>
         <div className="flex items-start justify-between gap-4">
           <div>
@@ -876,6 +893,8 @@ export function SavedTaskDetail({
               segments={terrainSegmentProfiles}
               waypoints={terrainProfileWaypoints}
               baseAltitudeM={baseAltitudeM}
+              topLevelFullscreenHref={topLevelProfileFullscreenHref}
+              autoOpenFullscreen={autoOpenProfileFullscreen}
             />
           </div>
 

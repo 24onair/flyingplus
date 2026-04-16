@@ -18,6 +18,7 @@ export default async function SavedTaskDetailPage({
       taskId={normalizedTaskId}
       embed={isEmbedValue(resolvedSearchParams.embed)}
       autoOpenMapFullscreen={isEmbedValue(resolvedSearchParams.mapFullscreen)}
+      autoOpenProfileFullscreen={isEmbedValue(resolvedSearchParams.profileFullscreen)}
     />
   );
 }
