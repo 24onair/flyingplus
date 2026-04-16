@@ -175,6 +175,7 @@ export function CourseMapPlaceholder({
   const customPointCreateRef = useRef(onCustomPointCreate);
   const terrainElevationsChangeRef = useRef(onTerrainElevationsChange);
   const terrainProfileChangeRef = useRef(onTerrainProfileChange);
+  const preserveViewportOnNextRouteChangeRef = useRef(false);
   const viewportRef = useRef<{
     center: [number, number];
     zoom: number;
@@ -255,6 +256,30 @@ export function CourseMapPlaceholder({
   useEffect(() => {
     terrainProfileChangeRef.current = onTerrainProfileChange;
   }, [onTerrainProfileChange]);
+
+  useEffect(() => {
+    const container = mapRef.current;
+
+    if (!container || typeof ResizeObserver === "undefined") {
+      return undefined;
+    }
+
+    const observer = new ResizeObserver(() => {
+      window.requestAnimationFrame(() => {
+        try {
+          mapInstanceRef.current?.resize();
+        } catch {
+          // Ignore resize attempts while Mapbox is rebuilding its canvas.
+        }
+      });
+    });
+
+    observer.observe(container);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia(
@@ -389,15 +414,42 @@ export function CourseMapPlaceholder({
       });
 
       mapInstance.on("click", (event) => {
-        if (!customPointCreateRef.current) {
+        const currentMap = mapInstance;
+
+        if (!customPointCreateRef.current || !currentMap) {
           return;
         }
 
+        try {
+          currentMap.resize();
+        } catch {
+          // The click can arrive during iframe/mobile layout transitions.
+        }
+
+        const sourceEvent = event.originalEvent as MouseEvent | undefined;
+        const canvasRect = currentMap.getCanvas().getBoundingClientRect();
+        const clickedLngLat =
+          sourceEvent && typeof sourceEvent.clientX === "number"
+            ? currentMap.unproject([
+                sourceEvent.clientX - canvasRect.left,
+                sourceEvent.clientY - canvasRect.top,
+              ])
+            : event.lngLat;
+        const center = currentMap.getCenter();
+
+        viewportRef.current = {
+          center: [center.lng, center.lat],
+          zoom: currentMap.getZoom(),
+          bearing: currentMap.getBearing(),
+          pitch: currentMap.getPitch(),
+        };
+        preserveViewportOnNextRouteChangeRef.current = true;
+
         customPointCreateRef.current({
-          lat: event.lngLat.lat,
-          lng: event.lngLat.lng,
+          lat: clickedLngLat.lat,
+          lng: clickedLngLat.lng,
           elevationM:
-            mapInstance?.queryTerrainElevation([event.lngLat.lng, event.lngLat.lat], {
+            currentMap.queryTerrainElevation([clickedLngLat.lng, clickedLngLat.lat], {
               exaggerated: false,
             }) ?? null,
         });
@@ -628,7 +680,9 @@ export function CourseMapPlaceholder({
           markers.push(marker);
         });
 
-        if (!taskBounds.isEmpty()) {
+        const shouldPreserveViewport = preserveViewportOnNextRouteChangeRef.current;
+
+        if (!taskBounds.isEmpty() && !shouldPreserveViewport) {
           currentMap.fitBounds(taskBounds, {
             padding:
               isFullscreen && !isCompactViewport
@@ -639,6 +693,10 @@ export function CourseMapPlaceholder({
             maxZoom: 12.5,
             duration: 0,
           });
+        }
+
+        if (shouldPreserveViewport) {
+          preserveViewportOnNextRouteChangeRef.current = false;
         }
 
         currentMap.once("idle", () => {
