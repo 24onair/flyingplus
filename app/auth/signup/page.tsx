@@ -10,45 +10,86 @@ export default async function SignupPage() {
   const supabaseEnabled = hasSupabaseAdminEnv();
 
   return (
-    <div className="space-y-6">
-      <section className="glass overflow-hidden rounded-[32px] border px-6 py-8 md:px-10 md:py-10">
-        <div className="max-w-4xl space-y-4">
-          <div className="inline-flex rounded-full bg-amber-100 px-3 py-1 text-sm font-medium text-amber-900">
-            회원가입
-          </div>
-          <div className="space-y-3">
-            <h1 className="text-4xl font-bold tracking-tight text-stone-900 md:text-5xl">
-              승인된 회원만
-              <br />
-              개인 저장 기능을 사용할 수 있습니다.
-            </h1>
-            <p className="max-w-3xl text-base leading-7 text-stone-600 md:text-lg">
-              비회원도 코스 생성과 내보내기는 가능하지만, 개인 타스크 저장과 좋아하는 활공장 저장은 승인된 회원에게만 열립니다.
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-3">
-            <Link href="/courses" className="btn btn-secondary">
-              비회원으로 코스 만들기
-            </Link>
-          </div>
-        </div>
+    <div style={{ display: "flex", flexDirection: "column", gap: 24, maxWidth: 640, margin: "0 auto" }}>
+      <section
+        style={{
+          background: "#050505",
+          borderRadius: 4,
+          padding: "32px 32px",
+          border: "1px solid #1f1f1f",
+          boxShadow: "rgba(0,0,0,0.3) 0px 0px 5px 0px",
+        }}
+      >
+        <span style={{
+          display: "inline-flex",
+          padding: "4px 12px",
+          borderRadius: 2,
+          fontSize: 11,
+          fontWeight: 700,
+          background: "rgba(14,165,233,0.12)",
+          color: "#0EA5E9",
+          letterSpacing: "0.08em",
+          textTransform: "uppercase",
+          marginBottom: 16,
+        }}>
+          회원가입
+        </span>
+        <h1 style={{ fontSize: 30, fontWeight: 700, color: "#FFFFFF", margin: "0 0 12px", lineHeight: 1.2 }}>
+          승인된 회원만<br />
+          개인 저장 기능을 사용할 수 있습니다.
+        </h1>
+        <p style={{ fontSize: 15, color: "#A7A7A7", margin: "0 0 24px", lineHeight: 1.65 }}>
+          비회원도 코스 생성과 내보내기는 가능하지만, 개인 타스크 저장과 좋아하는 활공장 저장은 승인된 회원에게만 열립니다.
+        </p>
+        <Link
+          href="/courses"
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            height: 40,
+            padding: "0 20px",
+            borderRadius: 4,
+            fontSize: 14,
+            fontWeight: 700,
+            background: "transparent",
+            color: "#FFFFFF",
+            border: "2px solid #0EA5E9",
+            textDecoration: "none",
+            textTransform: "uppercase",
+          }}
+        >
+          비회원으로 코스 만들기
+        </Link>
       </section>
 
-      <section className="glass rounded-[32px] border px-6 py-8 md:px-8">
+      <section
+        style={{
+          background: "#FFFFFF",
+          border: "1px solid #5E5E5E",
+          borderRadius: 4,
+          padding: 32,
+          boxShadow: "rgba(0,0,0,0.3) 0px 0px 5px 0px",
+        }}
+      >
         {!supabaseEnabled ? (
-          <div className="rounded-2xl bg-red-50 px-4 py-3 text-sm text-red-900">
+          <div style={{
+            marginBottom: 20,
+            padding: "12px 16px",
+            borderRadius: 4,
+            fontSize: 14,
+            background: "rgba(229,32,32,0.08)",
+            border: "1px solid rgba(229,32,32,0.35)",
+            color: "#E52020",
+          }}>
             Supabase 관리자 환경 변수가 아직 설정되지 않았습니다. `.env.local`의 `SUPABASE_SERVICE_ROLE_KEY` 설정을 먼저 확인해 주세요.
           </div>
         ) : null}
-
         <SignupForm
-          siteOptions={sites.map((site) => ({
-            siteId: site.siteId,
-            siteName: site.siteName,
-          }))}
+          siteOptions={sites.map((site) => ({ siteId: site.siteId, siteName: site.siteName }))}
           supabaseEnabled={supabaseEnabled}
         />
       </section>
+
     </div>
   );
 }

@@ -14,35 +14,43 @@ export function BriefingDashboard({
 
   if (!selectedDetail) {
     return (
-      <section className="glass rounded-[28px] border p-5">
-        <p className="text-sm font-semibold text-stone-500">선택 지역 상세</p>
-        <p className="mt-2 text-base text-stone-700">
-          선택한 활공장에 대한 상세 브리핑 데이터를 아직 만들지 못했습니다.
-        </p>
+      <section style={{ background: "#FFFFFF", border: "1px solid #5E5E5E", borderRadius: 4, padding: 20, boxShadow: "rgba(0,0,0,0.3) 0px 0px 5px 0px" }}>
+        <p style={{ fontSize: 11, fontWeight: 700, color: "#757575", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 8px" }}>선택 지역 상세</p>
+        <p style={{ fontSize: 15, color: "#000000", margin: 0 }}>선택한 활공장에 대한 상세 브리핑 데이터를 아직 만들지 못했습니다.</p>
       </section>
     );
   }
 
   return (
-    <div className="space-y-6">
-      <section className="rounded-[32px] border border-red-200 bg-red-50 p-5 shadow-sm">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-red-700">
-          위험 경고 우선
-        </p>
-        <div className="mt-3 space-y-3">
-          {selectedDetail.warnings.map((warning) => (
-            <div
-              key={warning.code}
-              className="rounded-2xl border border-red-200 bg-white px-4 py-3"
-            >
-              <p className="font-semibold text-red-900">{warning.title}</p>
-              <p className="mt-1 text-sm text-red-800">{warning.message}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+    <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
 
-      <section className="grid gap-4 md:grid-cols-3">
+      {/* Warnings — dark section */}
+      {selectedDetail.warnings.length > 0 && (
+        <section style={{ background: "#111111", borderRadius: 4, padding: 24, border: "1px solid #1f1f1f", boxShadow: "rgba(0,0,0,0.3) 0px 0px 5px 0px" }}>
+          <p style={{ fontSize: 11, fontWeight: 700, color: "#E52020", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 16px" }}>
+            위험 경고 우선
+          </p>
+          <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+            {selectedDetail.warnings.map((warning) => (
+              <div
+                key={warning.code}
+                style={{
+                  background: "#1A1A1A",
+                  border: "1px solid rgba(229,32,32,0.3)",
+                  borderRadius: 4,
+                  padding: "14px 16px",
+                }}
+              >
+                <p style={{ fontWeight: 700, color: "#E52020", margin: 0, fontSize: 15 }}>{warning.title}</p>
+                <p style={{ marginTop: 4, fontSize: 14, color: "#A7A7A7", margin: "4px 0 0" }}>{warning.message}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Metric cards */}
+      <section style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 16 }}>
         <MetricCard
           label="선택 지역"
           value={selectedDetail.siteName}
@@ -56,37 +64,57 @@ export function BriefingDashboard({
         />
         <MetricCard
           label="추천 이륙 시간"
-          value={`${selectedDetail.recommendedLaunchWindow.start} - ${selectedDetail.recommendedLaunchWindow.end}`}
+          value={`${selectedDetail.recommendedLaunchWindow.start} – ${selectedDetail.recommendedLaunchWindow.end}`}
           hint={selectedDetail.recommendedLaunchWindow.label}
           tone="warning"
         />
       </section>
 
-      <section className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
-        <article className="glass rounded-[28px] border p-5">
-          <p className="text-sm font-semibold text-stone-500">메인 추천 코스</p>
-          <h2 className="mt-2 text-2xl font-bold text-stone-900">
+      {/* Main course + alternative — light section */}
+      <section style={{ display: "grid", gridTemplateColumns: "1.2fr 0.8fr", gap: 16 }}>
+        <article style={{ background: "#FFFFFF", border: "1px solid #5E5E5E", borderRadius: 4, padding: 24, boxShadow: "rgba(0,0,0,0.3) 0px 0px 5px 0px" }}>
+          <p style={{ fontSize: 11, fontWeight: 700, color: "#757575", letterSpacing: "0.08em", textTransform: "uppercase", margin: 0 }}>메인 추천 코스</p>
+          <h2 style={{ fontSize: 22, fontWeight: 700, color: "#000000", margin: "8px 0 8px" }}>
             {selectedDetail.recommendedPlan.courseName}
           </h2>
-          <p className="mt-2 text-sm leading-6 text-stone-600">
+          <p style={{ fontSize: 14, color: "#757575", margin: 0, lineHeight: 1.6 }}>
             예상 거리 {selectedDetail.recommendedPlan.distanceKm.expected}km, 목표 범위{" "}
-            {selectedDetail.recommendedPlan.distanceKm.min}-
-            {selectedDetail.recommendedPlan.distanceKm.max}km
+            {selectedDetail.recommendedPlan.distanceKm.min}–{selectedDetail.recommendedPlan.distanceKm.max}km
           </p>
 
-          <div className="mt-5 space-y-3">
+          <div style={{ marginTop: 20, display: "flex", flexDirection: "column", gap: 8 }}>
             {selectedDetail.recommendedPlan.turnpoints.map((turnpoint) => (
               <div
                 key={turnpoint.order}
-                className="flex items-center justify-between rounded-2xl bg-stone-100 px-4 py-3"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  background: "#FFFFFF",
+                  border: "1px solid #E5E5E5",
+                  borderRadius: 4,
+                  padding: "10px 14px",
+                }}
               >
-                <div className="flex items-center gap-3">
-                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white text-sm font-bold text-stone-900">
+                <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                  <span style={{
+                    display: "inline-flex",
+                    width: 28,
+                    height: 28,
+                    alignItems: "center",
+                    justifyContent: "center",
+                    borderRadius: "50%",
+                    background: "#0EA5E9",
+                    color: "#FFFFFF",
+                    fontSize: 13,
+                    fontWeight: 700,
+                    flexShrink: 0,
+                  }}>
                     {turnpoint.order}
                   </span>
-                  <span className="font-medium text-stone-800">{turnpoint.name}</span>
+                  <span style={{ fontWeight: 700, color: "#000000", fontSize: 14 }}>{turnpoint.name}</span>
                 </div>
-                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">
+                <span style={{ fontSize: 11, fontWeight: 700, color: "#757575", letterSpacing: "0.08em", textTransform: "uppercase" }}>
                   턴포인트
                 </span>
               </div>
@@ -94,29 +122,38 @@ export function BriefingDashboard({
           </div>
         </article>
 
-        <article className="glass rounded-[28px] border p-5">
-          <p className="text-sm font-semibold text-stone-500">대안 플랜</p>
-          <h2 className="mt-2 text-xl font-bold text-stone-900">
+        <article style={{ background: "#FFFFFF", border: "1px solid #5E5E5E", borderRadius: 4, padding: 24, boxShadow: "rgba(0,0,0,0.3) 0px 0px 5px 0px" }}>
+          <p style={{ fontSize: 11, fontWeight: 700, color: "#757575", letterSpacing: "0.08em", textTransform: "uppercase", margin: 0 }}>대안 플랜</p>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: "#000000", margin: "8px 0 12px" }}>
             {selectedDetail.alternativePlan.courseName}
           </h2>
-          <p className="mt-3 text-sm leading-6 text-stone-600">
+          <p style={{ fontSize: 14, color: "#757575", lineHeight: 1.6, margin: 0 }}>
             {selectedDetail.alternativePlan.reason}
           </p>
 
-          <div className="mt-6 rounded-2xl bg-stone-100 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">
+          <div style={{ marginTop: 20, background: "#F7F7F7", borderRadius: 4, padding: 16, border: "1px solid #E5E5E5" }}>
+            <p style={{ fontSize: 11, fontWeight: 700, color: "#757575", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 12px" }}>
               핵심 병목
             </p>
-            <div className="mt-3 space-y-3">
+            <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
               {selectedDetail.bottlenecks.map((bottleneck) => (
-                <div key={bottleneck.id} className="rounded-2xl bg-white p-3">
-                  <div className="flex items-center justify-between gap-3">
-                    <p className="font-semibold text-stone-900">{bottleneck.name}</p>
-                    <span className="rounded-full bg-amber-100 px-2 py-1 text-xs font-semibold text-amber-800">
+                <div key={bottleneck.id} style={{ background: "#FFFFFF", borderRadius: 4, padding: "12px 14px", border: "1px solid #E5E5E5" }}>
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
+                    <p style={{ fontWeight: 700, color: "#000000", margin: 0, fontSize: 14 }}>{bottleneck.name}</p>
+                    <span style={{
+                      display: "inline-flex",
+                      padding: "2px 8px",
+                      borderRadius: 2,
+                      fontSize: 11,
+                      fontWeight: 700,
+                      background: "rgba(239,145,0,0.12)",
+                      color: "#DF6500",
+                      whiteSpace: "nowrap",
+                    }}>
                       {bottleneck.type}
                     </span>
                   </div>
-                  <p className="mt-2 text-sm text-stone-600">{bottleneck.message}</p>
+                  <p style={{ marginTop: 6, fontSize: 13, color: "#757575", margin: "6px 0 0" }}>{bottleneck.message}</p>
                 </div>
               ))}
             </div>
@@ -124,22 +161,33 @@ export function BriefingDashboard({
         </article>
       </section>
 
-      <section className="glass rounded-[28px] border p-5">
-        <p className="text-sm font-semibold text-stone-500">점수 근거</p>
-        <div className="mt-4 grid gap-4 md:grid-cols-2">
+      <section style={{ background: "#111111", borderRadius: 4, padding: 24, border: "1px solid #1f1f1f", boxShadow: "rgba(0,0,0,0.3) 0px 0px 5px 0px" }}>
+        <p style={{ fontSize: 11, fontWeight: 700, color: "#0EA5E9", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 16px" }}>
+          점수 근거
+        </p>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 12 }}>
           {selectedDetail.scoreBreakdown.map((item) => (
-            <div key={item.factor} className="rounded-2xl bg-stone-100 p-4">
-              <div className="flex items-center justify-between">
-                <p className="font-semibold text-stone-900">{item.factorLabel}</p>
-                <p className="text-sm font-bold text-stone-700">
+            <div
+              key={item.factor}
+              style={{
+                background: "#1A1A1A",
+                borderRadius: 4,
+                padding: "14px 16px",
+                border: "1px solid #2a2a2a",
+              }}
+            >
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                <p style={{ fontWeight: 600, color: "#FFFFFF", margin: 0, fontSize: 14 }}>{item.factorLabel}</p>
+                <p style={{ fontSize: 14, fontWeight: 700, color: "#0EA5E9", margin: 0 }}>
                   {item.score}/{item.maxScore}
                 </p>
               </div>
-              <p className="mt-2 text-sm text-stone-600">{item.reason}</p>
+              <p style={{ marginTop: 6, fontSize: 13, color: "#A7A7A7", margin: "6px 0 0" }}>{item.reason}</p>
             </div>
           ))}
         </div>
       </section>
+
     </div>
   );
 }
