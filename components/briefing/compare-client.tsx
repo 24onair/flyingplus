@@ -69,9 +69,9 @@ export function CompareClient({ searchParams, siteConfigs }: CompareClientProps)
 
   if (status === "loading") {
     return (
-      <div className="glass rounded-[28px] border p-6">
-        <p className="text-sm font-semibold text-stone-500">지역 비교 생성 중</p>
-        <h1 className="mt-2 text-2xl font-bold text-stone-900">
+      <div className="theme-panel-dark">
+        <p className="theme-kicker">지역 비교 생성 중</p>
+        <h1 className="theme-subtitle mt-2 text-white">
           같은 입력값으로 3개 지역을 비교하고 있습니다.
         </h1>
       </div>
@@ -80,9 +80,9 @@ export function CompareClient({ searchParams, siteConfigs }: CompareClientProps)
 
   if (status === "error" || !briefing) {
     return (
-      <div className="rounded-[28px] border border-red-200 bg-red-50 p-6">
-        <p className="text-sm font-semibold text-red-700">비교 생성 실패</p>
-        <p className="mt-2 text-base font-medium text-red-900">{error}</p>
+      <div className="theme-error">
+        <p className="theme-kicker mb-2 !text-[color:var(--danger)]">비교 생성 실패</p>
+        <p className="text-base font-medium">{error}</p>
       </div>
     );
   }
@@ -95,20 +95,20 @@ export function CompareClient({ searchParams, siteConfigs }: CompareClientProps)
   );
 
   return (
-    <div className="space-y-6">
+    <div className="theme-section-stack">
       <SelectedDateCard
         date={request.date}
         label="비교 기준 날짜"
         tone="accent"
       />
 
-      <div className="glass rounded-[28px] border p-5">
-        <p className="text-sm font-semibold text-stone-500">입력 기준 요약</p>
-        <h1 className="mt-1 text-2xl font-bold text-stone-900">
+      <div className="theme-panel-dark">
+        <p className="theme-kicker">입력 기준 요약</p>
+        <h1 className="theme-subtitle mt-1 text-white">
           {request.date} / {request.weatherInput.surfaceWindDir}{" "}
           {request.weatherInput.surfaceWindKmh}km/h / 써멀 {request.weatherInput.thermalMaxMs}m/s
         </h1>
-        <p className="mt-2 text-sm text-stone-600">
+        <p className="theme-copy theme-copy-inverse mt-2">
           {request.dataSource === "open_meteo" ? "Open-Meteo 자동 예보" : "수동 입력"} 기준으로 문경,
           합천, 울산 고헌산을 동시에 평가한 결과입니다.
         </p>

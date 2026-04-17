@@ -104,7 +104,7 @@ export function PersonalTasksPage({ embed = false }: { embed?: boolean }) {
 
   if (isLoading) {
     return (
-      <div className="glass rounded-[28px] border p-6 text-sm text-stone-600">
+      <div className="theme-panel text-sm text-[color:var(--muted)]">
         계정 상태를 확인하고 있습니다...
       </div>
     );
@@ -112,7 +112,7 @@ export function PersonalTasksPage({ embed = false }: { embed?: boolean }) {
 
   if (status === "loading") {
     return (
-      <div className="glass rounded-[28px] border p-6 text-sm text-stone-600">
+      <div className="theme-panel text-sm text-[color:var(--muted)]">
         타스크를 불러오는 중입니다...
       </div>
     );
@@ -120,7 +120,7 @@ export function PersonalTasksPage({ embed = false }: { embed?: boolean }) {
 
   if (status === "error") {
     return (
-      <div className="glass rounded-[28px] border border-red-200 bg-red-50 p-6 text-sm text-red-900">
+      <div className="theme-error text-sm">
         {error}
       </div>
     );
@@ -128,10 +128,10 @@ export function PersonalTasksPage({ embed = false }: { embed?: boolean }) {
 
   return (
     <div className={embed ? "space-y-4" : "space-y-6"}>
-      <section className={`glass border ${embed ? "rounded-[24px] p-4" : "rounded-[28px] p-6"}`}>
-        <p className="text-sm font-semibold text-stone-500">공개 타스크</p>
-        <h2 className="mt-1 text-2xl font-bold text-stone-900">모두가 보는 오픈 타스크</h2>
-        <p className="mt-2 text-sm text-stone-600">
+      <section className={embed ? "theme-panel p-4" : "theme-panel"}>
+        <p className="theme-kicker theme-kicker-muted">공개 타스크</p>
+        <h2 className="theme-subtitle mt-1 text-[color:var(--text-primary)]">모두가 보는 오픈 타스크</h2>
+        <p className="theme-copy mt-2 text-sm">
           공개로 저장된 타스크만 이 목록에 표시됩니다.
         </p>
       </section>
@@ -142,11 +142,11 @@ export function PersonalTasksPage({ embed = false }: { embed?: boolean }) {
       />
 
       {!embed && !user ? (
-        <div className="glass rounded-[28px] border p-6 text-sm text-stone-700">
+        <div className="theme-panel text-sm text-[color:var(--text-secondary)]">
           내 타스크를 보려면 로그인이 필요합니다.{" "}
           <Link
             href={buildLoginPath(withEmbedParam("/tasks", embed), embed)}
-            className="font-semibold text-stone-900 underline"
+            className="theme-link font-semibold"
           >
             로그인하러 가기
           </Link>
@@ -154,17 +154,17 @@ export function PersonalTasksPage({ embed = false }: { embed?: boolean }) {
       ) : null}
 
       {!embed && user && !isAdmin && !canUsePersonalStorage(profile) ? (
-        <div className="glass rounded-[28px] border p-6 text-sm text-stone-700">
+        <div className="theme-panel text-sm text-[color:var(--text-secondary)]">
           관리자 승인 후 내 타스크 저장 목록을 사용할 수 있습니다.
         </div>
       ) : null}
 
       {!embed && user && canAccessOwnTasks && !isAdmin ? (
         <>
-          <section className="glass rounded-[28px] border p-6">
-            <p className="text-sm font-semibold text-stone-500">내 타스크</p>
-            <h2 className="mt-1 text-2xl font-bold text-stone-900">내가 저장한 타스크</h2>
-            <p className="mt-2 text-sm text-stone-600">
+          <section className="theme-panel">
+            <p className="theme-kicker theme-kicker-muted">내 타스크</p>
+            <h2 className="theme-subtitle mt-1 text-[color:var(--text-primary)]">내가 저장한 타스크</h2>
+            <p className="theme-copy mt-2 text-sm">
               개인 회원은 자신이 저장한 타스크만 여기에서 볼 수 있습니다.
             </p>
           </section>
@@ -178,10 +178,10 @@ export function PersonalTasksPage({ embed = false }: { embed?: boolean }) {
 
       {!embed && isAdmin ? (
         <>
-          <section className="glass rounded-[28px] border p-6">
-            <p className="text-sm font-semibold text-stone-500">관리자 전체 타스크</p>
-            <h2 className="mt-1 text-2xl font-bold text-stone-900">전체 저장 타스크</h2>
-            <p className="mt-2 text-sm text-stone-600">
+          <section className="theme-panel">
+            <p className="theme-kicker theme-kicker-muted">관리자 전체 타스크</p>
+            <h2 className="theme-subtitle mt-1 text-[color:var(--text-primary)]">전체 저장 타스크</h2>
+            <p className="theme-copy mt-2 text-sm">
               관리자는 전체 회원의 저장 타스크를 모두 확인할 수 있습니다.
             </p>
           </section>

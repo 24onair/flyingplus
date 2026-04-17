@@ -112,7 +112,7 @@ export function SavedTasksList({
 
   if (tasks.length === 0) {
     return (
-      <div className="glass rounded-[28px] border p-6 text-sm text-stone-600">
+      <div className="theme-empty text-sm">
         {emptyMessage ?? "아직 저장된 타스크가 없습니다. 코스 페이지에서 먼저 저장해 주세요."}
       </div>
     );
@@ -121,20 +121,20 @@ export function SavedTasksList({
   return (
     <div className="grid gap-4">
       {deleteError ? (
-        <div className="glass rounded-[28px] border border-red-200 bg-red-50 p-4 text-sm text-red-900">
+        <div className="theme-error text-sm">
           {deleteError}
         </div>
       ) : null}
       {tasks.map((task) => (
         <div
           key={task.id}
-          className="glass rounded-[28px] border p-5 transition hover:-translate-y-0.5 hover:shadow-lg"
+          className="theme-panel transition hover:-translate-y-0.5"
         >
           <div className="flex items-start justify-between gap-4">
             <div className="min-w-0 flex-1">
-              <p className="text-sm font-semibold text-stone-500">{task.siteName}</p>
+              <p className="theme-kicker theme-kicker-muted !mb-1">{task.siteName}</p>
               {isAdmin && !embed ? (
-                <p className="mt-1 text-xs font-medium text-stone-500">
+                <p className="mt-1 text-xs font-medium text-[color:var(--muted)]">
                   저장자 {task.ownerName || task.ownerEmail || "알 수 없음"}
                 </p>
               ) : null}
@@ -144,7 +144,7 @@ export function SavedTasksList({
                     type="text"
                     value={draftName}
                     onChange={(event) => setDraftName(event.target.value)}
-                    className="min-w-[240px] flex-1 rounded-xl border border-stone-300 bg-white px-3 py-2 text-base font-semibold text-stone-900"
+                    className="theme-input min-w-[240px] flex-1 text-base font-semibold"
                   />
                   <button
                     type="button"
@@ -166,16 +166,16 @@ export function SavedTasksList({
                   </button>
                 </div>
               ) : (
-                <h2 className="mt-1 text-2xl font-bold text-stone-900">{task.name}</h2>
+                <h2 className="mt-1 text-2xl font-bold text-[color:var(--text-primary)]">{task.name}</h2>
               )}
-              <p className="mt-2 text-sm text-stone-600">
+              <p className="theme-copy mt-2 text-sm">
                 {task.date} / {task.taskType} / {task.turnpoints.length}개 웨이포인트
               </p>
-              <p className="mt-1 text-xs font-medium text-stone-500">
+              <p className="mt-1 text-xs font-medium text-[color:var(--muted)]">
                 {task.visibility === "public" ? "공개 타스크" : "나만 보는 타스크"}
               </p>
             </div>
-            <div className="text-right text-sm text-stone-600">
+            <div className="text-right text-sm text-[color:var(--muted)]">
               <p>{task.distanceKm.toFixed(1)}km</p>
               <p className="mt-1">SSS {task.sssOpenTime}</p>
               <p>Deadline {task.taskDeadlineTime}</p>

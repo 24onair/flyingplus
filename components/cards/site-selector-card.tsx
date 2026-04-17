@@ -18,7 +18,7 @@ export function SiteSelectorCard({
         padding: "14px 16px",
         borderRadius: 4,
         border: "1px solid #5E5E5E",
-        background: "#FFFFFF",
+        background: "#111111",
         cursor: "pointer",
         transition: "border-color 200ms ease, background 200ms ease",
         boxShadow: "rgba(0, 0, 0, 0.3) 0px 0px 5px 0px",
@@ -30,12 +30,12 @@ export function SiteSelectorCard({
       }}
       onMouseLeave={(e) => {
         (e.currentTarget as HTMLLabelElement).style.borderColor = "#5E5E5E";
-        (e.currentTarget as HTMLLabelElement).style.background = "#FFFFFF";
+        (e.currentTarget as HTMLLabelElement).style.background = "#111111";
       }}
     >
       <div>
         <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
-          <p style={{ fontWeight: 600, color: "#1E2026", margin: 0, fontSize: 15 }}>{site.name}</p>
+          <p style={{ fontWeight: 700, color: "#FFFFFF", margin: 0, fontSize: 15 }}>{site.name}</p>
           {preferred ? (
             <span style={{
               display: "inline-flex",
@@ -50,7 +50,7 @@ export function SiteSelectorCard({
             </span>
           ) : null}
         </div>
-        <p style={{ fontSize: 13, color: "#757575", margin: "3px 0 0" }}>{site.tagline}</p>
+        <p style={{ fontSize: 13, color: "#A7A7A7", margin: "3px 0 0" }}>{site.tagline}</p>
       </div>
       <input
         type="checkbox"

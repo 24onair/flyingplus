@@ -45,18 +45,18 @@ export default async function ManageSitesPage({
 
   return (
     <div className="space-y-6">
-      <section className="glass overflow-hidden rounded-[32px] border px-6 py-8 md:px-10 md:py-10">
+      <section className="theme-hero overflow-hidden md:px-10 md:py-10">
         <div className="max-w-4xl space-y-4">
-          <div className="inline-flex rounded-full bg-amber-100 px-3 py-1 text-sm font-medium text-amber-900">
+          <div className="theme-badge">
             기존 활공장 관리자
           </div>
           <div className="space-y-3">
-            <h1 className="text-4xl font-bold tracking-tight text-stone-900 md:text-5xl">
+            <h1 className="theme-title md:text-5xl">
               기존 활공장을 같은 편집 UI로 열고,
               <br />
               저장 상태까지 함께 관리합니다.
             </h1>
-            <p className="max-w-3xl text-base leading-7 text-stone-600 md:text-lg">
+            <p className="theme-copy theme-copy-inverse max-w-3xl text-base leading-7 md:text-lg">
               목록 페이지에서 활공장을 선택한 뒤, 등록 페이지와 같은 UI로 수정하고
               마지막 수정 시각과 기본값 되돌리기까지 한 번에 관리합니다.
             </p>
@@ -69,9 +69,9 @@ export default async function ManageSitesPage({
               활공장 목록으로
             </Link>
           </div>
-          <div className="rounded-3xl border border-amber-200 bg-amber-50 p-4">
-            <p className="text-sm font-semibold text-amber-900">등록 페이지 이동</p>
-            <p className="mt-1 text-sm text-stone-700">
+          <div className="theme-callout theme-callout-accent">
+            <p className="theme-label mb-1 text-[color:var(--accent)]">등록 페이지 이동</p>
+            <p className="theme-copy mt-1 text-sm">
               아래 카드 전체를 누르거나, 현재 선택된 활공장을 등록 페이지에서 바로 이어서 편집할 수 있습니다.
             </p>
             <div className="mt-3">
@@ -83,9 +83,9 @@ export default async function ManageSitesPage({
               </Link>
             </div>
           </div>
-          <div className="rounded-3xl border border-stone-200 bg-white/85 p-4">
-            <p className="text-sm font-semibold text-stone-900">등록 페이지 빠른 이동</p>
-            <p className="mt-1 text-sm text-stone-600">
+          <div className="theme-callout">
+            <p className="theme-label mb-1 text-[color:var(--text-primary)]">등록 페이지 빠른 이동</p>
+            <p className="theme-copy mt-1 text-sm">
               아래 버튼은 서버 렌더로 바로 보여서 페이지가 뜨자마자 눌러 이동할 수 있습니다.
             </p>
             <div className="mt-3 flex flex-wrap gap-2">

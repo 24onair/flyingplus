@@ -17,9 +17,9 @@ export function SiteWindRangePanel({
   }
 
   return (
-    <section className="glass rounded-[28px] border p-5">
-      <p className="text-sm font-semibold text-stone-500">{title}</p>
-      <p className="mt-2 text-sm leading-6 text-stone-600">{description}</p>
+    <section className="theme-panel">
+      <p className="theme-kicker theme-kicker-muted">{title}</p>
+      <p className="theme-copy mt-2">{description}</p>
       <div className="mt-5 grid gap-5 xl:grid-cols-2">
         {sites.map((site) => (
           <WindSectorPicker

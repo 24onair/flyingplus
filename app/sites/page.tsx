@@ -11,18 +11,18 @@ export default async function SitesIndexPage() {
 
   return (
     <div className="space-y-6">
-      <section className="glass overflow-hidden rounded-[32px] border px-6 py-8 md:px-10 md:py-10">
+      <section className="theme-hero overflow-hidden md:px-10 md:py-10">
         <div className="max-w-4xl space-y-4">
-          <div className="inline-flex rounded-full bg-amber-100 px-3 py-1 text-sm font-medium text-amber-900">
+          <div className="theme-badge">
             활공장 목록
           </div>
           <div className="space-y-3">
-            <h1 className="text-4xl font-bold tracking-tight text-stone-900 md:text-5xl">
+            <h1 className="theme-title md:text-5xl">
               전국 활공장과 주요 운영 활공장을
               <br />
               한 곳에서 함께 확인합니다.
             </h1>
-            <p className="max-w-3xl text-base leading-7 text-stone-600 md:text-lg">
+            <p className="theme-copy theme-copy-inverse max-w-3xl text-base leading-7 md:text-lg">
               먼저 전국 활공장 지도를 보고, 아래에서 현재 서비스에 연결된 주요 활공장의
               이륙장 위치와 기본 정보를 함께 확인할 수 있습니다. 필요할 때만 별도 관리
               화면으로 이동해 수정하면 됩니다.
