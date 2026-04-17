@@ -55,26 +55,66 @@ export function buildXctskTaskFile({
 
   const normalizedTurnpoints =
     (() => {
-      const goalIndex = validTurnpoints.findIndex(
-        (turnpoint) => turnpoint.taskType === "goal"
-      );
-      const hasEss = validTurnpoints.some((turnpoint) => turnpoint.taskType === "ess");
-
-      if (goalIndex < 0 || hasEss) {
+      if (validTurnpoints.length === 0) {
         return validTurnpoints;
       }
 
-      const goalTurnpoint = validTurnpoints[goalIndex];
+      const ensuredGoalTurnpoints =
+        (() => {
+          const existingGoalIndex = validTurnpoints.findIndex(
+            (turnpoint) => turnpoint.taskType === "goal"
+          );
+
+          if (existingGoalIndex >= 0) {
+            return validTurnpoints;
+          }
+
+          if (validTurnpoints.length === 1) {
+            const onlyTurnpoint = validTurnpoints[0];
+            return [
+              {
+                ...onlyTurnpoint,
+                taskType: "start" as const,
+              },
+              {
+                ...onlyTurnpoint,
+                taskType: "goal" as const,
+              },
+            ];
+          }
+
+          return validTurnpoints.map((turnpoint, index, all) =>
+            index === all.length - 1
+              ? {
+                  ...turnpoint,
+                  taskType: "goal" as const,
+                }
+              : turnpoint
+          );
+        })();
+
+      const goalIndex = ensuredGoalTurnpoints.findIndex(
+        (turnpoint) => turnpoint.taskType === "goal"
+      );
+      const hasEss = ensuredGoalTurnpoints.some(
+        (turnpoint) => turnpoint.taskType === "ess"
+      );
+
+      if (goalIndex < 0 || hasEss) {
+        return ensuredGoalTurnpoints;
+      }
+
+      const goalTurnpoint = ensuredGoalTurnpoints[goalIndex];
       const essTurnpoint: XctskTurnpointInput & { lat: number; lng: number } = {
         ...goalTurnpoint,
         taskType: "ess",
       };
 
       return [
-        ...validTurnpoints.slice(0, goalIndex),
+        ...ensuredGoalTurnpoints.slice(0, goalIndex),
         essTurnpoint,
         goalTurnpoint,
-        ...validTurnpoints.slice(goalIndex + 1),
+        ...ensuredGoalTurnpoints.slice(goalIndex + 1),
       ];
     })();
 
