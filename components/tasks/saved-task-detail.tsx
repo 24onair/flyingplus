@@ -10,7 +10,6 @@ import { XctskQrModal } from "@/components/briefing/xctsk-qr-modal";
 import { canUsePersonalStorage } from "@/lib/auth/profile";
 import { buildLoginPath, withEmbedParam } from "@/lib/embed";
 import { buildCupTaskFile } from "@/lib/export/cup";
-import { buildWptWaypointFile } from "@/lib/export/wpt";
 import { buildXctskTaskFile } from "@/lib/export/xctsk";
 import { computeTaskPath } from "@/lib/task/task-geometry";
 import type { TaskPointType, WaypointRecord } from "@/types/course";
@@ -401,19 +400,6 @@ export function SavedTaskDetail({
       }),
     [editableTurnpoints, sssOpenTime, taskDeadlineTime, terrainElevations]
   );
-  const waypointSetFileContent = useMemo(
-    () =>
-      buildWptWaypointFile({
-        turnpoints: editableTurnpoints.map((turnpoint) => ({
-          ...turnpoint,
-          elevationM:
-            terrainElevations.find((item) => item.order === turnpoint.order)?.elevationM ??
-            turnpoint.elevationM ??
-            0,
-        })),
-      }),
-    [editableTurnpoints, terrainElevations]
-  );
 
   function exportCup() {
     downloadFile(
@@ -428,14 +414,6 @@ export function SavedTaskDetail({
       xctskFileContent,
       `${task.date.replaceAll("-", "")}_${taskName.replace(/\s+/g, "-")}.xctsk`,
       "application/json;charset=utf-8"
-    );
-  }
-
-  function exportWaypointSet() {
-    downloadFile(
-      waypointSetFileContent,
-      `${task.date.replaceAll("-", "")}_${taskName.replace(/\s+/g, "-")}_waypoints.wpt`,
-      "text/plain;charset=utf-8"
     );
   }
 
@@ -850,13 +828,6 @@ export function SavedTaskDetail({
             className="flex h-32 w-32 items-center justify-center rounded-full border border-violet-200 bg-violet-50 px-6 text-center text-2xl font-semibold leading-tight text-violet-700 transition hover:-translate-y-0.5 hover:shadow-lg"
           >
             XCTrack QR
-          </button>
-          <button
-            type="button"
-            onClick={exportWaypointSet}
-            className="flex h-32 w-32 items-center justify-center rounded-full border border-amber-200 bg-amber-50 px-6 text-center text-2xl font-semibold leading-tight text-amber-700 transition hover:-translate-y-0.5 hover:shadow-lg"
-          >
-            웨이포인트 셋 내보내기
           </button>
         </div>
       </div>
