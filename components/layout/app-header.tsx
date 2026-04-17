@@ -65,9 +65,10 @@ export function AppHeader() {
         position: "sticky",
         top: 0,
         zIndex: 20,
-        background: "#000000",
-        borderBottom: "1px solid #1f1f1f",
-        boxShadow: "rgba(0,0,0,0.3) 0px 0px 5px 0px",
+        background: "rgba(255,255,255,0.92)",
+        borderBottom: "1px solid #e5e7eb",
+        boxShadow: "0 1px 2px rgba(17,24,39,0.04)",
+        backdropFilter: "blur(8px)",
       }}
     >
       <div
@@ -99,8 +100,8 @@ export function AppHeader() {
               width: 36,
               height: 36,
               borderRadius: 4,
-              border: "1px solid #0ea5e9",
-              background: "#111111",
+              border: "1px solid #d9dee7",
+              background: "#ffffff",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -108,15 +109,15 @@ export function AppHeader() {
             }}
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-              <path d="M12 2L4 7v10l8 5 8-5V7L12 2z" fill="#0ea5e9" opacity="0.92"/>
+              <path d="M12 2L4 7v10l8 5 8-5V7L12 2z" fill="#4ea3e3" opacity="0.92"/>
               <path d="M12 6l-4 2.5v5L12 16l4-2.5v-5L12 6z" fill="#ffffff"/>
             </svg>
           </div>
           <div>
-            <p style={{ fontSize: 10, fontWeight: 700, color: "#a7a7a7", letterSpacing: "0.12em", textTransform: "uppercase", lineHeight: 1 }}>
+            <p style={{ fontSize: 10, fontWeight: 700, color: "#9aa3b2", letterSpacing: "0.12em", textTransform: "uppercase", lineHeight: 1 }}>
               XC Planner
             </p>
-            <p style={{ fontSize: 15, fontWeight: 700, color: "#ffffff", lineHeight: 1.2, marginTop: 2 }}>
+            <p style={{ fontSize: 15, fontWeight: 700, color: "#111827", lineHeight: 1.2, marginTop: 2 }}>
               Hike &amp; Fly
             </p>
           </div>
@@ -135,10 +136,9 @@ export function AppHeader() {
                   fontSize: 14,
                   fontWeight: 700,
                   borderRadius: 4,
-                  textTransform: "uppercase",
-                  color: active ? "#ffffff" : "#a7a7a7",
-                  background: active ? "rgba(14,165,233,0.08)" : "transparent",
-                  borderBottom: active ? "2px solid #0ea5e9" : "2px solid transparent",
+                  color: active ? "#111827" : "#6b7280",
+                  background: active ? "#eef6fd" : "transparent",
+                  border: active ? "1px solid rgba(78,163,227,0.25)" : "1px solid transparent",
                   transition: "all 200ms ease",
                   whiteSpace: "nowrap",
                   textDecoration: "none",
@@ -162,12 +162,11 @@ export function AppHeader() {
                   style={{
                     padding: "5px 12px",
                     fontSize: 12,
-                    fontWeight: 700,
+                    fontWeight: 600,
                     borderRadius: 4,
-                    textTransform: "uppercase",
-                    color: active ? "#0ea5e9" : "#898989",
-                    background: active ? "rgba(14,165,233,0.08)" : "transparent",
-                    border: active ? "1px solid rgba(14,165,233,0.45)" : "1px solid transparent",
+                    color: active ? "#2f80c9" : "#8e95a3",
+                    background: active ? "#eef6fd" : "transparent",
+                    border: active ? "1px solid rgba(78,163,227,0.25)" : "1px solid transparent",
                     transition: "all 200ms ease",
                     whiteSpace: "nowrap",
                     textDecoration: "none",

@@ -6,13 +6,13 @@ export default function HomePage() {
       <div className="theme-hero">
         <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl">
-            <p className="theme-kicker">XC Planner</p>
+            <p className="theme-kicker theme-kicker-muted">XC Planner</p>
             <h1 className="theme-title mt-2">
               Hike & Fly 현장 판단과
               <br />
               타스크 제작을 한 곳에서
             </h1>
-            <p className="theme-copy theme-copy-inverse mt-4 max-w-2xl">
+            <p className="theme-copy mt-4 max-w-2xl">
               브리핑, 지역 비교, 코스 제작, 공개 타스크 공유, 활공장 관리까지 실제 비행 준비에 필요한 흐름을 한 화면에서 이어갈 수 있도록 정리한 XC 플래너입니다.
             </p>
           </div>
@@ -75,10 +75,10 @@ export default function HomePage() {
           </div>
         </section>
 
-        <aside className="theme-panel-dark">
-          <p className="theme-kicker">별도 도구</p>
-          <h2 className="theme-subtitle text-white">운영 이슈 대응 도구</h2>
-          <p className="theme-copy theme-copy-inverse mt-3">
+        <aside className="theme-panel">
+          <p className="theme-kicker theme-kicker-muted">별도 도구</p>
+          <h2 className="theme-subtitle">운영 이슈 대응 도구</h2>
+          <p className="theme-copy mt-3">
             홈과 분리해서, 문경 활공장 관련 국민신문고 민원문 생성 도구는 별도 페이지로 이동했습니다.
           </p>
           <div className="mt-5">
