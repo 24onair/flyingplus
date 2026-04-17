@@ -7,8 +7,8 @@ import { AppHeader } from "@/components/layout/app-header";
 import { EmbedModeSync } from "@/components/layout/embed-mode-sync";
 
 export const metadata: Metadata = {
-  title: "XC 도우미",
-  description: "패러글라이딩 Hike & Fly XC 코스플래너 MVP",
+  title: "XC Planner | Hike & Fly",
+  description: "브리핑, 비교, 코스 제작, 타스크 공유, 활공장 관리까지 이어지는 Hike & Fly XC Planner입니다.",
 };
 
 export default function RootLayout({
