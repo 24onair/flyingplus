@@ -58,7 +58,6 @@ export function AppHeader() {
     );
 
   if (isEmbed || isMapFullscreen || isProfileFullscreen) return null;
-  if (pathname === "/") return null;
 
   return (
     <header
