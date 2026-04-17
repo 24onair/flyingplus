@@ -5,25 +5,56 @@ type MetricCardProps = {
   tone?: "default" | "accent" | "warning";
 };
 
-const toneClass: Record<NonNullable<MetricCardProps["tone"]>, string> = {
-  default: "bg-white text-stone-900",
-  accent: "bg-emerald-50 text-emerald-950",
-  warning: "bg-amber-50 text-amber-950",
+const toneStyles: Record<
+  NonNullable<MetricCardProps["tone"]>,
+  { bg: string; border: string; labelColor: string; valueColor: string; hintColor: string }
+> = {
+  default: {
+    bg: "#FFFFFF",
+    border: "#5E5E5E",
+    labelColor: "#757575",
+    valueColor: "#000000",
+    hintColor: "#757575",
+  },
+  accent: {
+    bg: "#1A1A1A",
+    border: "#5E5E5E",
+    labelColor: "#0EA5E9",
+    valueColor: "#FFFFFF",
+    hintColor: "#A7A7A7",
+  },
+  warning: {
+    bg: "rgba(239,145,0,0.08)",
+    border: "rgba(239,145,0,0.35)",
+    labelColor: "#DF6500",
+    valueColor: "#000000",
+    hintColor: "#757575",
+  },
 };
 
-export function MetricCard({
-  label,
-  value,
-  hint,
-  tone = "default",
-}: MetricCardProps) {
+export function MetricCard({ label, value, hint, tone = "default" }: MetricCardProps) {
+  const s = toneStyles[tone];
   return (
-    <article className={`rounded-[24px] border border-stone-200 p-4 ${toneClass[tone]}`}>
-      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">
+    <article
+      style={{
+        background: s.bg,
+        border: `1px solid ${s.border}`,
+        borderRadius: 4,
+        padding: "20px 20px",
+        boxShadow: "rgba(0, 0, 0, 0.3) 0px 0px 5px 0px",
+      }}
+    >
+      <p style={{ fontSize: 11, fontWeight: 700, color: s.labelColor, letterSpacing: "0.08em", textTransform: "uppercase", margin: 0 }}>
         {label}
       </p>
-      <p className="mt-2 text-2xl font-bold">{value}</p>
-      {hint ? <p className="mt-2 text-sm text-stone-600">{hint}</p> : null}
+      <p style={{ fontSize: 22, fontWeight: 700, color: s.valueColor, margin: "8px 0 0" }}>
+        {value}
+      </p>
+      {hint ? (
+        <p style={{ fontSize: 13, color: s.hintColor, margin: "6px 0 0" }}>
+          {hint}
+        </p>
+      ) : null}
     </article>
   );
 }

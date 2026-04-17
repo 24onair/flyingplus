@@ -35,14 +35,8 @@ function isItemActive(
   href: string,
   activePrefixes?: string[]
 ) {
-  if (pathname === href) {
-    return true;
-  }
-
-  if (href !== "/" && pathname.startsWith(`${href}/`)) {
-    return true;
-  }
-
+  if (pathname === href) return true;
+  if (href !== "/" && pathname.startsWith(`${href}/`)) return true;
   return activePrefixes?.some((prefix) => pathname.startsWith(prefix)) ?? false;
 }
 
@@ -54,90 +48,149 @@ export function AppHeader() {
   const isProfileFullscreen = searchParams.get("profileFullscreen") === "1";
   const serializedParams = searchParams.toString();
   const { profile } = useAuth();
+
   const utilityItems = utilityNavItems
     .filter((item) => (item.href === "/sites/catalog" ? profile?.isAdmin : true))
     .map((item) =>
       item.href === "/sites"
-        ? {
-            ...item,
-            label: profile?.isAdmin ? "활공장 관리" : "활공장",
-          }
+        ? { ...item, label: profile?.isAdmin ? "활공장 관리" : "활공장" }
         : item
     );
 
-  if (isEmbed || isMapFullscreen || isProfileFullscreen) {
-    return null;
-  }
-
-  if (pathname === "/") {
-    return null;
-  }
+  if (isEmbed || isMapFullscreen || isProfileFullscreen) return null;
+  if (pathname === "/") return null;
 
   return (
-    <header className="sticky top-0 z-20 border-b border-[color:var(--line)] bg-[rgba(248,245,239,0.8)] backdrop-blur-2xl">
-      <div className="mx-auto w-[min(1200px,calc(100vw-24px))] py-3 md:py-4">
-        <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-          <Link
-            href="/"
-            className="flex min-w-0 items-center gap-3 rounded-[26px] border border-[color:var(--line)] bg-[rgba(255,253,249,0.72)] px-3 py-2 shadow-[0_12px_28px_rgba(23,20,17,0.06)] transition hover:border-[color:var(--line-strong)] hover:bg-[rgba(255,253,249,0.92)]"
+    <header
+      style={{
+        position: "sticky",
+        top: 0,
+        zIndex: 20,
+        background: "#000000",
+        borderBottom: "1px solid #1f1f1f",
+        boxShadow: "rgba(0,0,0,0.3) 0px 0px 5px 0px",
+      }}
+    >
+      <div
+        className="header-inner"
+        style={{
+          maxWidth: 1200,
+          margin: "0 auto",
+          padding: "0 32px",
+          minHeight: 72,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          gap: 24,
+        }}
+      >
+        {/* Logo */}
+        <Link
+          href="/"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 10,
+            textDecoration: "none",
+            flexShrink: 0,
+          }}
+        >
+          <div
+            style={{
+              width: 36,
+              height: 36,
+              borderRadius: 4,
+              border: "1px solid #0ea5e9",
+              background: "#111111",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexShrink: 0,
+            }}
           >
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[18px] bg-[linear-gradient(145deg,#171411,#2b241d)] text-xl text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.12)]">
-              🪂
-            </div>
-            <div className="min-w-0">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">
-                XC 도우미
-              </p>
-              <p className="truncate text-base font-black tracking-[-0.04em] text-stone-950 md:text-[1.1rem]">
-                Hike & Fly Planner
-              </p>
-            </div>
-          </Link>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2L4 7v10l8 5 8-5V7L12 2z" fill="#0ea5e9" opacity="0.92"/>
+              <path d="M12 6l-4 2.5v5L12 16l4-2.5v-5L12 6z" fill="#ffffff"/>
+            </svg>
+          </div>
+          <div>
+            <p style={{ fontSize: 10, fontWeight: 700, color: "#a7a7a7", letterSpacing: "0.12em", textTransform: "uppercase", lineHeight: 1 }}>
+              XC Planner
+            </p>
+            <p style={{ fontSize: 15, fontWeight: 700, color: "#ffffff", lineHeight: 1.2, marginTop: 2 }}>
+              Hike &amp; Fly
+            </p>
+          </div>
+        </Link>
 
-          <div className="min-w-0 flex-1 space-y-2">
-            <nav className="flex gap-2 overflow-x-auto pb-1 md:flex-wrap md:justify-end md:overflow-visible md:pb-0">
-              {primaryNavItems.map((item) => (
+        {/* Primary Nav */}
+        <nav className="header-primary-nav" style={{ display: "flex", alignItems: "center", gap: 4, flex: 1, justifyContent: "center", overflow: "auto" }}>
+          {primaryNavItems.map((item) => {
+            const active = isItemActive(pathname, item.href);
+            return (
+              <Link
+                key={item.href}
+                href={serializedParams ? `${item.href}?${serializedParams}` : item.href}
+                style={{
+                  padding: "6px 14px",
+                  fontSize: 14,
+                  fontWeight: 700,
+                  borderRadius: 4,
+                  textTransform: "uppercase",
+                  color: active ? "#ffffff" : "#a7a7a7",
+                  background: active ? "rgba(14,165,233,0.08)" : "transparent",
+                  borderBottom: active ? "2px solid #0ea5e9" : "2px solid transparent",
+                  transition: "all 200ms ease",
+                  whiteSpace: "nowrap",
+                  textDecoration: "none",
+                }}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
+        </nav>
+
+        {/* Right: Utility + Auth */}
+        <div className="header-right" style={{ display: "flex", alignItems: "center", gap: 8, flexShrink: 0 }}>
+          <nav style={{ display: "flex", alignItems: "center", gap: 4 }}>
+            {utilityItems.map((item) => {
+              const active = isItemActive(pathname, item.href, item.activePrefixes);
+              return (
                 <Link
                   key={item.href}
-                  href={
-                    serializedParams ? `${item.href}?${serializedParams}` : item.href
-                  }
-                  className={`shrink-0 rounded-full border px-4 py-2 text-sm font-semibold tracking-[-0.02em] transition ${
-                    isItemActive(pathname, item.href)
-                      ? "border-[color:var(--line)] bg-[rgba(255,253,249,0.92)] text-stone-950 shadow-[0_10px_22px_rgba(23,20,17,0.06)]"
-                      : "border-transparent text-stone-600 hover:border-[color:var(--line)] hover:bg-[rgba(255,253,249,0.7)] hover:text-stone-950"
-                  }`}
+                  href={serializedParams ? `${item.href}?${serializedParams}` : item.href}
+                  style={{
+                    padding: "5px 12px",
+                    fontSize: 12,
+                    fontWeight: 700,
+                    borderRadius: 4,
+                    textTransform: "uppercase",
+                    color: active ? "#0ea5e9" : "#898989",
+                    background: active ? "rgba(14,165,233,0.08)" : "transparent",
+                    border: active ? "1px solid rgba(14,165,233,0.45)" : "1px solid transparent",
+                    transition: "all 200ms ease",
+                    whiteSpace: "nowrap",
+                    textDecoration: "none",
+                  }}
                 >
                   {item.label}
                 </Link>
-              ))}
-            </nav>
-
-            <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-end md:gap-3">
-              <nav className="flex gap-2 overflow-x-auto pb-1 md:flex-wrap md:justify-end md:overflow-visible md:pb-0">
-                {utilityItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={
-                      serializedParams ? `${item.href}?${serializedParams}` : item.href
-                    }
-                    className={`shrink-0 rounded-full border px-3 py-1.5 text-xs font-semibold tracking-[-0.01em] transition ${
-                      isItemActive(pathname, item.href, item.activePrefixes)
-                        ? "border-[color:var(--line-strong)] bg-[rgba(255,253,249,0.94)] text-stone-950 shadow-[0_8px_18px_rgba(23,20,17,0.05)]"
-                        : "border-[color:var(--line)] bg-[rgba(248,243,235,0.72)] text-stone-600 hover:border-[color:var(--line-strong)] hover:bg-[rgba(255,253,249,0.9)] hover:text-stone-950"
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </nav>
-              <div className="min-w-0 md:max-w-full">
-                <AuthStatus />
-              </div>
-            </div>
-          </div>
+              );
+            })}
+          </nav>
+          <AuthStatus />
         </div>
       </div>
+
+      {/* Mobile nav */}
+      <style>{`
+        @media (max-width: 768px) {
+          .header-inner { flex-wrap: wrap; height: auto !important; padding: 12px 16px !important; }
+          .header-primary-nav { order: 3; width: 100%; justify-content: flex-start !important; overflow-x: auto; padding-bottom: 4px; }
+          .header-right { order: 2; }
+        }
+      `}</style>
     </header>
   );
 }

@@ -7,16 +7,9 @@ type SelectedDateCardProps = {
 };
 
 function formatKoreanDate(date: string) {
-  if (!date) {
-    return "날짜 미선택";
-  }
-
+  if (!date) return "날짜 미선택";
   const parsed = new Date(`${date}T00:00:00`);
-
-  if (Number.isNaN(parsed.getTime())) {
-    return date;
-  }
-
+  if (Number.isNaN(parsed.getTime())) return date;
   return new Intl.DateTimeFormat("ko-KR", {
     year: "numeric",
     month: "long",
@@ -25,22 +18,27 @@ function formatKoreanDate(date: string) {
   }).format(parsed);
 }
 
-export function SelectedDateCard({
-  date,
-  label = "선택 날짜",
-  tone = "default",
-}: SelectedDateCardProps) {
-  const tones =
-    tone === "accent"
-      ? "border-emerald-200 bg-emerald-50 text-emerald-950"
-      : "border-stone-200 bg-white/80 text-stone-900";
-
+export function SelectedDateCard({ date, label = "선택 날짜", tone = "default" }: SelectedDateCardProps) {
+  const isAccent = tone === "accent";
   return (
-    <div className={`rounded-2xl border px-4 py-3 ${tones}`}>
-      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">
+      <div
+      style={{
+        display: "inline-flex",
+        flexDirection: "column",
+        gap: 4,
+        padding: "12px 20px",
+        borderRadius: 4,
+        border: isAccent ? "1px solid rgba(14,165,233,0.4)" : "1px solid #5E5E5E",
+        background: isAccent ? "rgba(14,165,233,0.08)" : "#FFFFFF",
+        boxShadow: "rgba(0, 0, 0, 0.3) 0px 0px 5px 0px",
+      }}
+    >
+      <p style={{ fontSize: 11, fontWeight: 700, color: isAccent ? "#0EA5E9" : "#757575", letterSpacing: "0.08em", textTransform: "uppercase", margin: 0 }}>
         {label}
       </p>
-      <p className="mt-2 text-lg font-semibold">{formatKoreanDate(date)}</p>
+      <p style={{ fontSize: 16, fontWeight: 700, color: "#000000", margin: 0 }}>
+        {formatKoreanDate(date)}
+      </p>
     </div>
   );
 }
