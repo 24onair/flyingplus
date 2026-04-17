@@ -7,6 +7,8 @@ import {
   saveSiteRegistrationOverride,
 } from "@/lib/sites/runtime-site-configs";
 
+export const dynamic = "force-dynamic";
+
 const allowedExtensions = ["wpt", "cup", "gpx", "kml", "csv"] as const;
 type WaypointUploadType = (typeof allowedExtensions)[number];
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IGC Dashboard Prototype</title>
+    <title>IGC Flight Analysis | FlyingPlus</title>
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -15,15 +15,15 @@
   <body>
     <main class="page">
       <section class="hero">
-        <p class="eyebrow">Independent Prototype</p>
+        <p class="eyebrow">Flight Analysis</p>
         <div class="hero-actions">
-          <a class="playback-button secondary-link" href="/">XC 도우미 홈으로</a>
+          <a class="playback-button secondary-link" href="/">메인 홈으로</a>
           <a id="detail-back-link" class="playback-button secondary-link" href="./list.html">리스트로 돌아가기</a>
         </div>
-        <h1>IGC Flight Dashboard</h1>
+        <h1>비행 로그를 지도, 프로파일, 이상 구간으로 한 번에 읽습니다.</h1>
         <p class="subtitle">
-          메인 XC 앱과 분리된 독립 분석 뷰입니다. 샘플 IGC 1개를 읽어
-          요약/트랙/프로파일을 확인합니다.
+          업로드된 IGC 비행을 독립 분석 화면에서 검토합니다. 실제 트랙 맵, 고도 프로파일,
+          속도와 상승률, task 구간 통계, 비정상 속도 후보까지 한 화면에서 빠르게 확인할 수 있습니다.
         </p>
       </section>
 
@@ -37,7 +37,7 @@
         <article class="panel">
           <div class="panel-head">
             <h2>실제 트랙 맵</h2>
-            <p>OpenStreetMap 배경 + 비행 트랙 + 선언 Task</p>
+            <p>배경 지도와 실제 비행 트랙, 선언 task를 함께 표시합니다.</p>
           </div>
           <div class="playback-toolbar">
             <button id="playback-toggle" class="playback-button" type="button">재생</button>
@@ -77,7 +77,7 @@
         <article class="panel">
           <div class="panel-head">
             <h2>고도 프로파일</h2>
-            <p>GPS 고도 기준 프로파일</p>
+            <p>GPS 고도 기준 전체 프로파일과 구간 고도를 확인합니다.</p>
           </div>
           <svg id="altitude-svg" viewBox="0 0 800 300" class="chart-svg"></svg>
           <div id="altitude-footer" class="altitude-footer">
@@ -105,7 +105,7 @@
         <article class="panel">
           <div class="panel-head">
             <h2>속도 / 상승률</h2>
-            <p>연속 fix 계산 기준</p>
+            <p>연속 fix 기반으로 속도와 상승률을 계산합니다.</p>
           </div>
           <div id="flight-stats" class="stack"></div>
         </article>
@@ -113,7 +113,7 @@
         <article class="panel">
           <div class="panel-head">
             <h2>구간 통계</h2>
-            <p>선언 task point 기준 구간 거리/고도 변화</p>
+            <p>선언 task point 기준 거리와 고도 변화를 보여줍니다.</p>
           </div>
           <div id="segment-stats" class="stack"></div>
         </article>
@@ -123,7 +123,7 @@
         <article class="panel">
           <div class="panel-head">
             <h2>이상 속도 체크</h2>
-            <p>비정상 최고속도 후보를 따로 분리합니다.</p>
+            <p>비정상 최고속도 후보 구간을 따로 분리합니다.</p>
           </div>
           <div id="anomaly-stats" class="stack"></div>
         </article>
@@ -131,7 +131,7 @@
         <article class="panel">
           <div class="panel-head">
             <h2>의심 구간 목록</h2>
-            <p>짧은 시간에 과도한 속도/고도 변화가 있는 구간</p>
+            <p>짧은 시간에 과도한 속도나 고도 변화가 있는 구간입니다.</p>
           </div>
           <div id="anomaly-list" class="stack"></div>
         </article>
@@ -141,7 +141,7 @@
         <article class="panel">
           <div class="panel-head">
             <h2>Thermal / Glide 자동 분석</h2>
-            <p>상승률과 속도로 비행 모드를 자동 분류합니다.</p>
+            <p>상승률과 속도를 기준으로 비행 모드를 자동 분류합니다.</p>
           </div>
           <div id="mode-stats" class="stack"></div>
         </article>
@@ -149,7 +149,7 @@
         <article class="panel">
           <div class="panel-head">
             <h2>분석된 구간</h2>
-            <p>thermal / glide 구간을 시간순으로 보여줍니다.</p>
+            <p>thermal / glide / transition 구간을 시간순으로 보여줍니다.</p>
           </div>
           <div id="mode-list" class="stack"></div>
         </article>
@@ -159,7 +159,7 @@
         <article class="panel">
           <div class="panel-head">
             <h2>선언 Task</h2>
-            <p>IGC 내부 C record / LXNAOZN 기준</p>
+            <p>IGC 내부 C record와 LXNAOZN 기준으로 읽습니다.</p>
           </div>
           <div id="task-list" class="stack"></div>
         </article>
@@ -167,7 +167,7 @@
         <article class="panel">
           <div class="panel-head">
             <h2>비행 상태 이벤트</h2>
-            <p>Naviter `LXNA::PHASE` 이벤트</p>
+            <p>Naviter `LXNA::PHASE` 이벤트 목록입니다.</p>
           </div>
           <div id="phase-list" class="stack"></div>
         </article>

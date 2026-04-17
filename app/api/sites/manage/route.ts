@@ -5,6 +5,8 @@ import {
 } from "@/lib/sites/runtime-site-configs";
 import type { NewSiteRegistrationDraft } from "@/types/site-registration";
 
+export const dynamic = "force-dynamic";
+
 export async function POST(request: Request) {
   try {
     const body = (await request.json()) as NewSiteRegistrationDraft;
