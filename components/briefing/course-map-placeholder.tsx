@@ -659,11 +659,11 @@ export function CourseMapPlaceholder({
             : point.name;
 
           const wrapper = document.createElement("div");
-          wrapper.className = "flex items-center gap-2";
+          wrapper.className = "flex items-center gap-1.5";
 
           const el = document.createElement("div");
           el.className =
-            "flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-stone-900 text-xs font-bold text-white shadow-lg";
+            "flex h-7 w-7 items-center justify-center rounded-[4px] border border-slate-300 bg-white text-[11px] font-semibold text-slate-700 shadow";
           el.textContent = String(index + 1);
 
           wrapper.appendChild(el);
@@ -671,7 +671,7 @@ export function CourseMapPlaceholder({
           if (!isCompactViewport) {
             const text = document.createElement("div");
             text.className =
-              "rounded-xl border border-stone-200 bg-white/95 px-3 py-1.5 text-xs font-semibold text-stone-900 shadow-lg backdrop-blur";
+              "rounded-[4px] border border-slate-200 bg-white/96 px-2 py-1 text-[11px] font-medium text-slate-700 shadow";
             text.textContent = markerLabel;
             wrapper.appendChild(text);
           }
@@ -972,8 +972,8 @@ export function CourseMapPlaceholder({
       ) : null}
 
       {accessToken ? (
-        <div className="pointer-events-auto absolute left-3 right-3 top-[calc(env(safe-area-inset-top)+12px)] z-20 flex flex-col gap-2 sm:left-4 sm:right-auto sm:top-[calc(env(safe-area-inset-top)+16px)] sm:w-[360px]">
-          <div className="flex items-center gap-2 rounded-2xl bg-white/92 p-2 shadow-sm backdrop-blur">
+        <div className="pointer-events-auto absolute left-3 right-3 top-[calc(env(safe-area-inset-top)+10px)] z-20 flex flex-col gap-2 sm:left-4 sm:right-auto sm:top-[calc(env(safe-area-inset-top)+14px)] sm:w-[320px]">
+          <div className="flex items-center gap-2 rounded-[4px] border border-slate-200 bg-white/94 p-2 shadow-sm backdrop-blur">
             <input
               type="text"
               value={searchQuery}
@@ -985,7 +985,7 @@ export function CourseMapPlaceholder({
                 }
               }}
               placeholder="지명 검색"
-              className="min-w-0 flex-1 rounded-xl border border-stone-200 bg-white px-3 py-2 text-sm font-medium text-stone-900"
+              className="min-w-0 flex-1 rounded-[4px] border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-900"
             />
             <button
               type="button"
@@ -993,13 +993,13 @@ export function CourseMapPlaceholder({
                 void searchPlace();
               }}
               disabled={searchStatus === "searching" || !searchQuery.trim()}
-              className="rounded-xl bg-stone-900 px-3 py-2 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-60"
+              className="rounded-[4px] border border-slate-200 bg-slate-100 px-3 py-2 text-sm font-medium text-slate-700 disabled:cursor-not-allowed disabled:opacity-60"
             >
               {searchStatus === "searching" ? "검색 중..." : "검색"}
             </button>
           </div>
           {searchStatus === "empty" || searchStatus === "error" ? (
-            <div className="rounded-2xl border border-red-200 bg-white/92 px-3 py-2 text-sm font-medium text-red-700 shadow-sm backdrop-blur">
+            <div className="rounded-[4px] border border-red-200 bg-white/96 px-3 py-2 text-sm font-medium text-red-700 shadow-sm backdrop-blur">
               {searchMessage}
             </div>
           ) : null}
@@ -1011,34 +1011,34 @@ export function CourseMapPlaceholder({
         onClick={() => {
           void toggleFullscreen();
         }}
-        className={`pointer-events-auto absolute right-3 top-[calc(env(safe-area-inset-top)+12px)] z-20 rounded-2xl bg-stone-900 px-3 py-2 text-xs font-semibold text-white shadow-sm sm:right-4 sm:top-[calc(env(safe-area-inset-top)+16px)] sm:px-4 sm:py-3 sm:text-sm ${
+        className={`pointer-events-auto absolute right-3 top-[calc(env(safe-area-inset-top)+10px)] z-20 rounded-[4px] border border-[#8bb8e8] bg-white/96 px-3 py-2 text-xs font-semibold text-[#4a89c7] shadow-sm sm:right-4 sm:top-[calc(env(safe-area-inset-top)+14px)] sm:px-4 sm:py-2.5 sm:text-sm ${
           isFullscreen && !useNativeFullscreen ? "hidden" : ""
         }`}
       >
         {isFullscreen ? "전체 보기 닫기" : "지도 전체 보기"}
       </button>
 
-      <div className="pointer-events-none absolute left-3 right-20 top-[calc(env(safe-area-inset-top)+12px)] z-10 flex max-w-[min(100%-5rem,56rem)] flex-wrap gap-2 sm:left-4 sm:top-[calc(env(safe-area-inset-top)+16px)] sm:gap-3">
-        <div className="rounded-2xl bg-white/92 px-3 py-2 shadow-sm backdrop-blur sm:px-4 sm:py-3">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">
+      <div className="pointer-events-none absolute left-3 right-24 top-[calc(env(safe-area-inset-top)+66px)] z-10 flex max-w-[min(100%-6rem,44rem)] flex-wrap gap-2 sm:left-4 sm:right-4 sm:top-[calc(env(safe-area-inset-top)+70px)] sm:gap-2">
+        <div className="max-w-[240px] rounded-[4px] border border-slate-200 bg-white/94 px-3 py-2 shadow-sm backdrop-blur sm:max-w-[280px]">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-slate-400">
             추천 코스
           </p>
-          <p className="mt-1 text-sm font-bold text-stone-900 sm:mt-2 sm:text-lg">{courseName}</p>
+          <p className="mt-1 text-sm font-semibold text-slate-900 sm:text-base">{courseName}</p>
           {validRoute.length === 0 ? (
-            <p className="mt-2 text-xs font-medium text-stone-500">
+            <p className="mt-1.5 text-[11px] font-medium leading-5 text-slate-500">
               지명을 검색한 뒤 지도를 클릭해 첫 타스크 포인트를 만들 수 있습니다.
             </p>
           ) : null}
         </div>
-        <div className="hidden rounded-2xl bg-white/92 px-4 py-3 shadow-sm backdrop-blur md:block">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">
+        <div className="hidden max-w-[420px] rounded-[4px] border border-slate-200 bg-white/94 px-3 py-2 shadow-sm backdrop-blur lg:block">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-slate-400">
             지도 상태
           </p>
-          <p className="mt-2 text-sm leading-6 text-stone-700">
+          <p className="mt-1 text-xs leading-5 text-slate-600">
             빨간 원은 태스크 반경, 파란 굵은 선은 써클 외곽 기준 최단 연결선, 회색 점선은 중심 연결 참고선입니다.
           </p>
           {onWaypointSelect ? (
-            <p className="mt-2 text-xs font-medium text-stone-500">
+            <p className="mt-1 text-[11px] font-medium leading-5 text-slate-500">
               웨이포인트 점을 클릭하면 현재 코스에 바로 추가되고, 빈 지도를 클릭하면 커스텀 포인트를 만들 수 있습니다.
             </p>
           ) : null}
@@ -1127,7 +1127,7 @@ export function CourseMapPlaceholder({
 
       {centerLabel ? (
         <div className="pointer-events-none absolute left-1/2 top-1/2 z-[15] flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-2">
-          <div className="rounded-full border-2 border-sky-500 bg-white/95 px-4 py-2 text-sm font-semibold text-stone-900 shadow-lg backdrop-blur">
+          <div className="rounded-[4px] border border-[#8bb8e8] bg-white/96 px-3 py-1.5 text-xs font-semibold text-slate-900 shadow-lg backdrop-blur">
             {centerLabel}
           </div>
           <div className="relative h-7 w-7">
