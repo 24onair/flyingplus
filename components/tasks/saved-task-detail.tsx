@@ -10,6 +10,7 @@ import { XctskQrModal } from "@/components/briefing/xctsk-qr-modal";
 import { canUsePersonalStorage } from "@/lib/auth/profile";
 import { buildLoginPath, withEmbedParam } from "@/lib/embed";
 import { buildCupTaskFile } from "@/lib/export/cup";
+import { buildWptWaypointFile } from "@/lib/export/wpt";
 import { buildXctskTaskFile } from "@/lib/export/xctsk";
 import { computeTaskPath } from "@/lib/task/task-geometry";
 import type { TaskPointType, WaypointRecord } from "@/types/course";
@@ -400,6 +401,19 @@ export function SavedTaskDetail({
       }),
     [editableTurnpoints, sssOpenTime, taskDeadlineTime, terrainElevations]
   );
+  const waypointSetFileContent = useMemo(
+    () =>
+      buildWptWaypointFile({
+        turnpoints: editableTurnpoints.map((turnpoint) => ({
+          ...turnpoint,
+          elevationM:
+            terrainElevations.find((item) => item.order === turnpoint.order)?.elevationM ??
+            turnpoint.elevationM ??
+            0,
+        })),
+      }),
+    [editableTurnpoints, terrainElevations]
+  );
 
   function exportCup() {
     downloadFile(
@@ -414,6 +428,14 @@ export function SavedTaskDetail({
       xctskFileContent,
       `${task.date.replaceAll("-", "")}_${taskName.replace(/\s+/g, "-")}.xctsk`,
       "application/json;charset=utf-8"
+    );
+  }
+
+  function exportWaypointSet() {
+    downloadFile(
+      waypointSetFileContent,
+      `${task.date.replaceAll("-", "")}_${taskName.replace(/\s+/g, "-")}_waypoints.wpt`,
+      "text/plain;charset=utf-8"
     );
   }
 
@@ -829,6 +851,13 @@ export function SavedTaskDetail({
           >
             XCTrack QR
           </button>
+          <button
+            type="button"
+            onClick={exportWaypointSet}
+            className="flex h-32 w-32 items-center justify-center rounded-full border border-amber-200 bg-amber-50 px-6 text-center text-2xl font-semibold leading-tight text-amber-700 transition hover:-translate-y-0.5 hover:shadow-lg"
+          >
+            웨이포인트 셋 내보내기
+          </button>
         </div>
       </div>
       ) : null}
@@ -1035,7 +1064,7 @@ export function SavedTaskDetail({
                 <p className="mt-1 text-xs text-stone-500">
                   {turnpoint.lat.toFixed(5)}, {turnpoint.lng.toFixed(5)}
                 </p>
-                {isCustomTurnpoint(turnpoint) ? (
+                {isCustomTurnpoint(turnpoint) && task.siteId !== "manual" ? (
                   <div className="mt-3 flex flex-wrap items-center gap-3">
                     <button
                       type="button"
@@ -1056,6 +1085,11 @@ export function SavedTaskDetail({
                       </span>
                     ) : null}
                   </div>
+                ) : null}
+                {isCustomTurnpoint(turnpoint) && task.siteId === "manual" ? (
+                  <p className="mt-3 text-sm font-medium text-stone-500">
+                    직접 입력 사이트는 개별 웨이포인트 등록 대신 상단의 웨이포인트 셋 내보내기를 사용해 주세요.
+                  </p>
                 ) : null}
               </li>
             ))}
