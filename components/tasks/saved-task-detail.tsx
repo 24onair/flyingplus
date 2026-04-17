@@ -88,6 +88,21 @@ function buildCustomPointMeta(current: Array<{ name: string }>) {
   };
 }
 
+function isCustomTurnpoint(turnpoint: EditableTurnpoint) {
+  return turnpoint.name.toUpperCase().startsWith("CUST");
+}
+
+function waypointCategoryFromTaskType(taskType: TaskPointType) {
+  switch (taskType) {
+    case "start":
+      return "launch";
+    case "goal":
+      return "landing";
+    default:
+      return "turnpoint";
+  }
+}
+
 function normalizeTurnpoints(turnpoints: EditableTurnpoint[]) {
   return turnpoints.map((turnpoint, index, all) => ({
     ...turnpoint,
@@ -205,6 +220,8 @@ export function SavedTaskDetail({
   const [deleteStatus, setDeleteStatus] = useState<"idle" | "deleting" | "error">("idle");
   const [deleteError, setDeleteError] = useState("");
   const [waypointDatabase, setWaypointDatabase] = useState<WaypointRecord[]>([]);
+  const [waypointSaveStatus, setWaypointSaveStatus] = useState<Record<number, "idle" | "saving" | "done" | "error">>({});
+  const [waypointSaveError, setWaypointSaveError] = useState<Record<number, string>>({});
   const emptyBottlenecks = useMemo(() => [], []);
 
   useEffect(() => {
@@ -483,6 +500,100 @@ export function SavedTaskDetail({
         turnpoint.order === order ? { ...turnpoint, taskType } : turnpoint
       )
     );
+  }
+
+  async function saveTurnpointAsWaypoint(turnpoint: EditableTurnpoint) {
+    if (authLoading) {
+      return;
+    }
+
+    if (!user) {
+      router.push(loginPath);
+      return;
+    }
+
+    if (!canUsePersonalStorage(profile)) {
+      setWaypointSaveStatus((current) => ({ ...current, [turnpoint.order]: "error" }));
+      setWaypointSaveError((current) => ({
+        ...current,
+        [turnpoint.order]: "관리자 승인 후 웨이포인트 저장을 사용할 수 있습니다.",
+      }));
+      return;
+    }
+
+    if (task.siteId === "manual") {
+      setWaypointSaveStatus((current) => ({ ...current, [turnpoint.order]: "error" }));
+      setWaypointSaveError((current) => ({
+        ...current,
+        [turnpoint.order]: "직접 입력 사이트는 웨이포인트를 저장할 수 없습니다.",
+      }));
+      return;
+    }
+
+    setWaypointSaveStatus((current) => ({ ...current, [turnpoint.order]: "saving" }));
+    setWaypointSaveError((current) => ({ ...current, [turnpoint.order]: "" }));
+
+    try {
+      const accessToken = await getAccessToken();
+
+      if (!accessToken) {
+        router.push(loginPath);
+        return;
+      }
+
+      const response = await fetch(`/api/sites/waypoints`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${accessToken}`,
+        },
+        body: JSON.stringify({
+          siteId: task.siteId,
+          name: turnpoint.name,
+          label: turnpoint.label,
+          lat: turnpoint.lat,
+          lng: turnpoint.lng,
+          elevationM: turnpoint.elevationM,
+          category: waypointCategoryFromTaskType(turnpoint.taskType),
+        }),
+      });
+
+      const payload = response.headers.get("content-type")?.includes("application/json")
+        ? ((await response.json()) as {
+            error?: string;
+            details?: string;
+            waypoint?: WaypointRecord;
+          })
+        : null;
+
+      if (!response.ok || !payload?.waypoint) {
+        throw new Error(
+          payload?.error ?? payload?.details ?? "웨이포인트 저장에 실패했습니다."
+        );
+      }
+
+      setWaypointDatabase((current) => [...current, payload.waypoint as WaypointRecord]);
+      setEditableTurnpoints((current) =>
+        current.map((item) =>
+          item.order === turnpoint.order
+            ? {
+                ...item,
+                name: payload.waypoint?.code ?? item.name,
+                label: payload.waypoint?.label ?? item.label,
+                elevationM: payload.waypoint?.elevationM ?? item.elevationM,
+              }
+            : item
+        )
+      );
+      setWaypointSaveStatus((current) => ({ ...current, [turnpoint.order]: "done" }));
+    } catch (error) {
+      setWaypointSaveStatus((current) => ({ ...current, [turnpoint.order]: "error" }));
+      setWaypointSaveError((current) => ({
+        ...current,
+        [turnpoint.order]:
+          error instanceof Error ? error.message : "웨이포인트 저장 중 오류가 발생했습니다.",
+      }));
+    }
   }
 
   async function saveAsNewTask() {
@@ -924,6 +1035,28 @@ export function SavedTaskDetail({
                 <p className="mt-1 text-xs text-stone-500">
                   {turnpoint.lat.toFixed(5)}, {turnpoint.lng.toFixed(5)}
                 </p>
+                {isCustomTurnpoint(turnpoint) ? (
+                  <div className="mt-3 flex flex-wrap items-center gap-3">
+                    <button
+                      type="button"
+                      onClick={() => void saveTurnpointAsWaypoint(turnpoint)}
+                      disabled={waypointSaveStatus[turnpoint.order] === "saving" || waypointSaveStatus[turnpoint.order] === "done"}
+                      className="btn btn-secondary disabled:cursor-not-allowed disabled:opacity-60"
+                    >
+                      {waypointSaveStatus[turnpoint.order] === "saving"
+                        ? "웨이포인트 저장 중..."
+                        : waypointSaveStatus[turnpoint.order] === "done"
+                          ? "웨이포인트 등록 완료"
+                          : "웨이포인트로 등록"}
+                    </button>
+                    {waypointSaveStatus[turnpoint.order] === "error" &&
+                    waypointSaveError[turnpoint.order] ? (
+                      <span className="text-sm font-medium text-red-900">
+                        {waypointSaveError[turnpoint.order]}
+                      </span>
+                    ) : null}
+                  </div>
+                ) : null}
               </li>
             ))}
           </ul>

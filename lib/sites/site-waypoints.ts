@@ -51,6 +51,17 @@ function parsedJsonPath(siteId: string, fileName: string) {
   );
 }
 
+function customWaypointPath(siteId: string) {
+  return path.join(
+    process.cwd(),
+    "data",
+    "sites",
+    "uploads",
+    siteId,
+    "custom-waypoints.parsed.json"
+  );
+}
+
 function rawWaypointPath(siteId: string, fileName: string) {
   return path.join(process.cwd(), "data", "sites", "uploads", siteId, fileName);
 }
@@ -172,6 +183,86 @@ async function readParsedWaypointFile(siteId: string, fileName: string) {
   }
 }
 
+async function readCustomWaypointFile(siteId: string) {
+  try {
+    const raw = await fs.readFile(customWaypointPath(siteId), "utf8");
+    const parsed = JSON.parse(raw) as WaypointRecord[];
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
+function sanitizeWaypointCode(value: string) {
+  const cleaned = value
+    .toUpperCase()
+    .replace(/[^A-Z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 16);
+
+  return cleaned || "CUST-WP";
+}
+
+function ensureUniqueWaypointCode(existing: WaypointRecord[], preferred: string) {
+  const baseCode = sanitizeWaypointCode(preferred);
+  const existingCodes = new Set(existing.map((item) => item.code.toUpperCase()));
+
+  if (!existingCodes.has(baseCode)) {
+    return baseCode;
+  }
+
+  let sequence = 2;
+  while (sequence < 1000) {
+    const suffix = `-${sequence}`;
+    const candidate = `${baseCode.slice(0, Math.max(1, 16 - suffix.length))}${suffix}`;
+    if (!existingCodes.has(candidate.toUpperCase())) {
+      return candidate;
+    }
+    sequence += 1;
+  }
+
+  return `${baseCode.slice(0, 12)}-${Date.now().toString().slice(-3)}`;
+}
+
+export async function appendCustomWaypoint(
+  siteId: string,
+  waypoint: {
+    name: string;
+    label?: string;
+    lat: number;
+    lng: number;
+    elevationM: number;
+    category: WaypointCategory;
+  }
+) {
+  const existingDatabase = await getSiteWaypointDatabase(siteId);
+  const existingCustom = await readCustomWaypointFile(siteId);
+  const code = ensureUniqueWaypointCode(
+    existingDatabase,
+    waypoint.name || waypoint.label || "CUST-WP"
+  );
+  const record: WaypointRecord = {
+    siteId,
+    code,
+    name: code,
+    label: waypoint.label?.trim() || waypoint.name.trim() || code,
+    lat: waypoint.lat,
+    lng: waypoint.lng,
+    elevationM: Number.isFinite(waypoint.elevationM) ? waypoint.elevationM : 0,
+    category: waypoint.category,
+    source: "custom-task",
+  };
+
+  await fs.mkdir(path.dirname(customWaypointPath(siteId)), { recursive: true });
+  await fs.writeFile(
+    customWaypointPath(siteId),
+    JSON.stringify([...existingCustom, record], null, 2),
+    "utf8"
+  );
+
+  return record;
+}
+
 async function getLatestUploadedWaypointFile(siteId: string) {
   try {
     const targetDir = path.join(process.cwd(), "data", "sites", "uploads", siteId);
@@ -227,13 +318,16 @@ export async function getSiteWaypointDatabase(siteId: string) {
   for (const fileName of fileCandidates) {
     const uploadedWaypoints = await loadUploadedSiteWaypoints(siteId, fileName);
     if (uploadedWaypoints.length > 0) {
-      return uploadedWaypoints;
+      const customWaypoints = await readCustomWaypointFile(siteId);
+      return [...uploadedWaypoints, ...customWaypoints];
     }
   }
 
+  const customWaypoints = await readCustomWaypointFile(siteId);
+
   if (siteId === "mungyeong") {
-    return getMungyeongWaypointDatabase();
+    return [...getMungyeongWaypointDatabase(), ...customWaypoints];
   }
 
-  return [];
+  return customWaypoints;
 }
