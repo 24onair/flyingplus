@@ -1,42 +1,29 @@
-import type { TaskPointType } from "@/types/course";
-
-type WptTurnpoint = {
-  order: number;
-  name: string;
-  label?: string;
-  lat?: number;
-  lng?: number;
-  elevationM?: number;
-  taskType: TaskPointType;
-};
+import type { WaypointRecord } from "@/types/course";
 
 type BuildWptParams = {
-  turnpoints: WptTurnpoint[];
+  waypoints: WaypointRecord[];
 };
 
-function mapSymbol(taskType: TaskPointType) {
-  switch (taskType) {
-    case "start":
+function mapSymbol(category: WaypointRecord["category"]) {
+  switch (category) {
+    case "launch":
       return 1;
-    case "goal":
+    case "landing":
       return 5;
-    case "ess":
+    case "reference":
       return 4;
-    case "sss":
-      return 3;
     default:
       return 2;
   }
 }
 
-export function buildWptWaypointFile({ turnpoints }: BuildWptParams) {
-  const validTurnpoints = turnpoints.filter(
-    (
-      turnpoint
-    ): turnpoint is WptTurnpoint & {
-      lat: number;
-      lng: number;
-    } => typeof turnpoint.lat === "number" && typeof turnpoint.lng === "number"
+export function buildWptWaypointSetFile({ waypoints }: BuildWptParams) {
+  const validWaypoints = waypoints.filter(
+    (waypoint) =>
+      typeof waypoint.lat === "number" &&
+      typeof waypoint.lng === "number" &&
+      Number.isFinite(waypoint.lat) &&
+      Number.isFinite(waypoint.lng)
   );
 
   const header = [
@@ -46,18 +33,18 @@ export function buildWptWaypointFile({ turnpoints }: BuildWptParams) {
     "Reserved 3",
   ];
 
-  const rows = validTurnpoints.map((turnpoint, index) => {
-    const label = turnpoint.label?.trim() || turnpoint.name;
-    const elevationM = Math.round(turnpoint.elevationM ?? 0);
+  const rows = validWaypoints.map((waypoint, index) => {
+    const label = waypoint.label?.trim() || waypoint.name;
+    const elevationM = Math.round(waypoint.elevationM ?? 0);
 
     return [
       index + 1,
-      turnpoint.name,
-      turnpoint.lat.toFixed(6),
-      turnpoint.lng.toFixed(6),
+      waypoint.code,
+      waypoint.lat.toFixed(6),
+      waypoint.lng.toFixed(6),
       "1",
       "1",
-      mapSymbol(turnpoint.taskType),
+      mapSymbol(waypoint.category),
       "0",
       "65535",
       "",

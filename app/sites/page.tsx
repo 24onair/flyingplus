@@ -36,6 +36,12 @@ export default async function SitesIndexPage() {
               신규 활공장 등록
             </Link>
             <Link
+              href="/sites/waypoints"
+              className="btn btn-secondary"
+            >
+              지역 웨이포인트 내보내기
+            </Link>
+            <Link
               href="/sites/catalog"
               className="btn btn-secondary"
             >
