@@ -222,6 +222,18 @@ h1 {
   transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;
 }
 
+.playback-button.secondary-link {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f8fafc;
+  border-color: rgba(148, 163, 184, 0.35);
+}
+
+.playback-button.secondary-link:hover {
+  background: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+  border-color: rgba(94, 174, 232, 0.9);
+}
+
 .playback-button:hover {
   background: var(--accent-hover);
   color: var(--text-inverse);
